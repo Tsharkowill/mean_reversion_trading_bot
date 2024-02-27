@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import time
+import math
 from pprint import pprint
 from datetime import datetime, timedelta
 
@@ -26,37 +27,34 @@ def format_number(curr_num, match_num):
   
 
 
-# Helper function to convert datetime to Unix timestamp in milliseconds
-def to_unix_milliseconds(dt):
-    return int(dt.timestamp() * 1000)
+
+
+# Helper function to convert datetime to Unix timestamp in milliseconds and round down to the nearest hour
+def to_unix_milliseconds_rounded(dt):
+    # Round down to the nearest hour
+    dt_rounded = dt.replace(minute=0, second=0, microsecond=0)
+    return int(dt_rounded.timestamp() * 1000)
 
 def get_unix_times():
-    # Get current datetime
-    date_start_0 = datetime.now()
-    date_start_1 = date_start_0 - timedelta(hours=100)
-    date_start_2 = date_start_1 - timedelta(hours=100)
-    date_start_3 = date_start_2 - timedelta(hours=100)
-    date_start_4 = date_start_3 - timedelta(hours=100)
-
-    # Create dictionary with Unix timestamps in milliseconds
-    times_dict = {
-        "range_1": {
-            "from_unix": to_unix_milliseconds(date_start_1),
-            "to_unix": to_unix_milliseconds(date_start_0),
-        },
-        "range_2": {
-            "from_unix": to_unix_milliseconds(date_start_2),
-            "to_unix": to_unix_milliseconds(date_start_1),
-        },
-        "range_3": {
-            "from_unix": to_unix_milliseconds(date_start_3),
-            "to_unix": to_unix_milliseconds(date_start_2),
-        },
-        "range_4": {
-            "from_unix": to_unix_milliseconds(date_start_4),
-            "to_unix": to_unix_milliseconds(date_start_3),
-        },
-    }
-
-    # Return result
+    # Get current datetime and round down to the nearest hour
+    current_time = datetime.now()
+    current_time_rounded = current_time.replace(minute=0, second=0, microsecond=0)
+    
+    # Initialize the dictionary to store time ranges
+    times_dict = {}
+    hours_step = 200  # Define the hours to step back for each range
+    
+    # Generate sequential time ranges
+    for i in range(1, 5):
+        end_time = current_time_rounded - timedelta(hours=(i-1) * hours_step)
+        start_time = current_time_rounded - timedelta(hours=i * hours_step)
+        
+        times_dict[f"range_{i}"] = {
+            "from_unix": to_unix_milliseconds_rounded(start_time),
+            "to_unix": to_unix_milliseconds_rounded(end_time),
+        }
+    
     return times_dict
+
+
+print(get_unix_times())

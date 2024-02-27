@@ -1,88 +1,80 @@
 import pandas as pd
 import numpy as np
-import statsmodels.api as sm
 from statsmodels.tsa.stattools import coint
+import statsmodels.api as sm
 
-WINDOW = 21
-MAX_HALF_LIFE = 24
+# from constants import WINDOW
 
-# Calculate Half Life
-# https://www.pythonforfinance.net/2016/05/09/python-backtesting-mean-reversion-part-2/
-
+# Function to calculate half-life of mean reversion
 def calculate_half_life(spread):
-  df_spread = pd.DataFrame(spread, columns=["spread"])
-  spread_lag = df_spread.spread.shift(1)
-  spread_lag.iloc[0] = spread_lag.iloc[1]
-  spread_ret = df_spread.spread - spread_lag
-  spread_ret.iloc[0] = spread_ret.iloc[1]
-  spread_lag2 = sm.add_constant(spread_lag)
-  model = sm.OLS(spread_ret, spread_lag2)
-  res = model.fit()
-  halflife = round(-np.log(2) / res.params[1], 0)
-  return halflife
+    df_spread = pd.DataFrame(spread, columns=["spread"])
+    spread_lag = df_spread.spread.shift(1)
+    spread_lag.iloc[0] = spread_lag.iloc[1]
+    spread_ret = df_spread.spread - spread_lag
+    spread_ret.iloc[0] = spread_ret.iloc[1]
+    spread_lag2 = sm.add_constant(spread_lag)
+    model = sm.OLS(spread_ret, spread_lag2)
+    res = model.fit()
+    halflife = round(-np.log(2) / res.params.iloc[1], 0)
+    return halflife
 
+# Calculate rolling ZScore
+# def calculate_zscore(spread):
+#   spread_series = pd.Series(spread)
+#   mean = spread_series.rolling(center=False, window=WINDOW).mean()
+#   std = spread_series.rolling(center=False, window=WINDOW).std()
+#   x = spread_series.rolling(center=False, window=1).mean()
+#   zscore = (x - mean) / std
+#   return zscore
 
-# Calculate ZScore
-def calculate_zscore(spread):
-  spread_series = pd.Series(spread)
-  mean = spread_series.rolling(center=False, window=WINDOW).mean()
-  std = spread_series.rolling(center=False, window=WINDOW).std()
-  x = spread_series.rolling(center=False, window=1).mean()
-  zscore = (x - mean) / std
-  return zscore
+def find_cointegrated_pairs(df_market_prices):
+    # Remove the timestamp column for analysis
+    prices = df_market_prices.drop(columns=[df_market_prices.columns[0]])
+    
+    # Initialize an empty list to store the cointegrated pairs
+    cointegrated_pairs = []
+    
+    # Get the list of asset symbols
+    symbols = prices.columns
+    
+    # Iterate over each combination of pairs
+    for i in range(len(symbols)):
+        for j in range(i+1, len(symbols)):
+            series_1 = prices[symbols[i]]
+            series_2 = prices[symbols[j]]
+            
+            # Perform the cointegration test
+            score, pvalue, _ = coint(series_1, series_2)
+            
+            # If the p-value is less than 0.05, consider the pair cointegrated
+            if pvalue < 0.05:
+                # Calculate the hedge ratio
+                model = sm.OLS(series_1, series_2).fit()
+                hedge_ratio = model.params.iloc[0]
 
+                # Calculate the spread adjusted by the hedge ratio
+                spread = series_1 - hedge_ratio * series_2
 
-# Calculate Cointegration
-def calculate_cointegration(series_1, series_2):
-  series_1 = np.array(series_1).astype(np.float)
-  series_2 = np.array(series_2).astype(np.float)
-  coint_flag = 0
-  coint_res = coint(series_1, series_2)
-  coint_t = coint_res[0]
-  p_value = coint_res[1]
-  critical_value = coint_res[2][1]
-  model = sm.OLS(series_1, series_2).fit()
-  hedge_ratio = model.params[0]
-  spread = series_1 - (hedge_ratio * series_2)
-  half_life = calculate_half_life(spread)
-  t_check = coint_t < critical_value
-  coint_flag = 1 if p_value < 0.05 and t_check else 0
-  return coint_flag, hedge_ratio, half_life
+                # Calculate the half life (Ornstein-Uhlenbeck process) 
+                half_life = calculate_half_life(spread)
 
+                # Append the pair and their hedge ratio to the list
+                if half_life <= 40 and half_life > 0:
+                    cointegrated_pairs.append({
+                    'Base': symbols[i],
+                    'Quote': symbols[j],
+                    'HedgeRatio': hedge_ratio,
+                    'HalfLife': half_life
+                })
+    
+    # Convert the list of cointegrated pairs into a DataFrame
+    df_cointegrated_pairs = pd.DataFrame(cointegrated_pairs)
+    df_cointegrated_pairs.to_csv('cointegrated_pairs_1h.csv', index=False)
 
-# Store Cointegration Results
-def store_cointegration_results(df_market_prices):
+    return df_cointegrated_pairs
 
-  # Initialize
-  markets = df_market_prices.columns.to_list()
-  criteria_met_pairs = []
+# Example usage
+df_market_prices = pd.read_csv('data_1h.csv')  # Ensure to replace with the correct path
+cointegrated_pairs_df = find_cointegrated_pairs(df_market_prices)
+print(cointegrated_pairs_df)
 
-  # Find cointegrated pairs
-  # Start with our base pair
-  for index, base_market in enumerate(markets[:-1]):
-    series_1 = df_market_prices[base_market].values.astype(float).tolist()
-
-    # Get Quote Pair
-    for quote_market in markets[index +1:]:
-      series_2 = df_market_prices[quote_market].values.astype(float).tolist()
-
-      # Check cointegration
-      coint_flag, hedge_ratio, half_life = calculate_cointegration(series_1, series_2)
-
-      # Log pair
-      if coint_flag == 1 and half_life <= MAX_HALF_LIFE and half_life > 0:
-        criteria_met_pairs.append({
-          "base_market": base_market,
-          "quote_market": quote_market,
-          "hedge_ratio": hedge_ratio,
-          "half_life": half_life,
-        })
-
-  # Create and save DataFrame
-  df_criteria_met = pd.DataFrame(criteria_met_pairs)
-  df_criteria_met.to_csv("cointegrated_pairs.csv")
-  del df_criteria_met
-
-  # Return result
-  print("Cointegrated pairs successfully saved")
-  return "saved"
