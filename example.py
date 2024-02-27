@@ -3,11 +3,12 @@ import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
 
 from bitget.exceptions import BitgetAPIException
+from decouple import config
 
 if __name__ == '__main__':
-    apiKey = 'bg_aa2d6e1212aff23224316cbecb996a94'
-    secretKey = '15ec828c44dabc9f9e9db4a38b3d02ea08da898d516ba497a7d907297e0803d3'
-    passphrase = 'b1TG3TTH3T2Y'
+    apiKey = config('apiKey')
+    secretKey = config('secretKey')
+    passphrase = config('passphrase')
 
     # Create an instance of the BitgetApi class
     baseApi = BitgetApi(apiKey, secretKey, passphrase)
