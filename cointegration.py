@@ -69,12 +69,12 @@ def find_cointegrated_pairs(df_market_prices):
     
     # Convert the list of cointegrated pairs into a DataFrame
     df_cointegrated_pairs = pd.DataFrame(cointegrated_pairs)
-    df_cointegrated_pairs.to_csv('cointegrated_pairs_1h.csv', index=False)
+    df_cointegrated_pairs.to_csv('cointegrated_train.csv', index=False)
 
     return df_cointegrated_pairs
 
 # Example usage
-df_market_prices = pd.read_csv('data_1h.csv')  # Ensure to replace with the correct path
+df_market_prices = pd.read_csv('data_train.csv')  # Ensure to replace with the correct path
 cointegrated_pairs_df = find_cointegrated_pairs(df_market_prices)
 print(cointegrated_pairs_df)
 

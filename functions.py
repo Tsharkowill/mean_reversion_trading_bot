@@ -45,7 +45,7 @@ def get_unix_times():
     hours_step = 200  # Define the hours to step back for each range
     
     # Generate sequential time ranges
-    for i in range(1, 5):
+    for i in range(1, 11):
         end_time = current_time_rounded - timedelta(hours=(i-1) * hours_step)
         start_time = current_time_rounded - timedelta(hours=i * hours_step)
         

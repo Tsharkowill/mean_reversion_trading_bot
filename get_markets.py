@@ -18,13 +18,6 @@ if __name__ == '__main__':
 
     # Create an instance of the BitgetApi class
     baseApi = BitgetApi(apiKey, secretKey, passphrase)
-
-
-# Also use the get_unix_times function to grab more data for each trading pair finally append each new pair as
-# a new column on to the data frame
-# afterwards the csv will be used to find cointegrated pairs or maybe it just remains a dataframe then coint pairs are the csv
-# 20 requests per second is the rate limit
-    
     
     markets = ["BTCUSDT", "ETHUSDT", "XRPUSDT", "EOSUSDT", "BCHUSDT", "LTCUSDT", "ADAUSDT", "ETCUSDT", "LINKUSDT", "DOGEUSDT", "SOLUSDT", "MATICUSDT", "BNBUSDT", "UNIUSDT", "ICPUSDT", "AAVEUSDT", "XLMUSDT", "ATOMUSDT", "XTZUSDT", "SUSHIUSDT", "AXSUSDT", "THETAUSDT", "AVAXUSDT", "SHIBUSDT", "MANAUSDT", "GALAUSDT", "SANDUSDT", "DYDXUSDT", "CRVUSDT"]
 
@@ -46,16 +39,13 @@ if __name__ == '__main__':
     # except BitgetAPIException as e:
     #     print("error:" + e.message)
 
-    # Need to set the initial time to pull from so that the dataframe all has the same timestamps
-    # Use functions you made for time
-    # Check API documentation to find parameter for start time
+    
 
 
     # Get current time and create times dict to collect multiple batches of data from the API
     times_dict = get_unix_times()
 
-    # Initialize an empty DataFrame for the final result
-    # final_df = pd.DataFrame()
+    
 
     try:
         final_df = pd.DataFrame()
@@ -87,7 +77,7 @@ if __name__ == '__main__':
             final_df[market] = interim_df['data'].apply(lambda x: x[4])
 
             # Sleep to avoid hitting the rate limit
-            time.sleep(0.1)  
+            time.sleep(1)  
             
             # Ensure the 'time' column is synchronized across all market columns
             if 'time' not in final_df.columns:
@@ -102,7 +92,7 @@ if __name__ == '__main__':
         df_market_prices = final_df[cols]
         
         # Export the compiled data to a CSV file
-        df_market_prices.to_csv('data_1h.csv', index=False)
+        df_market_prices.to_csv('data_1h_10.csv', index=False)
 
     except BitgetAPIException as e:
         print(f"error: {e.message}")
