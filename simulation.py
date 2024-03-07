@@ -6,31 +6,19 @@ import json
 
 
 
-
-'''Make loop to iterate through data.csv and cointegrated_pairs.csv to create spread data frame as do the simulation'''
-
-'''Also use the first week of data to establish a hedge ratio and then simulate time periods following
-the intial one to see how a simulation from the past will work on future data'''
-
-'''How long between refreshing the cointegrated pairs? The 1hr_data is about a month'''
-
-'''Test whether I need to feed data in to the simulation with only the spread (I think I don't need to use the
-static z_score)'''
-
-'''Look at correlation between parameters and final portfolio value/sharpe ratio'''
-
 '''Make seperate repo for analysis with jupyter notebooks and link to it in the README'''
 
 
 # Adjusted Z-Score calculation to be a method within the class
 class TradingStrategy:
     def __init__(self, price_data):
-        self.price_data = price_data  # DataFrame with timestamp indexed asset prices
+        self.price_data = pd.read_csv(price_data)  # DataFrame with timestamp indexed asset prices
         self.leverage = 50
         self.initial_portfolio_value = 2000
-        self.results_df = pd.DataFrame()  # DataFrame to store simulation results
 
+            
     def calculate_spread(self, cointegrated_pairs_file):
+        
         cointegrated_pairs = pd.read_csv(cointegrated_pairs_file)
         spreads_df = pd.DataFrame(index=self.price_data.index)
         spreads_df['time'] = self.price_data['time']
@@ -40,28 +28,35 @@ class TradingStrategy:
             hedge_ratio = row['HedgeRatio']
             spread_name = f'{base_asset}_{quote_asset}'
             spreads_df[spread_name] = self.price_data[base_asset] - (hedge_ratio * self.price_data[quote_asset])
-            
+                
 
         self.spreads_df = spreads_df
-        print(self.spreads_df)
+        self.spreads_df.to_csv('spreads_df.csv')
+        print("Spread calculation completed successfully.")
+        print(self.spreads_df.head())
 
-    '''Need to update zscore calculation to accommodate the new way of calculating the spread'''
     
-    def calculate_zscore(self, WINDOW):
-        spread_series = self.price_data['spread']
-        mean = spread_series.rolling(window=WINDOW).mean()
-        std = spread_series.rolling(window=WINDOW).std()
-        self.price_data['z_score'] = (spread_series - mean) / std
+    def calculate_zscore(self, market, WINDOW):
+            spread_series = self.spreads_df[market]
+            mean = spread_series.rolling(window=WINDOW).mean()
+            std = spread_series.rolling(window=WINDOW).std()
+            self.spreads_df[f'z_score_{market}'] = (spread_series - mean) / std
 
-    def simulate_trade(self, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z):
-        self.calculate_zscore(WINDOW)  # Update Z-score calculation
+    def simulate_trade(self, market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z):
+        # calculate z-scores for the given market and WINDOW
+        self.calculate_zscore(market, WINDOW)
+
+        # Initialize portfolio values tracking
         portfolio_values = [self.initial_portfolio_value]
         portfolio_value = self.initial_portfolio_value
         in_position = False
         
-        for _, row in self.price_data.iterrows():
-            z_score = row['z_score']
-            spread = row['spread']
+        # Reference correect z score column for current market
+        z_score_column = f'z_score_{market}'
+        
+        for _, row in self.spreads_df.iterrows():
+            z_score = row[z_score_column]
+            spread = row[f'{market}']
             trade_return = 0
 
             if not in_position:
@@ -84,14 +79,14 @@ class TradingStrategy:
 
         return sharpe_ratio, final_portfolio_value
 
-    def run_monte_carlo_simulation(self, iterations):
+    def run_monte_carlo_simulation(self, market, iterations):
         simulations = []
         for _ in range(iterations):
             WINDOW = np.random.randint(5, 30)
             POSITION_SIZE = 5
-            ENTRY_Z = np.random.uniform(0.5, 1.5)
+            ENTRY_Z = np.random.uniform(1, 1.5)
             EXIT_Z = np.random.uniform(0, 0.2)
-            sharpe_ratio, final_portfolio_value = self.simulate_trade(WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z)
+            sharpe_ratio, final_portfolio_value = self.simulate_trade (market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z)
             simulations.append({
                 'WINDOW': WINDOW,
                 'POSITION_SIZE': POSITION_SIZE,
@@ -100,100 +95,91 @@ class TradingStrategy:
                 'SHARPE_RATIO': sharpe_ratio,
                 'FINAL_PORTFOLIO_VALUE': final_portfolio_value
             })
-        self.results_df = pd.DataFrame(simulations)
-        self.results_df.to_csv('simulation_results.csv', index=False)
-        return self.results_df
+        results_df = pd.DataFrame(simulations)
+        return results_df
     
-    def test_trading_strategy(self, cointegrated_pairs_file, price_data_file, optimal_parameters_file):
-        pairs_df = pd.read_csv(cointegrated_pairs_file)
-        price_data = pd.read_csv(price_data_file)
-        optimal_parameters = pd.read_csv(optimal_parameters_file)
+    def simulate_all_pairs(self):
+    # Assuming each column in spreads_df represents a cointegrated pair (market)
+        for market in self.spreads_df.columns:
+            # Skip 'time' or any non-market column if present
+            if market == 'time':
+                continue
 
-        results = []
-
-        for _, pair_row in pairs_df.iterrows():
-            base_asset, quote_asset, hedge_ratio = pair_row['Base'], pair_row['Quote'], pair_row['HedgeRatio']
-            spread = price_data[base_asset] - price_data[quote_asset] * hedge_ratio
-            spread_data = pd.DataFrame({'spread': spread})
+            # Run Monte Carlo simulation for this market
+            # Make sure to adjust the method to handle simulations for a single market correctly
+            results_df = self.run_monte_carlo_simulation(market=market, iterations=4000)
             
-            for _, params_row in optimal_parameters.iterrows():
-                if f"{base_asset}_{quote_asset}" == params_row['Market']:
-                    sharpe_ratio, final_portfolio_value = self.simulate_trade(spread_data, WINDOW=params_row['WINDOW'], POSITION_SIZE=1, ENTRY_Z=params_row['ENTRY_Z'], EXIT_Z=params_row['EXIT_Z'])
-                    results.append({'Market': params_row['Market'], 'SharpeRatio': sharpe_ratio, 'FinalPortfolioValue': final_portfolio_value})
-
-        results_df = pd.DataFrame(results)
-        results_df.to_csv('tested_trades.csv', index=False)
-        print("Simulation results saved to 'tested_trades.csv'")
+            # Save results to CSV, naming the file after the cointegrated pair
+            filename = f"{market}_simulation_train.csv"
+            results_df.to_csv(filename, index=False)
+            print(f"Results for {market} saved to {filename}")
 
 
-# # # Assume price_data is loaded here, e.g., using pd.read_csv()
-# price_data = pd.read_csv('your_spread_data.csv')
+    
+    def extract_parameters(self, simulation_train_files_path):
+        optimal_parameters = {}
+        csv_files = [f for f in os.listdir(simulation_train_files_path) if f.endswith('_simulation_train.csv')]
+        for csv_file in csv_files:
+            df = pd.read_csv(os.path.join(simulation_train_files_path, csv_file)).dropna().sort_values(by='FINAL_PORTFOLIO_VALUE', ascending=False).head(10)
+             # Filter the DataFrame based on your criteria
+            df = df[(df['FINAL_PORTFOLIO_VALUE'] > 2050) & (df['FINAL_PORTFOLIO_VALUE'] < 5000) & (df['SHARPE_RATIO'] > 1) & (df['SHARPE_RATIO'] > 0)]
+            print(f'Filtered {len(df)} entries from {csv_file}')
+            # If filtered_df is empty, continue to the next csv_file
+            if df.empty:
+                print(f'No entries met the criteria in {csv_file}, skipping...')
+                continue
 
-# # # Initialize the trading strategy with price data
-# strategy = TradingStrategy(price_data)
+            most_frequent_window = int(df['WINDOW'].mode()[0])
+            entry_z_mean = float(df[df['WINDOW'] == most_frequent_window]['ENTRY_Z'].mean())
+            exit_z_mean = float(df[df['WINDOW'] == most_frequent_window]['EXIT_Z'].mean())
+            market_name = csv_file.split('_simulation_train.csv')[0]
+            optimal_parameters[market_name] = {
+                'WINDOW': most_frequent_window,
+                'ENTRY_Z': entry_z_mean,
+                'EXIT_Z': exit_z_mean
+            }
+        with open('optimal_parameters.json', 'w') as json_file:
+            json.dump(optimal_parameters, json_file, indent=4)
 
-# # # Run Monte Carlo simulations
-# results_df = strategy.run_monte_carlo_simulation(iterations=4000)
 
-# # # Results are saved to 'simulation_results.csv' and returned as a DataFrame
-# print(results_df)
+    def test_strategy(self, cointegrated_pairs_file, optimal_parameters_file):
+        with open(optimal_parameters_file, 'r') as file:
+            optimal_parameters= json.load(file)
+        test_results = {}
+
+        for market, params in optimal_parameters.items():
+            WINDOW = params['WINDOW']
+            ENTRY_Z = params['ENTRY_Z']
+            EXIT_Z = params['EXIT_Z']
+            POSITION_SIZE = 5
+
+            self.calculate_spread(cointegrated_pairs_file)
+            sharpe_ratio, final_portfolio_value = self.simulate_trade(
+                market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z
+            )
+
+            test_results[market] = {
+                'SharpeRatio': sharpe_ratio,
+                'FinalPortfolioValue': final_portfolio_value
+            }
+
+        with open('test_strategy.json', 'w') as json_file:
+            json.dump(test_results, json_file, indent=4)
+    
     
 
-def calculate_spread_and_run_simulation(cointegrated_pairs_file, price_data_file):
-    # Load cointegrated pairs and price data
-    pairs_df = pd.read_csv(cointegrated_pairs_file)
-    price_data = pd.read_csv(price_data_file)
-    
-    for _, row in pairs_df.iterrows():
-        base_asset = row['Base']
-        quote_asset = row['Quote']
-        hedge_ratio = row['HedgeRatio']
+'''Testing monte carlo simulation after modifications'''
+
+train_strategy = TradingStrategy('data_test_2.csv')
+train_strategy.calculate_spread('cointegrated_train.csv')
+train_strategy.simulate_all_pairs()
+train_strategy.extract_parameters('.')
+
+test_strategy = TradingStrategy('data_test_3.csv')
+test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
+
+
+
+
         
-        # Calculate the spread
-        spread = price_data[base_asset] - price_data[quote_asset] * hedge_ratio
-        
-        # Prepare DataFrame for trading strategy
-        spread_data = pd.DataFrame({'spread': spread})
-        
-        # Initialize trading strategy with spread data
-        strategy = TradingStrategy(spread_data)
-        
-        # Run Monte Carlo simulation
-        results_df = strategy.run_monte_carlo_simulation(iterations=4000)
-        
-        # Save results to CSV, naming the file after the cointegrated pair
-        filename = f"{base_asset}_{quote_asset}_simulation_train.csv"
-        results_df.to_csv(filename, index=False)
-        print(f"Results for {base_asset}-{quote_asset} saved to {filename}")
-
-# Replace 'cointegrated_pairs.csv' and 'data.csv' with your actual file paths
-# calculate_spread_and_run_simulation('cointegrated_train.csv', 'data_train.csv')
-        
-
-'''Filtering for the best parameters to feed in to a simulation to test how well
-the first 600 hours of training data will perform for the remaining 200 hours'''
-
-# csv_files = [f for f in os.listdir('.') if f.endswith('_simulation_train.csv')]
-
-
-# Extract optimal trading parameters from the training data then 
-def extract_parameters(csv_file):
-    df = pd.read_csv(csv_file).dropna().sort_values(by='FINAL_PORTFOLIO_VALUE', ascending=False).head(30)
-    most_frequent_window = df['WINDOW'].mode()[0]
-    entry_z_mean = df[df['WINDOW'] == most_frequent_window]['ENTRY_Z'].mean()
-    exit_z_mean = df[df['WINDOW'] == most_frequent_window]['EXIT_Z'].mean()
-    market_name = csv_file.split('_simulation_train.csv')[0]
-    return {'Market': market_name, 'WINDOW': most_frequent_window, 'ENTRY_Z': entry_z_mean, 'EXIT_Z': exit_z_mean}
-
-# # Assuming csv_files is already defined
-# optimal_parameters_list = [extract_parameters(csv_file) for csv_file in csv_files]
-
-# # Convert list of dictionaries to a DataFrame and save to CSV
-# pd.DataFrame(optimal_parameters_list).to_csv('optimal_parameters.csv', index=False)
-
-
-# Example of using the TradingStrategy class
-strategy = TradingStrategy(pd.read_csv('data_test.csv'))
-# strategy.test_trading_strategy('cointegrated_train.csv', 'data_test.csv', 'optimal_parameters.csv')
-strategy.calculate_spread('cointegrated_train.csv')
 

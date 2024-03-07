@@ -3,7 +3,6 @@ import numpy as np
 from statsmodels.tsa.stattools import coint
 import statsmodels.api as sm
 
-# from constants import WINDOW
 
 # Function to calculate half-life of mean reversion
 def calculate_half_life(spread):
@@ -18,16 +17,11 @@ def calculate_half_life(spread):
     halflife = round(-np.log(2) / res.params.iloc[1], 0)
     return halflife
 
-# Calculate rolling ZScore
-# def calculate_zscore(spread):
-#   spread_series = pd.Series(spread)
-#   mean = spread_series.rolling(center=False, window=WINDOW).mean()
-#   std = spread_series.rolling(center=False, window=WINDOW).std()
-#   x = spread_series.rolling(center=False, window=1).mean()
-#   zscore = (x - mean) / std
-#   return zscore
 
-def find_cointegrated_pairs(df_market_prices):
+def find_cointegrated_pairs(price_data):
+    # Load csv file 
+    df_market_prices = pd.read_csv(price_data)
+    
     # Remove the timestamp column for analysis
     prices = df_market_prices.drop(columns=[df_market_prices.columns[0]])
     
@@ -74,7 +68,6 @@ def find_cointegrated_pairs(df_market_prices):
     return df_cointegrated_pairs
 
 # Example usage
-df_market_prices = pd.read_csv('data_train.csv')  # Ensure to replace with the correct path
-cointegrated_pairs_df = find_cointegrated_pairs(df_market_prices)
+cointegrated_pairs_df = find_cointegrated_pairs('data_test_2.csv')
 print(cointegrated_pairs_df)
 

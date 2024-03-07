@@ -58,3 +58,14 @@ def get_unix_times():
 
 
 print(get_unix_times())
+
+# Splitting time data for training and testing
+data_1h = pd.read_csv('data_1h.csv')
+data_train = data_1h.head(600)
+data_test_1 = data_1h.tail(200)
+data_test_2 = data_test_1.head(100)
+data_test_3 = data_test_1.tail(100)
+data_train.to_csv('data_train.csv', index=False)
+data_test_1.to_csv('data_test_1.csv', index=False)
+data_test_2.to_csv('data_test_2.csv', index=False)
+data_test_3.to_csv('data_test_3.csv', index=False)
