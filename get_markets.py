@@ -8,7 +8,7 @@ from bitget.bitget_api import BitgetApi
 from bitget.exceptions import BitgetAPIException
 
 from decouple import config
-from functions import get_unix_times
+from get_time import get_unix_times
 
 if __name__ == '__main__':
 
@@ -55,7 +55,7 @@ if __name__ == '__main__':
                 params = {
                     "symbol": market,
                     "productType": "USDT-FUTURES",
-                    "granularity": "1H",
+                    "granularity": "15m",
                     "endTime": times_value["to_unix"],
                     "limit": "200"
                 }
@@ -92,7 +92,7 @@ if __name__ == '__main__':
         df_market_prices = final_df[cols]
         
         # Export the compiled data to a CSV file
-        df_market_prices.to_csv('data_1h_10.csv', index=False)
+        df_market_prices.to_csv('data_15m.csv', index=False)
 
     except BitgetAPIException as e:
         print(f"error: {e.message}")

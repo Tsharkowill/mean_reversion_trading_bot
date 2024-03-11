@@ -45,6 +45,7 @@ def find_cointegrated_pairs(price_data):
                 # Calculate the hedge ratio
                 model = sm.OLS(series_1, series_2).fit()
                 hedge_ratio = model.params.iloc[0]
+                #hedge_ratio = series_2.mean() / series_1.mean()
 
                 # Calculate the spread adjusted by the hedge ratio
                 spread = series_1 - hedge_ratio * series_2
@@ -53,7 +54,7 @@ def find_cointegrated_pairs(price_data):
                 half_life = calculate_half_life(spread)
 
                 # Append the pair and their hedge ratio to the list
-                if half_life <= 40 and half_life > 0:
+                if half_life <= 100 and half_life > 0:
                     cointegrated_pairs.append({
                     'Base': symbols[i],
                     'Quote': symbols[j],
@@ -68,6 +69,6 @@ def find_cointegrated_pairs(price_data):
     return df_cointegrated_pairs
 
 # Example usage
-cointegrated_pairs_df = find_cointegrated_pairs('data_test_2.csv')
+cointegrated_pairs_df = find_cointegrated_pairs('data_train.csv')
 print(cointegrated_pairs_df)
 

@@ -4,7 +4,9 @@ import os
 import json
 
 
+'''The way the cointegration function is determining the hedge ratio isn't working for all pairs'''
 
+'''Need to fix calculate spread so that its seperate for train and test data (or do I?)'''
 
 '''Make seperate repo for analysis with jupyter notebooks and link to it in the README'''
 
@@ -50,31 +52,36 @@ class TradingStrategy:
         portfolio_values = [self.initial_portfolio_value]
         portfolio_value = self.initial_portfolio_value
         in_position = False
+        position_type = None  # Track whether the position is long or short
+        entry_spread = None  # Track spread at the entry point
         
-        # Reference correect z score column for current market
         z_score_column = f'z_score_{market}'
         
         for _, row in self.spreads_df.iterrows():
-            z_score = row[z_score_column]
-            spread = row[f'{market}']
+            current_z_score = row[z_score_column]
+            current_spread = row[market]
             trade_return = 0
 
             if not in_position:
-                if z_score > ENTRY_Z:  # Short the spread
-                    trade_return = -spread * POSITION_SIZE * self.leverage
-                    in_position = True  # Mark that a position is now open
-                elif z_score < -ENTRY_Z:  # Long the spread
-                    trade_return = spread * POSITION_SIZE * self.leverage
-                    in_position = True  # Mark that a position is now open
-            elif abs(z_score) <= EXIT_Z:
-                in_position = False  # Close position if Z-score within bounds for exiting
+                if current_z_score > ENTRY_Z:  # Enter short position
+                    trade_return = -current_spread * POSITION_SIZE * self.leverage
+                    in_position, position_type, entry_spread = True, "short", current_spread
+                elif current_z_score < -ENTRY_Z:  # Enter long position
+                    trade_return = current_spread * POSITION_SIZE * self.leverage
+                    in_position, position_type, entry_spread = True, "long", current_spread
+            elif abs(current_z_score) <= EXIT_Z:
+                # Exit position based on profitability
+                if (position_type == "long" and current_spread > (entry_spread * 1.05)) or \
+                (position_type == "short" and (current_spread * 1.05) < entry_spread):
+                    in_position, position_type, entry_spread = False, None, None  # Exit position
+        
 
             portfolio_value += trade_return
             portfolio_values.append(portfolio_value)
 
         # Calculate Sharpe ratio (assuming risk-free rate = 0 for simplicity)
-        returns = pd.Series(portfolio_values).pct_change().dropna()
-        sharpe_ratio = returns.mean() / returns.std() * np.sqrt(252) # Risk free rate might be *.95/period length/year
+        returns = pd.Series(portfolio_values).pct_change().dropna()  
+        sharpe_ratio = returns.mean() / returns.std() * np.sqrt(252) 
         final_portfolio_value = portfolio_values[-1]
 
         return sharpe_ratio, final_portfolio_value
@@ -82,9 +89,9 @@ class TradingStrategy:
     def run_monte_carlo_simulation(self, market, iterations):
         simulations = []
         for _ in range(iterations):
-            WINDOW = np.random.randint(5, 30)
+            WINDOW = np.random.randint(5, 50)
             POSITION_SIZE = 5
-            ENTRY_Z = np.random.uniform(1, 1.5)
+            ENTRY_Z = np.random.uniform(0.3, 1.5)
             EXIT_Z = np.random.uniform(0, 0.2)
             sharpe_ratio, final_portfolio_value = self.simulate_trade (market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z)
             simulations.append({
@@ -120,9 +127,9 @@ class TradingStrategy:
         optimal_parameters = {}
         csv_files = [f for f in os.listdir(simulation_train_files_path) if f.endswith('_simulation_train.csv')]
         for csv_file in csv_files:
-            df = pd.read_csv(os.path.join(simulation_train_files_path, csv_file)).dropna().sort_values(by='FINAL_PORTFOLIO_VALUE', ascending=False).head(10)
+            df = pd.read_csv(os.path.join(simulation_train_files_path, csv_file)).dropna().sort_values(by='FINAL_PORTFOLIO_VALUE', ascending=False).head(30)
              # Filter the DataFrame based on your criteria
-            df = df[(df['FINAL_PORTFOLIO_VALUE'] > 2050) & (df['FINAL_PORTFOLIO_VALUE'] < 5000) & (df['SHARPE_RATIO'] > 1) & (df['SHARPE_RATIO'] > 0)]
+            df = df[(df['FINAL_PORTFOLIO_VALUE'] > 2000) & (df['FINAL_PORTFOLIO_VALUE'] < 5000) & (df['SHARPE_RATIO'] > 1)]
             print(f'Filtered {len(df)} entries from {csv_file}')
             # If filtered_df is empty, continue to the next csv_file
             if df.empty:
@@ -170,12 +177,13 @@ class TradingStrategy:
 
 '''Testing monte carlo simulation after modifications'''
 
-train_strategy = TradingStrategy('data_test_2.csv')
+train_strategy = TradingStrategy('data_train.csv')
 train_strategy.calculate_spread('cointegrated_train.csv')
 train_strategy.simulate_all_pairs()
 train_strategy.extract_parameters('.')
 
-test_strategy = TradingStrategy('data_test_3.csv')
+test_strategy = TradingStrategy('data_test.csv')
+test_strategy.calculate_spread('cointegrated_train.csv')
 test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
 
 
