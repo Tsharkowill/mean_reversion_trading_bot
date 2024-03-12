@@ -177,14 +177,16 @@ class TradingStrategy:
 
 '''Testing monte carlo simulation after modifications'''
 
-train_strategy = TradingStrategy('data_train.csv')
-train_strategy.calculate_spread('cointegrated_train.csv')
-train_strategy.simulate_all_pairs()
-train_strategy.extract_parameters('.')
+if __name__ == '__main__':
 
-test_strategy = TradingStrategy('data_test.csv')
-test_strategy.calculate_spread('cointegrated_train.csv')
-test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
+    train_strategy = TradingStrategy('data_train.csv')
+    train_strategy.calculate_spread('cointegrated_train.csv')
+    train_strategy.simulate_all_pairs()
+    train_strategy.extract_parameters('.')
+
+    test_strategy = TradingStrategy('data_test.csv')
+    test_strategy.calculate_spread('cointegrated_train.csv')
+    test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
 
 
 

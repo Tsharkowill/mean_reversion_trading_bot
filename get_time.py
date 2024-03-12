@@ -18,7 +18,7 @@ def get_unix_times():
     intervals_step = 200  # Define the number of 15-minute intervals to step back for each range. For example, 800 intervals of 15 minutes each equal 200 hours.
     
     # Generate sequential time ranges
-    for i in range(1, 11):
+    for i in range(1, 3):
         end_time = current_time_rounded - timedelta(minutes=(i-1) * intervals_step * 15)
         start_time = current_time_rounded - timedelta(minutes=i * intervals_step * 15)
         
@@ -28,3 +28,5 @@ def get_unix_times():
         }
     
     return times_dict
+
+

@@ -45,7 +45,6 @@ def find_cointegrated_pairs(price_data):
                 # Calculate the hedge ratio
                 model = sm.OLS(series_1, series_2).fit()
                 hedge_ratio = model.params.iloc[0]
-                #hedge_ratio = series_2.mean() / series_1.mean()
 
                 # Calculate the spread adjusted by the hedge ratio
                 spread = series_1 - hedge_ratio * series_2
@@ -59,7 +58,9 @@ def find_cointegrated_pairs(price_data):
                     'Base': symbols[i],
                     'Quote': symbols[j],
                     'HedgeRatio': hedge_ratio,
-                    'HalfLife': half_life
+                    'HalfLife': half_life,
+                    'Score': score,
+                    'Pvalue': pvalue
                 })
     
     # Convert the list of cointegrated pairs into a DataFrame
@@ -68,7 +69,33 @@ def find_cointegrated_pairs(price_data):
 
     return df_cointegrated_pairs
 
-# Example usage
-cointegrated_pairs_df = find_cointegrated_pairs('data_train.csv')
-print(cointegrated_pairs_df)
 
+
+def update_hedge_ratios(price_data_file, existing_pairs_file):
+    # Load new price data and existing pairs
+    df_market_prices = pd.read_csv(price_data_file)
+    existing_pairs = pd.read_csv(existing_pairs_file)
+
+    # Remove the timestamp column for analysis
+    prices = df_market_prices.drop(columns=[df_market_prices.columns[0]])
+    
+    # Iterate over each existing cointegrated pair to update its hedge ratio
+    for index, row in existing_pairs.iterrows():
+        base_asset = row['Base']
+        quote_asset = row['Quote']
+        
+        series_1 = prices[base_asset]
+        series_2 = prices[quote_asset]
+        
+        # Recalculate the hedge ratio
+        model = sm.OLS(series_1, series_2).fit()
+        hedge_ratio = model.params[0]
+        
+        # Update the hedge ratio in the existing_pairs DataFrame
+        existing_pairs.at[index, 'HedgeRatio'] = hedge_ratio
+
+    # Optionally, save the updated DataFrame to a new CSV file
+    updated_pairs_file = 'updated_cointegrated_pairs.csv'
+    existing_pairs.to_csv(updated_pairs_file, index=False)
+    
+    return existing_pairs
