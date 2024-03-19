@@ -4,7 +4,7 @@ import numpy as np
 from get_time import get_unix_times
 from get_markets import fetch_and_compile_candle_data
 from cointegration import find_cointegrated_pairs, update_hedge_ratios
-from trade_functions import filter_and_save_tradable_pairs, calculate_spread, manage_trades, enter_trade_pair, exit_trade_pair
+from trade_functions import filter_and_save_tradable_pairs, calculate_spread, manage_trades
 from simulation import TradingStrategy
 from constants import MARKETS
 
@@ -65,13 +65,13 @@ times_dict = get_unix_times()
 # Get market prices and create a .csv for selected markets
 fetch_and_compile_candle_data(times_dict, MARKETS)
 
-#Split data again for estimating new hedge ratio
+# Split data again for estimating new hedge ratio
 data_15m = pd.read_csv('data_15m.csv')
 data_hedge_ratio = data_15m.tail(100)
 
 '''Update the hedge ratio by using the last "x" number of rows of data and append to the cointegrated_pairs.csv'''
 
-#Update hedge ratio with most recent price data
+# Update hedge ratio with most recent price data
 update_hedge_ratios(data_hedge_ratio, 'cointegrated_train.csv')
 
 '''Create new dictionary and json containing tradeable pairs'''
@@ -86,7 +86,7 @@ calculate_spread('data_15m.csv', 'updated_cointegrated_pairs.csv')
 
 '''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
 
-manage_trades('tradable_pairs.json')
+manage_trades('spreads_df.csv', 'tradable_pairs.json', 'updated_cointegrated_pairs.csv', 'data_15m.csv')
 
 
 '''Decide whether after 1 day (or whatever period) I should just close all open trades
