@@ -73,7 +73,7 @@ def find_cointegrated_pairs(price_data):
 
 def update_hedge_ratios(price_data_file, existing_pairs_file):
     # Load new price data and existing pairs
-    df_market_prices = pd.read_csv(price_data_file)
+    df_market_prices = pd.read_csv(price_data_file).tail(100)
     existing_pairs = pd.read_csv(existing_pairs_file)
 
     # Remove the timestamp column for analysis

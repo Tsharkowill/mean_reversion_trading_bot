@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import time
 
 from get_time import get_unix_times
 from get_markets import fetch_and_compile_candle_data
@@ -56,38 +57,37 @@ test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
 
 
 '''This part should be put on a loop or while true'''
+while True:
 
-'''Getting new time data'''
+    '''Getting new time data'''
 
-# Create dictionary for requesting market data
-times_dict = get_unix_times()
+    # Create dictionary for requesting market data
+    times_dict = get_unix_times()
 
-# Get market prices and create a .csv for selected markets
-fetch_and_compile_candle_data(times_dict, MARKETS)
-
-# Split data again for estimating new hedge ratio
-data_15m = pd.read_csv('data_15m.csv')
-data_hedge_ratio = data_15m.tail(100)
-
-'''Update the hedge ratio by using the last "x" number of rows of data and append to the cointegrated_pairs.csv'''
-
-# Update hedge ratio with most recent price data
-update_hedge_ratios(data_hedge_ratio, 'cointegrated_train.csv')
-
-'''Create new dictionary and json containing tradeable pairs'''
-
-filter_and_save_tradable_pairs('optimal_parameters.json', 'test_strategy.json', 'tradable_pairs.json')
-
-'''Calculate spread on new prices and see whether pairs should be entered or exited,
-this should include seeing whether the pair exists within the open trades dictionary'''
-
-calculate_spread('data_15m.csv', 'updated_cointegrated_pairs.csv')
+    # Get market prices and create a .csv for selected markets
+    fetch_and_compile_candle_data(times_dict, MARKETS)
 
 
-'''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
+    '''Update the hedge ratio by using the last 100 rows of data and append to the cointegrated_pairs.csv'''
 
-manage_trades('spreads_df.csv', 'tradable_pairs.json', 'updated_cointegrated_pairs.csv', 'data_15m.csv')
+    # Update hedge ratio with most recent price data
+    update_hedge_ratios('data_15m.csv', 'cointegrated_train.csv')
+
+    '''Create new dictionary and json containing tradeable pairs'''
+
+    filter_and_save_tradable_pairs('optimal_parameters.json', 'test_strategy.json', 'tradable_pairs.json')
+
+    '''Calculate spread on new prices and see whether pairs should be entered or exited,
+    this should include seeing whether the pair exists within the open trades dictionary'''
+
+    calculate_spread('data_15m.csv', 'updated_cointegrated_pairs.csv')
 
 
-'''Decide whether after 1 day (or whatever period) I should just close all open trades
-and start fresh or make a new dicitonary for close only positions'''
+    '''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
+
+    manage_trades('spreads_df.csv', 'tradable_pairs.json', 'updated_cointegrated_pairs.csv', 'data_15m.csv')
+
+
+    '''Decide whether after 1 day (or whatever period) I should just close all open trades
+    and start fresh or make a new dicitonary for close only positions'''
+    time.sleep(900)

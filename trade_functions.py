@@ -5,6 +5,13 @@ from constants import ORDER_SIZE
 import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
 from bitget.exceptions import BitgetAPIException
+from decouple import config
+
+apiKey = config('apiKey')
+secretKey = config('secretKey')
+passphrase = config('passphrase')
+
+baseApi = BitgetApi(apiKey, secretKey, passphrase)
 
 
 
@@ -66,9 +73,10 @@ def calculate_zscore(market, spreads_df, WINDOW):
 def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, price_data_file):
   spreads_df = pd.read_csv(spreads_file)
 
-  price_data = pd.read_scv(price_data_file)
+  price_data = pd.read_csv(price_data_file)
 
   cointegrated_pairs = pd.read_csv(cointegrated_pairs_file)
+
   
   with open(tradable_pairs_file, 'r') as file:
       tradable_pairs = json.load(file)
@@ -76,52 +84,58 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
   # Load open positions from JSON if it exists, else initialize an empty dictionary
   try:
       with open('open_positions.json', 'r') as json_file:
-          open_positions = json.load(json_file)
+        open_positions = json.load(json_file)
+      print(f'Open positions loaded: {open_positions}')
   except FileNotFoundError:
       open_positions = {}
+      print('No open positions found, starting fresh')
 
   for market, params in tradable_pairs.items():
+    print(f"\nProcessing market: {market}")
     base_asset, quote_asset = market.split('_')
     WINDOW = params['WINDOW']
     ENTRY_Z = params['ENTRY_Z']
     EXIT_Z = params['EXIT_Z']
 
+    print("Calculating Z-scores...")
     calculate_zscore(market, spreads_df, WINDOW)
 
     z_score_column = f'z_score_{market}'
 
-    for _, row in spreads_df.iterrows():
-        current_z_score = row[z_score_column]
-        current_spread = row[market]  # Assuming this is how you've stored the spread data for each market
+    latest_row = spreads_df.iloc[-1]
+    current_z_score = latest_row[z_score_column]
+    current_spread = latest_row[market]
     
-        # Determine if any trade logic needs to be processed
-        if market not in open_positions:
-            if current_z_score > ENTRY_Z:  # Enter positions with base asset shorted and quote asset longed
-                enter_trade_pair(base_asset, quote_asset, "short/long", price_data, cointegrated_pairs, open_positions)
-                open_positions[market] = {"position_type": "short/long", "entry_spread": current_spread}
-            elif current_z_score < -ENTRY_Z:  # Enter positions with base asset longed and quote asset shorted
-                enter_trade_pair(base_asset, quote_asset, "long/short", price_data, cointegrated_pairs, open_positions)
-                open_positions[market] = {"position_type": "long/short", "entry_spread": current_spread}
-        elif abs(current_z_score) <= EXIT_Z and market in open_positions:
-          position_info = open_positions[market]
-          position_type = position_info["position_type"]
-          entry_spread = position_info["entry_spread"]
-          current_spread = row[market]  # Assuming this is how you've stored the current spread for each market
-          
-          profitable_to_exit = False
-          # Check if it's profitable to exit "short/long" positions
-          if position_type == "short/long" and current_spread < entry_spread:
-              profitable_to_exit = True
-          # Check if it's profitable to exit "long/short" positions
-          elif position_type == "long/short" and current_spread > entry_spread:
-              profitable_to_exit = True
+  
+    # Determine if any trade logic needs to be processed
+    if market not in open_positions:
+        if current_z_score > ENTRY_Z:  # Enter positions with base asset shorted and quote asset longed
+            enter_trade_pair(base_asset, quote_asset, "short/long", price_data, cointegrated_pairs, open_positions, current_spread)
+            # open_positions[market] = {"position_type": "short/long", "entry_spread": current_spread}
+        elif current_z_score < -ENTRY_Z:  # Enter positions with base asset longed and quote asset shorted
+            enter_trade_pair(base_asset, quote_asset, "long/short", price_data, cointegrated_pairs, open_positions, current_spread)
+            # open_positions[market] = {"position_type": "long/short", "entry_spread": current_spread}
+    elif abs(current_z_score) <= EXIT_Z and market in open_positions:
+      print(f"Checking if it's profitable to exit for market: {market}")
+      position_info = open_positions[market]
+      position_type = position_info["position_type"]
+      entry_spread = position_info["entry_spread"]
+      
+      profitable_to_exit = False
+      # Check if it's profitable to exit "short/long" positions
+      if position_type == "short/long" and current_spread < entry_spread:
+          profitable_to_exit = True
+      # Check if it's profitable to exit "long/short" positions
+      elif position_type == "long/short" and current_spread > entry_spread:
+          profitable_to_exit = True
 
-          if profitable_to_exit:
-              exit_trade_pair(base_asset, quote_asset, position_type, open_positions)
-              del open_positions[market]
+      if profitable_to_exit:
+          print(f"Exiting position for market: {market}")
+          exit_trade_pair(base_asset, quote_asset, position_type, open_positions)
+          del open_positions[market]
 
 
-        # Additional logic for updating portfolio values or tracking trades can be added here
+    # Additional logic for updating portfolio values or tracking trades can be added here
 
     # Consider persisting open_positions to a file if needed for longer-term tracking beyond script execution
   with open('open_positions.json', 'w') as json_file:
@@ -129,7 +143,7 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
 
           
 
-def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointegrated_pairs, open_positions):
+def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointegrated_pairs, open_positions, current_spread):
   
   # Use latest price to determine position size
   base_asset_latest_price = price_data[base_asset].iloc[-1]
@@ -153,7 +167,7 @@ def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointeg
       # Short the base asset
       print(f"Shorting {base_asset}")
       params_base = {
-          "symbol": base_asset,
+          "symbol": f"{base_asset}_UMCBL",
           "marginCoin": "USDT",
           "side": "open_short",
           "orderType": "market",
@@ -163,7 +177,7 @@ def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointeg
       # Long the quote asset
       print(f"Longing {quote_asset}")
       params_quote = {
-          "symbol": quote_asset,
+          "symbol": f"{quote_asset}_UMCBL",
           "marginCoin": "USDT",
           "side": "open_long",
           "orderType": "market",
@@ -174,7 +188,7 @@ def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointeg
       # Long the base asset
       print(f"Longing {base_asset}")
       params_base = {
-          "symbol": base_asset,
+          "symbol": f"{base_asset}_UMCBL",
           "marginCoin": "USDT",
           "side": "open_long",
           "orderType": "market",
@@ -184,7 +198,7 @@ def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointeg
       # Short the quote asset
       print(f"Shorting {quote_asset}")
       params_quote = {
-          "symbol": quote_asset,
+          "symbol": f"{quote_asset}_UMCBL",
           "marginCoin": "USDT",
           "side": "open_short",
           "orderType": "market",
@@ -192,21 +206,29 @@ def enter_trade_pair(base_asset, quote_asset, position_type, price_data, cointeg
           "timInForceValue": "normal"
       }
 
+  
+  # Execute the trades
+  order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
   try:
-      # Execute the trades
-      response_base = maxOrderApi.placeOrder(params_base)
-      print(response_base)
-      response_quote = maxOrderApi.placeOrder(params_quote)
-      print(response_quote)
-
-      # Save opened positions
-      open_positions[f"{base_asset}_{quote_asset}"] = {
-          "position_type": position_type,
-          "base_position_size": base_asset_position_size,
-          "quote_position_size": quote_asset_position_size
-      }
+    response_base = order_api.placeOrder(params_base)
+    print(response_base)
   except BitgetAPIException as e:
-      print("Error in trade entry: " + e.message)
+    print("error:" + e.message)
+  try:
+    response_quote = order_api.placeOrder(params_quote)
+    print(response_quote)
+  except BitgetAPIException as e:
+    print("error:" + e.message)
+
+  # Save opened positions
+  open_positions[f"{base_asset}_{quote_asset}"] = {
+      "position_type": position_type,
+      "entry_spread": current_spread,
+      "base_position_size": base_asset_position_size,
+      "quote_position_size": quote_asset_position_size
+  }
+  print(open_positions)
+  
 
 
 
@@ -229,7 +251,7 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
         # Close short on base asset
         print(f"Shorting {base_asset}")
         params_base = {
-            "symbol": base_asset,
+            "symbol": f"{base_asset}_UMCBL",
             "marginCoin": "USDT",
             "side": "close_short",
             "orderType": "market",
@@ -239,7 +261,7 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
         # Close long on quote asset
         print(f"Longing {quote_asset}")
         params_quote = {
-            "symbol": quote_asset,
+            "symbol": f"{quote_asset}_UMCBL",
             "marginCoin": "USDT",
             "side": "close_long",
             "orderType": "market",
@@ -250,7 +272,7 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
         # Close long on base asset
         print(f"Longing {base_asset}")
         params_base = {
-            "symbol": base_asset,
+            "symbol": f"{base_asset}_UMCBL",
             "marginCoin": "USDT",
             "side": "close_long",
             "orderType": "market",
@@ -260,7 +282,7 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
         # Close short on quote asset
         print(f"Shorting {quote_asset}")
         params_quote = {
-            "symbol": quote_asset,
+            "symbol": f"{quote_asset}_UMCBL",
             "marginCoin": "USDT",
             "side": "close_short",
             "orderType": "market",
@@ -270,9 +292,9 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
 
       try:
           # Execute the trades
-          response_base = maxOrderApi.placeOrder(params_base)
+          response_base = maxOrderApi.OrderApi(apiKey, secretKey, passphrase, params_base)
           print(response_base)
-          response_quote = maxOrderApi.placeOrder(params_quote)
+          response_quote = maxOrderApi.OrderApi(apiKey, secretKey, passphrase, params_quote)
           print(response_quote)
       
       except BitgetAPIException as e:
