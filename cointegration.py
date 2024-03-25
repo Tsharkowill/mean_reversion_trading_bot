@@ -89,7 +89,7 @@ def update_hedge_ratios(price_data_file, existing_pairs_file):
         
         # Recalculate the hedge ratio
         model = sm.OLS(series_1, series_2).fit()
-        hedge_ratio = model.params[0]
+        hedge_ratio = model.params.iloc[0]
         
         # Update the hedge ratio in the existing_pairs DataFrame
         existing_pairs.at[index, 'HedgeRatio'] = hedge_ratio

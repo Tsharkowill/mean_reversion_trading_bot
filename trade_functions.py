@@ -132,7 +132,6 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
       if profitable_to_exit:
           print(f"Exiting position for market: {market}")
           exit_trade_pair(base_asset, quote_asset, position_type, open_positions)
-          del open_positions[market]
 
 
     # Additional logic for updating portfolio values or tracking trades can be added here
@@ -290,15 +289,18 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
             "timInForceValue": "normal"
         }
 
-      try:
-          # Execute the trades
-          response_base = maxOrderApi.OrderApi(apiKey, secretKey, passphrase, params_base)
-          print(response_base)
-          response_quote = maxOrderApi.OrderApi(apiKey, secretKey, passphrase, params_quote)
-          print(response_quote)
-      
-      except BitgetAPIException as e:
-          print("Error in trade entry: " + e.message)
+      # Execute the trades
+        order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
+        try:
+            response_base = order_api.placeOrder(params_base)
+            print(response_base)
+        except BitgetAPIException as e:
+            print("error:" + e.message)
+        try:
+            response_quote = order_api.placeOrder(params_quote)
+            print(response_quote)
+        except BitgetAPIException as e:
+            print("error:" + e.message)
       
       print(f"Exiting trade: {base_asset}, {quote_asset}")
       # Placeholder for logic to execute trade exit for both assets

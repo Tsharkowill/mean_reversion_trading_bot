@@ -33,11 +33,11 @@ if __name__ == '__main__':
 
     try:
         params = {}
-        params["symbol"] = "ATOMUSDT_UMCBL"
+        params["symbol"] = "ARBUSDT_UMCBL"
         params["marginCoin"] = "USDT"
-        params["side"] = "close_long"
+        params["side"] = "close_short"
         params["orderType"] = "market"
-        params["size"] = "10"
+        params["size"] = "150"
         params["timInForceValue"] = "normal"
         response = maxOrderApi.placeOrder(params)
         print(response)
