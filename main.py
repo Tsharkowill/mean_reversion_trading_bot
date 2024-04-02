@@ -26,102 +26,102 @@ baseApi = BitgetApi(apiKey, secretKey, passphrase)
 
 while True:
 
-    # # Create dictionary for requesting market data
-    # times_dict = get_unix_times()
+    # Create dictionary for requesting market data
+    times_dict = get_unix_times()
 
-    # # Get market prices and create a .csv for selected markets
-    # fetch_and_compile_candle_data(times_dict, MARKETS)
+    # Get market prices and create a .csv for selected markets
+    fetch_and_compile_candle_data(times_dict, MARKETS)
 
-    # # Splitting time data for training and testing
-    # data_15m = pd.read_csv('data_15m.csv')
-    # data_train = data_15m.tail(200)
-    # data_train.to_csv('data_train.csv', index=False)
+    # Splitting time data for training and testing
+    data_15m = pd.read_csv('data_15m.csv')
+    data_train = data_15m.tail(200)
+    data_train.to_csv('data_train.csv', index=False)
 
-    # # Find cointegrated pairs
-    # cointegrated_pairs_df = find_cointegrated_pairs('data_train.csv')
+    # Find cointegrated pairs
+    cointegrated_pairs_df = find_cointegrated_pairs('data_train.csv')
 
-    # # Use trading strategy class to find optimal trading parameters
-    # train_strategy = TradingStrategy('data_train.csv')
-    # train_strategy.calculate_spread('cointegrated_pairs.csv')
-    # train_strategy.simulate_all_pairs()
-    # train_strategy.extract_parameters('.')
+    # Use trading strategy class to find optimal trading parameters
+    train_strategy = TradingStrategy('data_train.csv')
+    train_strategy.calculate_spread('cointegrated_pairs.csv')
+    train_strategy.simulate_all_pairs()
+    train_strategy.extract_parameters('.')
 
 
 
-    # for i in range(2):
+    for i in range(2):
 
-    #     start_time = time.time()
+        start_time = time.time()
         
-    #     '''Getting new time data'''
+        '''Getting new time data'''
 
-    #     # Create dictionary for requesting market data
-    #     times_dict = get_unix_times()
+        # Create dictionary for requesting market data
+        times_dict = get_unix_times()
 
-    #     # Get market prices and create a .csv for selected markets
-    #     fetch_and_compile_candle_data(times_dict, MARKETS)
+        # Get market prices and create a .csv for selected markets
+        fetch_and_compile_candle_data(times_dict, MARKETS)
 
 
-    #     '''Update the hedge ratio by using the last 100 rows of data and append to the cointegrated_pairs.csv'''
+        '''Update the hedge ratio by using the last 100 rows of data and append to the cointegrated_pairs.csv'''
 
-    #     # Update hedge ratio with most recent price data
-    #     update_hedge_ratios('data_15m.csv', 'cointegrated_pairs.csv')
+        # Update hedge ratio with most recent price data
+        update_hedge_ratios('data_15m.csv', 'cointegrated_pairs.csv')
 
-    #     '''Update hedge ratios for close only pairs'''
+        '''Update hedge ratios for close only pairs'''
 
-    #     update_hedge_ratios('data_15m.csv', 'cointegrated_close.csv')
+        update_hedge_ratios('data_15m.csv', 'cointegrated_close.csv')
 
-    #     '''Calculate spread on new prices and see whether pairs should be entered or exited,
-    #     this should include seeing whether the pair exists within the open trades dictionary'''
+        '''Calculate spread on new prices and see whether pairs should be entered or exited,
+        this should include seeing whether the pair exists within the open trades dictionary'''
 
-    #     calculate_spread('data_15m.csv', 'cointegrated_pairs.csv').to_csv('spreads_df.csv', index=False)
+        calculate_spread('data_15m.csv', 'cointegrated_pairs.csv').to_csv('spreads_df.csv', index=False)
         
 
-    #     '''Calculate spreads for close only pairs'''
+        '''Calculate spreads for close only pairs'''
 
-    #     closing_spreads = calculate_spread('data_15m.csv', 'cointegrated_close.csv')
-    #     if closing_spreads is not None:
-    #         closing_spreads.to_csv('closing_spreads_df', index=False)
-    #     else:
-    #         print('No close only poisitons at this time')
+        closing_spreads = calculate_spread('data_15m.csv', 'cointegrated_close.csv')
+        if closing_spreads is not None:
+            closing_spreads.to_csv('closing_spreads_df', index=False)
+        else:
+            print('No close only poisitons at this time')
 
 
-    #     '''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
+        '''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
 
-    #     manage_trades('spreads_df.csv', 'optimal_parameters.json', 'cointegrated_pairs.csv', 'data_15m.csv')
+        manage_trades('spreads_df.csv', 'optimal_parameters.json', 'cointegrated_pairs.csv', 'data_15m.csv')
 
-    #     '''Manage closing only trades here'''
+        '''Manage closing only trades here'''
 
-    #     if closing_spreads is not None:
-    #         manage_close_only_trades('closing_spreads_df.csv', 'close_only.json')
-    #     else:
-    #         print('No close only positions at this time')
+        if closing_spreads is not None:
+            manage_close_only_trades('closing_spreads_df.csv', 'close_only.json')
+        else:
+            print('No close only positions at this time')
 
 
         
-    #     end_time = time.time()
-    #     # elapsed_time = end_time - start_time
-    #     # sleep_time = max(15*60 - elapsed_time, 0)
-    #     # time.sleep(sleep_time)
-    #     time.sleep(20)
+        end_time = time.time()
+        # elapsed_time = end_time - start_time
+        # sleep_time = max(15*60 - elapsed_time, 0)
+        # time.sleep(sleep_time)
+        time.sleep(20)
 
     
-    # '''Dump open_positions.json in to close_only.json, create new spreads_df for positions in close_only, close only cointegrated_pairs'''
-    # merge_json('open_positions.json', 'close_only.json')
+    '''Dump open_positions.json in to close_only.json, create new spreads_df for positions in close_only, close only cointegrated_pairs'''
+    merge_json('open_positions.json', 'close_only.json')
 
-    # append_filtered_data('spreads_df.csv', 'closing_spreads_df.csv', 'close_only.json')
+    append_filtered_data('spreads_df.csv', 'closing_spreads_df.csv', 'close_only.json')
 
-    # filter_and_append_data('cointegrated_pairs.csv', 'cointegrated_close.csv', 'close_only.json')
+    filter_and_append_data('cointegrated_pairs.csv', 'cointegrated_close.csv', 'close_only.json')
 
-    # pattern = '*simulation_train.csv'
+    pattern = '*simulation_train.csv'
 
-    # files_to_delete = glob.glob(pattern)
+    files_to_delete = glob.glob(pattern)
 
-    # for file in files_to_delete:
-    #     try:
-    #         os.remove(file)
-    #         print(f"Deleted {file}")
-    #     except Exception as e:
-    #         print(f"Error deleting {file}: {e}")
+    for file in files_to_delete:
+        try:
+            os.remove(file)
+            print(f"Deleted {file}")
+        except Exception as e:
+            print(f"Error deleting {file}: {e}")
 
     if CLOSE_ALL_TRADES is True:
         close_all_trades('open_positions.json')
