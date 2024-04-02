@@ -60,7 +60,6 @@ def fetch_and_compile_candle_data(times_dict, markets):
                     "endTime": times_value["to_unix"],
                     "limit": "200"
                 }
-                print(params)
                 response = baseApi.get("/api/v2/mix/market/history-candles", params)
             
                 # Temporary DataFrame from the response

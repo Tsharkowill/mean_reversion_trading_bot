@@ -48,7 +48,7 @@ while True:
 
 
 
-    for i in range(2):
+    for i in range(120):
 
         start_time = time.time()
         
@@ -99,10 +99,9 @@ while True:
 
         
         end_time = time.time()
-        # elapsed_time = end_time - start_time
-        # sleep_time = max(15*60 - elapsed_time, 0)
-        # time.sleep(sleep_time)
-        time.sleep(20)
+        elapsed_time = end_time - start_time
+        sleep_time = max(15*60 - elapsed_time, 0)
+        time.sleep(sleep_time)
 
     
     '''Dump open_positions.json in to close_only.json, create new spreads_df for positions in close_only, close only cointegrated_pairs'''
@@ -132,8 +131,6 @@ while True:
 
 
 
-
-    '''Force close trades which uses a variable from constants to force close all positions in both close only and open trades'''
 
     '''Look at trades and how long they take to close and how profitable they are, scatter plot to show length of
     time the trade was open for vs profitability, perhaps segment these trades based on how many days they were open for.

@@ -368,7 +368,6 @@ def manage_close_only_trades(spreads_file, tradable_pairs_file):
         WINDOW = 25
         EXIT_Z = 0.1
 
-        print("Calculating Z-scores...")
         calculate_zscore(market, close_only_spreads_df, WINDOW)
 
         z_score_column = f'z_score_{market}'
