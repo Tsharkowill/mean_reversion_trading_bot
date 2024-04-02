@@ -6,9 +6,7 @@ import json
 
 '''The way the cointegration function is determining the hedge ratio isn't working for all pairs'''
 
-'''Need to fix calculate spread so that its seperate for train and test data (or do I?)'''
 
-'''Make seperate repo for analysis with jupyter notebooks and link to it in the README'''
 
 
 # Adjusted Z-Score calculation to be a method within the class
@@ -89,10 +87,10 @@ class TradingStrategy:
     def run_monte_carlo_simulation(self, market, iterations):
         simulations = []
         for _ in range(iterations):
-            WINDOW = np.random.randint(5, 50)
+            WINDOW = np.random.randint(10, 50)
             POSITION_SIZE = 5
-            ENTRY_Z = np.random.uniform(0.3, 1.5)
-            EXIT_Z = np.random.uniform(0, 0.2)
+            ENTRY_Z = np.random.uniform(1.1, 1.9)
+            EXIT_Z = np.random.uniform(0, 0.1)
             sharpe_ratio, final_portfolio_value = self.simulate_trade (market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z)
             simulations.append({
                 'WINDOW': WINDOW,
@@ -114,7 +112,7 @@ class TradingStrategy:
 
             # Run Monte Carlo simulation for this market
             # Make sure to adjust the method to handle simulations for a single market correctly
-            results_df = self.run_monte_carlo_simulation(market=market, iterations=4000)
+            results_df = self.run_monte_carlo_simulation(market=market, iterations=2000)
             
             # Save results to CSV, naming the file after the cointegrated pair
             filename = f"{market}_simulation_train.csv"
@@ -129,7 +127,7 @@ class TradingStrategy:
         for csv_file in csv_files:
             df = pd.read_csv(os.path.join(simulation_train_files_path, csv_file)).dropna().sort_values(by='FINAL_PORTFOLIO_VALUE', ascending=False).head(30)
              # Filter the DataFrame based on your criteria
-            df = df[(df['FINAL_PORTFOLIO_VALUE'] > 2000) & (df['FINAL_PORTFOLIO_VALUE'] < 5000) & (df['SHARPE_RATIO'] > 1)]
+            df = df[(df['FINAL_PORTFOLIO_VALUE'] > 2000) & (df['FINAL_PORTFOLIO_VALUE'] < 5000) & (df['SHARPE_RATIO'] > 0.9)]
             print(f'Filtered {len(df)} entries from {csv_file}')
             # If filtered_df is empty, continue to the next csv_file
             if df.empty:
@@ -177,16 +175,16 @@ class TradingStrategy:
 
 '''Testing monte carlo simulation after modifications'''
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    train_strategy = TradingStrategy('data_train.csv')
-    train_strategy.calculate_spread('cointegrated_train.csv')
-    train_strategy.simulate_all_pairs()
-    train_strategy.extract_parameters('.')
+#     train_strategy = TradingStrategy('data_train.csv')
+#     train_strategy.calculate_spread('cointegrated_train.csv')
+#     train_strategy.simulate_all_pairs()
+#     train_strategy.extract_parameters('.')
 
-    test_strategy = TradingStrategy('data_test.csv')
-    test_strategy.calculate_spread('cointegrated_train.csv')
-    test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
+#     test_strategy = TradingStrategy('data_test.csv')
+#     test_strategy.calculate_spread('cointegrated_train.csv')
+#     test_strategy.test_strategy('cointegrated_train.csv', 'optimal_parameters.json')
 
 
 

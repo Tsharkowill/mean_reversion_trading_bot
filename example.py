@@ -35,9 +35,9 @@ if __name__ == '__main__':
         params = {}
         params["symbol"] = "ARBUSDT_UMCBL"
         params["marginCoin"] = "USDT"
-        params["side"] = "close_short"
+        params["side"] = "close_long"
         params["orderType"] = "market"
-        params["size"] = "150"
+        params["size"] = "10"
         params["timInForceValue"] = "normal"
         response = maxOrderApi.placeOrder(params)
         print(response)

@@ -1,6 +1,7 @@
 import json
 import pandas as pd
-import numpy as np
+import os
+import time
 from constants import ORDER_SIZE
 import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
@@ -44,7 +45,8 @@ def filter_and_save_tradable_pairs(optimal_parameters_file, test_results_file, o
 
 
 def calculate_spread(price_data_file, cointegrated_pairs_file):
-        
+  if not os.path.exists(cointegrated_pairs_file):
+      return      
   price_data = pd.read_csv(price_data_file)
   cointegrated_pairs = pd.read_csv(cointegrated_pairs_file)
   spreads_df = pd.DataFrame(index=price_data.index)
@@ -57,9 +59,8 @@ def calculate_spread(price_data_file, cointegrated_pairs_file):
       spreads_df[spread_name] = price_data[base_asset] - (hedge_ratio * price_data[quote_asset])
           
 
-  spreads_df.to_csv('spreads_df.csv')
-  print("Spread calculation completed successfully.")
-  print(spreads_df.head())
+  return spreads_df
+
 
 
 def calculate_zscore(market, spreads_df, WINDOW):
@@ -123,10 +124,10 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
       
       profitable_to_exit = False
       # Check if it's profitable to exit "short/long" positions
-      if position_type == "short/long" and current_spread < entry_spread:
+      if position_type == "short/long" and (current_spread * 1.1) < entry_spread:
           profitable_to_exit = True
       # Check if it's profitable to exit "long/short" positions
-      elif position_type == "long/short" and current_spread > entry_spread:
+      elif position_type == "long/short" and current_spread > (entry_spread * 1.1):
           profitable_to_exit = True
 
       if profitable_to_exit:
@@ -291,16 +292,45 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
 
       # Execute the trades
         order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
-        try:
-            response_base = order_api.placeOrder(params_base)
-            print(response_base)
-        except BitgetAPIException as e:
-            print("error:" + e.message)
-        try:
-            response_quote = order_api.placeOrder(params_quote)
-            print(response_quote)
-        except BitgetAPIException as e:
-            print("error:" + e.message)
+        max_retries = 3
+
+        for attempt in range(max_retries):
+
+            try:
+                response_base = order_api.placeOrder(params_base)
+                print(response_base)
+                # Check for success directly after receiving the response
+                if response_base.get('code') == '00000' and response_base.get('msg') == 'success':
+                    print("Base trade executed successfully.")
+                    break  # Exit the loop if successful
+                else:
+                    print("Base trade execution failed.")
+                    if 'msg' in response_base:
+                        print(f"Error message: {response_base['msg']}")
+                    if attempt < max_retries:
+                        print("Retrying...")
+                        time.sleep(1)  # Wait for 1 second before retrying
+            except BitgetAPIException as e:
+                print("error:" + e.message)
+            
+        for attempt in range(max_retries):
+
+            try:
+                response_quote = order_api.placeOrder(params_quote)
+                print(response_quote)
+                if response_quote.get('code') == '00000' and response_quote.get('msg') == 'success':
+                    print("Quote trade executed successfully.")
+                    print(f"Order ID: {response_quote['data']['orderId']}")
+                    break  # Exit the loop if successful
+                else:
+                    print("Quote trade execution failed.")
+                    if 'msg' in response_quote:
+                        print(f"Error message: {response_quote['msg']}")
+                    if attempt < max_retries:
+                        print("Retrying...")
+                        time.sleep(1)
+            except BitgetAPIException as e:
+                print("error:" + e.message)
       
       print(f"Exiting trade: {base_asset}, {quote_asset}")
       # Placeholder for logic to execute trade exit for both assets
@@ -310,3 +340,78 @@ def exit_trade_pair(base_asset, quote_asset, position_type, open_positions):
 
   else:
         print(f"No open trade found for {base_asset}_{quote_asset} to exit.")
+
+
+def manage_close_only_trades(spreads_file, tradable_pairs_file):
+    if not os.path.exists(spreads_file):
+        return
+    if not os.path.exists(tradable_pairs_file):
+        return
+    close_only_spreads_df = pd.read_csv(spreads_file)
+
+    
+    with open(tradable_pairs_file, 'r') as file:
+        close_only_pairs = json.load(file)
+
+    # Load open positions from JSON if it exists, else initialize an empty dictionary
+    try:
+        with open('open_positions.json', 'r') as json_file:
+            open_positions = json.load(json_file)
+        print(f'Open positions loaded: {open_positions}')
+    except FileNotFoundError:
+        open_positions = {}
+        print('No open positions found, starting fresh')
+
+    for market, params in close_only_pairs.items():
+        print(f"\nProcessing market: {market}")
+        base_asset, quote_asset = market.split('_')
+        WINDOW = 25
+        EXIT_Z = 0.1
+
+        print("Calculating Z-scores...")
+        calculate_zscore(market, close_only_spreads_df, WINDOW)
+
+        z_score_column = f'z_score_{market}'
+
+        latest_row = close_only_spreads_df.iloc[-1]
+        current_z_score = latest_row[z_score_column]
+        current_spread = latest_row[market]
+
+        if abs(current_z_score) <= EXIT_Z and market in open_positions:
+            print(f"Checking if it's profitable to exit for market: {market}")
+            position_info = open_positions[market]
+            position_type = position_info["position_type"]
+            entry_spread = position_info["entry_spread"]
+            
+            profitable_to_exit = False
+            # Check if it's profitable to exit "short/long" positions
+            if position_type == "short/long" and (current_spread * 1.5) < entry_spread:
+                profitable_to_exit = True
+            # Check if it's profitable to exit "long/short" positions
+            elif position_type == "long/short" and current_spread > (entry_spread * 1.5):
+                profitable_to_exit = True
+
+            if profitable_to_exit:
+                print(f"Exiting position for market: {market}")
+                exit_trade_pair(base_asset, quote_asset, position_type, open_positions)
+
+
+        # Additional logic for updating portfolio values or tracking trades can be added here
+
+        # Consider persisting open_positions to a file if needed for longer-term tracking beyond script execution
+    with open('open_positions.json', 'w') as json_file:
+            json.dump(open_positions, json_file, indent=4)
+
+
+
+def close_all_trades(tradable_pairs_file):
+    with open(tradable_pairs_file, 'r') as file:
+        close_only_pairs = json.load(file)
+
+    for market, params in list(close_only_pairs.items()):
+        base_asset, quote_asset = market.split('_')
+        position_info = params
+        position_type = position_info["position_type"]
+
+        exit_trade_pair(base_asset, quote_asset, position_type, close_only_pairs)
+        time.sleep(0.5)

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 from statsmodels.tsa.stattools import coint
 import statsmodels.api as sm
 
@@ -65,13 +66,15 @@ def find_cointegrated_pairs(price_data):
     
     # Convert the list of cointegrated pairs into a DataFrame
     df_cointegrated_pairs = pd.DataFrame(cointegrated_pairs)
-    df_cointegrated_pairs.to_csv('cointegrated_train.csv', index=False)
+    df_cointegrated_pairs.to_csv('cointegrated_pairs.csv', index=False)
 
     return df_cointegrated_pairs
 
 
 
 def update_hedge_ratios(price_data_file, existing_pairs_file):
+    if not os.path.exists(existing_pairs_file):
+        return
     # Load new price data and existing pairs
     df_market_prices = pd.read_csv(price_data_file).tail(100)
     existing_pairs = pd.read_csv(existing_pairs_file)
@@ -95,7 +98,7 @@ def update_hedge_ratios(price_data_file, existing_pairs_file):
         existing_pairs.at[index, 'HedgeRatio'] = hedge_ratio
 
     # Optionally, save the updated DataFrame to a new CSV file
-    updated_pairs_file = 'updated_cointegrated_pairs.csv'
-    existing_pairs.to_csv(updated_pairs_file, index=False)
+    
+    existing_pairs.to_csv(existing_pairs_file, index=False)
     
     return existing_pairs
