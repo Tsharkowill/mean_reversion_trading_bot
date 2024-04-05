@@ -124,10 +124,10 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
       
       profitable_to_exit = False
       # Check if it's profitable to exit "short/long" positions
-      if position_type == "short/long" and (current_spread * 1.4) < entry_spread:
+      if position_type == "short/long" and (current_spread * 2.0) < entry_spread:
           profitable_to_exit = True
       # Check if it's profitable to exit "long/short" positions
-      elif position_type == "long/short" and current_spread > (entry_spread * 1.4):
+      elif position_type == "long/short" and current_spread > (entry_spread * 2.0):
           profitable_to_exit = True
 
       if profitable_to_exit:
@@ -384,10 +384,10 @@ def manage_close_only_trades(spreads_file, tradable_pairs_file):
             
             profitable_to_exit = False
             # Check if it's profitable to exit "short/long" positions
-            if position_type == "short/long" and (current_spread * 1.5) < entry_spread:
+            if position_type == "short/long" and (current_spread * 2.5) < entry_spread:
                 profitable_to_exit = True
             # Check if it's profitable to exit "long/short" positions
-            elif position_type == "long/short" and current_spread > (entry_spread * 1.5):
+            elif position_type == "long/short" and current_spread > (entry_spread * 2.5):
                 profitable_to_exit = True
 
             if profitable_to_exit:

@@ -87,9 +87,9 @@ class TradingStrategy:
     def run_monte_carlo_simulation(self, market, iterations):
         simulations = []
         for _ in range(iterations):
-            WINDOW = np.random.randint(10, 50)
+            WINDOW = np.random.randint(20, 50)
             POSITION_SIZE = 5
-            ENTRY_Z = np.random.uniform(1.1, 1.9)
+            ENTRY_Z = np.random.uniform(1.5, 2.9)
             EXIT_Z = np.random.uniform(0, 0.1)
             sharpe_ratio, final_portfolio_value = self.simulate_trade (market, WINDOW, POSITION_SIZE, ENTRY_Z, EXIT_Z)
             simulations.append({
