@@ -123,12 +123,17 @@ def manage_trades(spreads_file, tradable_pairs_file, cointegrated_pairs_file, pr
       entry_spread = position_info["entry_spread"]
       
       profitable_to_exit = False
-      # Check if it's profitable to exit "short/long" positions
-      if position_type == "short/long" and (current_spread * 2.0) < entry_spread:
-          profitable_to_exit = True
-      # Check if it's profitable to exit "long/short" positions
-      elif position_type == "long/short" and (current_spread * 2.0) > entry_spread:
-          profitable_to_exit = True
+      # For "short/long" positions: profit when the spread decreases
+      if position_type == "short/long":
+        desired_exit_spread = entry_spread - abs(entry_spread) * 2.0  # Ensuring a decrease
+        if current_spread <= desired_exit_spread:
+            profitable_to_exit = True
+
+    # For "long/short" positions: profit when the spread increases
+      elif position_type == "long/short":
+        desired_exit_spread = entry_spread + abs(entry_spread) * 2.0  # Ensuring an increase
+        if current_spread >= desired_exit_spread:
+            profitable_to_exit = True
 
       if profitable_to_exit:
           print(f"Exiting position for market: {market}")
@@ -383,12 +388,17 @@ def manage_close_only_trades(spreads_file, tradable_pairs_file):
             entry_spread = position_info["entry_spread"]
             
             profitable_to_exit = False
-            # Check if it's profitable to exit "short/long" positions
-            if position_type == "short/long" and (current_spread * 2.5) < entry_spread:
-                profitable_to_exit = True
-            # Check if it's profitable to exit "long/short" positions
-            elif position_type == "long/short" and (current_spread * 2.5) > entry_spread:
-                profitable_to_exit = True
+            # For "short/long" positions: profit when the spread decreases
+            if position_type == "short/long":
+                desired_exit_spread = entry_spread - abs(entry_spread) * 2.0  # Ensuring a decrease
+                if current_spread <= desired_exit_spread:
+                    profitable_to_exit = True
+
+            # For "long/short" positions: profit when the spread increases
+            elif position_type == "long/short":
+                desired_exit_spread = entry_spread + abs(entry_spread) * 2.0  # Ensuring an increase
+                if current_spread >= desired_exit_spread:
+                    profitable_to_exit = True
 
             if profitable_to_exit:
                 print(f"Exiting position for market: {market}")
