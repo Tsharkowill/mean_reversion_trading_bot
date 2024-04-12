@@ -76,7 +76,7 @@ def update_hedge_ratios(price_data_file, existing_pairs_file):
     if not os.path.exists(existing_pairs_file):
         return
     # Load new price data and existing pairs
-    df_market_prices = pd.read_csv(price_data_file).tail(100)
+    df_market_prices = pd.read_csv(price_data_file).tail(200)
     existing_pairs = pd.read_csv(existing_pairs_file)
 
     # Remove the timestamp column for analysis

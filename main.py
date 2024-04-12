@@ -1,7 +1,6 @@
 import pandas as pd
 import time
 import os
-import glob
 import sys
 
 from get_time import get_unix_times
@@ -43,12 +42,10 @@ while True:
     # Use trading strategy class to find optimal trading parameters
     train_strategy = TradingStrategy('data_train.csv')
     train_strategy.calculate_spread('cointegrated_pairs.csv')
-    train_strategy.simulate_all_pairs()
-    train_strategy.extract_parameters('.')
 
 
 
-    for i in range(120):
+    for i in range(100):
 
         start_time = time.time()
         
@@ -80,18 +77,20 @@ while True:
 
         closing_spreads = calculate_spread('data_15m.csv', 'cointegrated_close.csv')
         if closing_spreads is not None:
-            closing_spreads.to_csv('closing_spreads_df', index=False)
+            print('closing spreads in not none')
+            closing_spreads.to_csv('closing_spreads_df.csv', index=False)
         else:
             print('No close only poisitons at this time')
 
 
         '''Execute trades, store data in dictionary/json if entering and remove from that dictionary when exiting'''
 
-        manage_trades('spreads_df.csv', 'optimal_parameters.json', 'cointegrated_pairs.csv', 'data_15m.csv')
+        manage_trades('spreads_df.csv', 'cointegrated_pairs.csv', 'data_15m.csv')
 
         '''Manage closing only trades here'''
 
         if closing_spreads is not None:
+            print('managing closing trades')
             manage_close_only_trades('closing_spreads_df.csv', 'close_only.json')
         else:
             print('No close only positions at this time')
@@ -111,16 +110,11 @@ while True:
 
     filter_and_append_data('cointegrated_pairs.csv', 'cointegrated_close.csv', 'close_only.json')
 
-    pattern = '*simulation_train.csv'
+    files = ['data_15m.csv', 'data_train.csv', 'open_positions.json', 'spreads_df.csv', 'cointegrated_pairs.csv']
 
-    files_to_delete = glob.glob(pattern)
+    for f in files:
+        os.remove(f)
 
-    for file in files_to_delete:
-        try:
-            os.remove(file)
-            print(f"Deleted {file}")
-        except Exception as e:
-            print(f"Error deleting {file}: {e}")
 
     if CLOSE_ALL_TRADES is True:
         close_all_trades('open_positions.json')

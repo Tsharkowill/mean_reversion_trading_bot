@@ -31,18 +31,18 @@ if __name__ == '__main__':
     # except BitgetAPIException as e:
     #     print("error:" + e.message)
 
-    try:
-        params = {}
-        params["symbol"] = "ARBUSDT_UMCBL"
-        params["marginCoin"] = "USDT"
-        params["side"] = "close_long"
-        params["orderType"] = "market"
-        params["size"] = "10"
-        params["timInForceValue"] = "normal"
-        response = maxOrderApi.placeOrder(params)
-        print(response)
-    except BitgetAPIException as e:
-        print("error:" + e.message)
+    # try:
+    #     params = {}
+    #     params["symbol"] = "ARBUSDT_UMCBL"
+    #     params["marginCoin"] = "USDT"
+    #     params["side"] = "close_long"
+    #     params["orderType"] = "market"
+    #     params["size"] = "10"
+    #     params["timInForceValue"] = "normal"
+    #     response = maxOrderApi.placeOrder(params)
+    #     print(response)
+    # except BitgetAPIException as e:
+    #     print("error:" + e.message)
 
     # # Demo 2:place order by post directly
     # baseApi = baseApi.BitgetApi(apiKey, secretKey, passphrase)
@@ -69,12 +69,12 @@ if __name__ == '__main__':
     # except BitgetAPIException as e:
     #     print("error:" + e.message)
 
-    # # Demo 4:send get request with no params
-    # try:
-    #     response = baseApi.get("/api/spot/v1/account/getInfo", {})
-    #     print(response)
-    # except BitgetAPIException as e:
-    #     print("error:" + e.message)
+    # Demo 4:send get request with no params
+    try:
+        response = baseApi.get("/api/spot/v1/account/getInfo", {})
+        print(response)
+    except BitgetAPIException as e:
+        print("error:" + e.message)
 
     # # Demo 5:send get request
     # try:

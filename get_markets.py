@@ -77,7 +77,7 @@ def fetch_and_compile_candle_data(times_dict, markets):
             final_df[market] = interim_df['data'].apply(lambda x: x[4])
 
             # Sleep to avoid hitting the rate limit
-            time.sleep(1)  
+            time.sleep(0.2)  
             
             # Ensure the 'time' column is synchronized across all market columns
             if 'time' not in final_df.columns:
