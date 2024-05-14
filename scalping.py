@@ -20,13 +20,13 @@ baseApi = BitgetApi(apiKey, secretKey, passphrase)
 class ScalpingStrategy:
     def __init__(self, price_data):
         self.price_data = price_data  # DataFrame with timestamp indexed asset prices
-        self.leverage = 100
+        self.leverage = 50
         self.initial_portfolio_value = 2000
     
     def calculate_zscore(self, market):
             spread_series = self.price_data[market]
-            mean = spread_series.rolling(window=200).mean()
-            std = spread_series.rolling(window=200).std()
+            mean = spread_series.rolling(window=40).mean()
+            std = spread_series.rolling(window=40).std()
             self.price_data[f'z_score_{market}'] = (spread_series - mean) / std
 
     def simulate_trade(self, market, WINDOW, POSITION_SIZE, Z_SCORE):
@@ -87,7 +87,7 @@ class ScalpingStrategy:
         for _ in range(iterations):
             WINDOW = 200
             POSITION_SIZE = 1
-            Z_SCORE = np.random.uniform(3.0, 5.0)
+            Z_SCORE = np.random.uniform(1.0, 3.5)
             total_returns = self.trade_all_markets(WINDOW, POSITION_SIZE, Z_SCORE)
             # Check if this simulation yielded higher returns than previous best
             if total_returns > highest_returns:
@@ -100,7 +100,7 @@ class ScalpingStrategy:
                 }
 
         # Save the best parameters to a JSON file
-        with open('best_parameters_15_200.json', 'w') as f:
+        with open('best_parameters.json', 'w') as f:
             json.dump(best_parameters, f, indent=4)
 
         return best_parameters
@@ -142,8 +142,8 @@ class ScalpingStrategy:
 def manage_scalp(price_data_file, MARKETS):
     
     price_data = pd.read_csv(price_data_file)
-    Z_SCORE = 3.5
-    WINDOW = 40
+    Z_SCORE = 1.3
+    WINDOW = 200
 
     try:
         with open('open_scalps.json', 'r') as json_file:
@@ -160,6 +160,7 @@ def manage_scalp(price_data_file, MARKETS):
         calculate_zscore(market, price_data, WINDOW)
         z_score_column = f'z_score_{market}'
         current_z_score = price_data[z_score_column].iloc[-1]
+        print(current_z_score)
         key_to_remove = None
 
         if market not in open_scalps:
@@ -196,7 +197,7 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 
     asset_latest_price = price_data[market].iloc[-1]
 
-    asset_position_size = SCALP_SIZE / asset_latest_price
+    asset_position_size = round(SCALP_SIZE / asset_latest_price, 2)
 
     if position_type == "long":
         print(f"Opening long scalp on: {market}")
@@ -255,7 +256,7 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 #     return
 
 
-# data = pd.read_csv('data_15_scalp.csv')
+# data = pd.read_csv('data_15m.csv')
 # # data = data.tail(2000)
 
 
@@ -266,4 +267,4 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 #     if market == 'time':
 #         continue
 #     scalping.calculate_zscore(market)
-# scalping.run_monte_carlo_simulation(1000)
+# scalping.run_monte_carlo_simulation(500)
