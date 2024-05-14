@@ -108,7 +108,7 @@ while True:
 
     append_filtered_data('spreads_df.csv', 'closing_spreads_df.csv', 'close_only.json')
 
-    filter_and_append_data('cointegrated_pairs.csv', 'cointegrated_close.csv', 'close_only.json')
+    filter_and_append_data('cointegrated_pairs.csv', 'cointegrated_close.csv', 'open_positions.json')
 
     files = ['data_15m.csv', 'data_train.csv', 'open_positions.json', 'spreads_df.csv', 'cointegrated_pairs.csv']
 

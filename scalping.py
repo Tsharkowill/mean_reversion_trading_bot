@@ -4,6 +4,17 @@ import os
 import json
 
 from trade_functions import calculate_zscore
+from constants import SCALP_SIZE
+import bitget.v1.mix.order_api as maxOrderApi
+from bitget.bitget_api import BitgetApi
+from bitget.exceptions import BitgetAPIException
+from decouple import config
+
+apiKey = config('apiKey')
+secretKey = config('secretKey')
+passphrase = config('passphrase')
+
+baseApi = BitgetApi(apiKey, secretKey, passphrase)
 
 
 class ScalpingStrategy:
@@ -148,25 +159,26 @@ def manage_scalp(price_data_file, MARKETS):
        
         calculate_zscore(market, price_data, WINDOW)
         z_score_column = f'z_score_{market}'
-        latest_row = price_data[market].iloc[-1]
-        current_z_score = latest_row[z_score_column]
+        current_z_score = price_data[z_score_column].iloc[-1]
         key_to_remove = None
 
         if market not in open_scalps:
             if current_z_score <= -Z_SCORE:
-                enter_scalp_trade(market, "long", price_data)
+                enter_scalp_trade(market, "long", price_data, open_scalps)
             elif current_z_score >= Z_SCORE:
-                enter_scalp_trade(market, "short", price_data)
+                enter_scalp_trade(market, "short", price_data, open_scalps)
 
         elif market in open_scalps:
             position_type = open_scalps[market]['position_type']
             if position_type == "long" and current_z_score >= Z_SCORE:
                 print(f"Exiting long position for market: {market}")
-                key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
+                #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
+                key_to_remove = market
 
             elif position_type == "short" and current_z_score >= -Z_SCORE:
                 print(f"Exiting short position for market: {market}")
-                key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
+                #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
+                key_to_remove = market
         
             if key_to_remove is not None:
                 keys_to_remove.append(key_to_remove) 
@@ -180,13 +192,67 @@ def manage_scalp(price_data_file, MARKETS):
         json.dump(open_scalps, json_file, indent=4)
 
 
-def enter_scalp_trade(market, position_type, price_data):
+def enter_scalp_trade(market, position_type, price_data, open_scalps):
+
+    asset_latest_price = price_data[market].iloc[-1]
+
+    asset_position_size = SCALP_SIZE / asset_latest_price
+
+    if position_type == "long":
+        print(f"Opening long scalp on: {market}")
+        params = {
+            "symbol": f"{market}_UMCBL",
+            "marginCoin": "USDT",
+            "side": "open_long",
+            "orderType": "market",
+            "size": asset_position_size,
+            "timInForceValue": "normal"
+        }
+
+    elif position_type == "short":
+        print(f"Opening short scalps on: {market}")
+        params = {
+            "symbol": f"{market}_UMCBL",
+            "marginCoin": "USDT",
+            "side": "open_short",
+            "orderType": "market",
+            "size": asset_position_size,
+            "timInForceValue": "normal"
+        }
+
+    # Execute the trades
+    order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
+    try:
+        response_base = order_api.placeOrder(params)
+        print(response_base)
+    except BitgetAPIException as e:
+        print("error:" + e.message)
+
+    # Save opened positions
+    open_scalps[f"{market}"] = {
+        "position_type": position_type,
+        "base_position_size": asset_position_size
+    }
+    
+    
+    
+'''Work on getting this function going so I can start scalping'''
+
+'''Try without exiting trades for now so that I can figure out optimal exit strategy'''
+
+def exit_scalp_trade(market, position_type, open_scalps):
+
+    if market in open_scalps:
+        # Check if position exists
+        scalp_info = open_scalps[market]
+
+        # Unpack values
 
 
 
-def exit_scalp_trade(market, position_type, price_data):
 
 
+    return
 
 
 data = pd.read_csv('data_15_scalp.csv')
