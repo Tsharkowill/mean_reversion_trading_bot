@@ -240,30 +240,30 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 
 '''Try without exiting trades for now so that I can figure out optimal exit strategy'''
 
-def exit_scalp_trade(market, position_type, open_scalps):
+# def exit_scalp_trade(market, position_type, open_scalps):
 
-    if market in open_scalps:
-        # Check if position exists
-        scalp_info = open_scalps[market]
+#     if market in open_scalps:
+#         # Check if position exists
+#         scalp_info = open_scalps[market]
 
-        # Unpack values
-
-
+#         # Unpack values
 
 
 
-    return
 
 
-data = pd.read_csv('data_15_scalp.csv')
-# data = data.tail(2000)
+#     return
+
+
+# data = pd.read_csv('data_15_scalp.csv')
+# # data = data.tail(2000)
 
 
 
-scalping = ScalpingStrategy(data)
-for market in scalping.price_data:
-    # Skip 'time' or any non-market column if present
-    if market == 'time':
-        continue
-    scalping.calculate_zscore(market)
-scalping.run_monte_carlo_simulation(1000)
+# scalping = ScalpingStrategy(data)
+# for market in scalping.price_data:
+#     # Skip 'time' or any non-market column if present
+#     if market == 'time':
+#         continue
+#     scalping.calculate_zscore(market)
+# scalping.run_monte_carlo_simulation(1000)
