@@ -47,7 +47,7 @@ markets = MARKETS
 
 
 
-def fetch_and_compile_candle_data(times_dict, markets):
+def fetch_and_compile_candle_data(times_dict, markets, granularity):
     try:
         final_df = pd.DataFrame()
         for market in markets:
@@ -56,7 +56,7 @@ def fetch_and_compile_candle_data(times_dict, markets):
                 params = {
                     "symbol": market,
                     "productType": "USDT-FUTURES",
-                    "granularity": "15m",
+                    "granularity": granularity,
                     "endTime": times_value["to_unix"],
                     "limit": "200"
                 }
@@ -92,7 +92,7 @@ def fetch_and_compile_candle_data(times_dict, markets):
         df_market_prices = final_df[cols]
         
         # Export the compiled data to a CSV file
-        df_market_prices.to_csv('data_15m.csv', index=False)
+        df_market_prices.to_csv(f"data_{granularity}.csv", index=False)
 
     except BitgetAPIException as e:
         print(f"error: {e.message}")

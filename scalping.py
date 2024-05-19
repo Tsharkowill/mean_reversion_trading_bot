@@ -3,8 +3,10 @@ import pandas as pd
 import os
 import json
 
+from get_time import get_unix_times
+from get_markets import fetch_and_compile_candle_data
 from trade_functions import calculate_zscore
-from constants import SCALP_SIZE
+from constants import SCALP_SIZE, SCALP_MARKETS
 import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
 from bitget.exceptions import BitgetAPIException
@@ -25,8 +27,8 @@ class ScalpingStrategy:
     
     def calculate_zscore(self, market):
             spread_series = self.price_data[market]
-            mean = spread_series.rolling(window=40).mean()
-            std = spread_series.rolling(window=40).std()
+            mean = spread_series.rolling(window=200).mean()
+            std = spread_series.rolling(window=200).std()
             self.price_data[f'z_score_{market}'] = (spread_series - mean) / std
 
     def simulate_trade(self, market, WINDOW, POSITION_SIZE, Z_SCORE):
@@ -87,7 +89,7 @@ class ScalpingStrategy:
         for _ in range(iterations):
             WINDOW = 200
             POSITION_SIZE = 1
-            Z_SCORE = np.random.uniform(1.0, 3.5)
+            Z_SCORE = np.random.uniform(1.8, 3.2)
             total_returns = self.trade_all_markets(WINDOW, POSITION_SIZE, Z_SCORE)
             # Check if this simulation yielded higher returns than previous best
             if total_returns > highest_returns:
@@ -139,14 +141,12 @@ class ScalpingStrategy:
         
 
 
-def manage_scalp(price_data_file, MARKETS):
+def manage_scalp(price_data_file, MARKETS, cadence, Z_SCORE, WINDOW):
     
     price_data = pd.read_csv(price_data_file)
-    Z_SCORE = 1.3
-    WINDOW = 200
 
     try:
-        with open('open_scalps.json', 'r') as json_file:
+        with open(f'open_scalps_{cadence}.json', 'r') as json_file:
             open_scalps = json.load(json_file)
         print(f'Open positions loaded: {open_scalps}')
     except FileNotFoundError:
@@ -176,7 +176,7 @@ def manage_scalp(price_data_file, MARKETS):
                 #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
                 key_to_remove = market
 
-            elif position_type == "short" and current_z_score >= -Z_SCORE:
+            elif position_type == "short" and current_z_score <= -Z_SCORE:
                 print(f"Exiting short position for market: {market}")
                 #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
                 key_to_remove = market
@@ -189,7 +189,7 @@ def manage_scalp(price_data_file, MARKETS):
             del open_scalps[key]
 
 
-    with open('open_scalps.json', 'w') as json_file:
+    with open(f'open_scalps_{cadence}.json', 'w') as json_file:
         json.dump(open_scalps, json_file, indent=4)
 
 
@@ -255,16 +255,20 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 
 #     return
 
+# Create dictionary for requesting market data
+# times_dict = get_unix_times(21)
 
-# data = pd.read_csv('data_15m.csv')
-# # data = data.tail(2000)
+# Get market prices and create a .csv for selected markets
+# fetch_and_compile_candle_data(times_dict, SCALP_MARKETS, '1m')
+data = pd.read_csv('data_15m.csv')
+data = data.tail(3000)
 
 
 
-# scalping = ScalpingStrategy(data)
-# for market in scalping.price_data:
-#     # Skip 'time' or any non-market column if present
-#     if market == 'time':
-#         continue
-#     scalping.calculate_zscore(market)
-# scalping.run_monte_carlo_simulation(500)
+scalping = ScalpingStrategy(data)
+for market in scalping.price_data:
+    # Skip 'time' or any non-market column if present
+    if market == 'time':
+        continue
+    scalping.calculate_zscore(market)
+scalping.run_monte_carlo_simulation(100)

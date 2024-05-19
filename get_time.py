@@ -8,7 +8,7 @@ def to_unix_milliseconds_rounded(dt):
     dt_rounded = dt.replace(minute=dt.minute - minutes_to_subtract, second=0, microsecond=0)
     return int(dt_rounded.timestamp() * 1000)
 
-def get_unix_times():
+def get_unix_times(steps):
     # Get current datetime and round down to the nearest 15 minutes
     current_time = datetime.now()
     current_time_rounded = current_time - timedelta(minutes=current_time.minute % 15, seconds=current_time.second, microseconds=current_time.microsecond)
@@ -18,7 +18,7 @@ def get_unix_times():
     intervals_step = 200  # Define the number of 15-minute intervals to step back for each range. For example, 800 intervals of 15 minutes each equal 200 hours.
     
     # Generate sequential time ranges
-    for i in range(1, 2):
+    for i in range(1, steps):
         end_time = current_time_rounded - timedelta(minutes=(i-1) * intervals_step * 15)
         start_time = current_time_rounded - timedelta(minutes=i * intervals_step * 15)
         
