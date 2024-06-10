@@ -19,3 +19,4 @@ tzdata==2024.1
 tzlocal==5.2
 urllib3==2.2.1
 websocket-client==1.7.0
+cx_Oracle==8.3.0

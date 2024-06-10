@@ -173,12 +173,10 @@ def manage_scalp(price_data_file, MARKETS, cadence, Z_SCORE, WINDOW):
             position_type = open_scalps[market]['position_type']
             if position_type == "long" and current_z_score >= Z_SCORE:
                 print(f"Exiting long position for market: {market}")
-                #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
                 key_to_remove = market
 
             elif position_type == "short" and current_z_score <= -Z_SCORE:
                 print(f"Exiting short position for market: {market}")
-                #key_to_remove = exit_scalp_trade(market, position_type, open_scalps)
                 key_to_remove = market
         
             if key_to_remove is not None:
@@ -241,13 +239,6 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 
 '''Try without exiting trades for now so that I can figure out optimal exit strategy'''
 
-# def exit_scalp_trade(market, position_type, open_scalps):
-
-#     if market in open_scalps:
-#         # Check if position exists
-#         scalp_info = open_scalps[market]
-
-#         # Unpack values
 
 
 

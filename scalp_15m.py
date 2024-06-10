@@ -35,7 +35,7 @@ while True:
         print(f"Error fetching market data: {e}")
 
     try:
-        manage_scalp('data_15m.csv', SCALP_MARKETS, '15m', 1.0, 200)
+        manage_scalp('data_15m.csv', SCALP_MARKETS, '15m', 3.0, 200)
     except Exception as e:
         print(f"Error managing scalps: {e}")
 
