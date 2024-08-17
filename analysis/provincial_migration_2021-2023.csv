@@ -1,0 +1,170 @@
+﻿To Dimension,Measure,Rank2,Rank,t,From Dimension
+Alberta,0,1,1,0,Alberta
+British Columbia,81760,2,1,0,Alberta
+Manitoba,7367,3,1,0,Alberta
+New Brunswick,5190,4,1,0,Alberta
+Newfoundland and Labrador,5076,5,1,0,Alberta
+Northwest Territories,1652,6,1,0,Alberta
+Nova Scotia,8759,7,1,0,Alberta
+Nunavut,406,8,1,0,Alberta
+Ontario,46365,9,1,0,Alberta
+Prince Edward Island,1468,10,1,0,Alberta
+Quebec,8157,11,1,0,Alberta
+Saskatchewan,18781,12,1,0,Alberta
+Yukon,971,13,1,0,Alberta
+Alberta,86745,1,2,0,British Columbia
+British Columbia,0,2,2,0,British Columbia
+Manitoba,8002,3,2,0,British Columbia
+New Brunswick,3253,4,2,0,British Columbia
+Newfoundland and Labrador,1505,5,2,0,British Columbia
+Northwest Territories,890,6,2,0,British Columbia
+Nova Scotia,7513,7,2,0,British Columbia
+Nunavut,187,8,2,0,British Columbia
+Ontario,42749,9,2,0,British Columbia
+Prince Edward Island,1224,10,2,0,British Columbia
+Quebec,8465,11,2,0,British Columbia
+Saskatchewan,8781,12,2,0,British Columbia
+Yukon,1606,13,2,0,British Columbia
+Alberta,18673,1,3,0,Manitoba
+British Columbia,15402,2,3,0,Manitoba
+Manitoba,0,3,3,0,Manitoba
+New Brunswick,1027,4,3,0,Manitoba
+Newfoundland and Labrador,355,5,3,0,Manitoba
+Northwest Territories,140,6,3,0,Manitoba
+Nova Scotia,1213,7,3,0,Manitoba
+Nunavut,176,8,3,0,Manitoba
+Ontario,20519,9,3,0,Manitoba
+Prince Edward Island,206,10,3,0,Manitoba
+Quebec,2952,11,3,0,Manitoba
+Saskatchewan,5187,12,3,0,Manitoba
+Yukon,107,13,3,0,Manitoba
+Alberta,5256,1,4,0,New Brunswick
+British Columbia,2372,2,4,0,New Brunswick
+Manitoba,529,3,4,0,New Brunswick
+New Brunswick,0,4,4,0,New Brunswick
+Newfoundland and Labrador,1229,5,4,0,New Brunswick
+Northwest Territories,144,6,4,0,New Brunswick
+Nova Scotia,6679,7,4,0,New Brunswick
+Nunavut,121,8,4,0,New Brunswick
+Ontario,10579,9,4,0,New Brunswick
+Prince Edward Island,1318,10,4,0,New Brunswick
+Quebec,5815,11,4,0,New Brunswick
+Saskatchewan,391,12,4,0,New Brunswick
+Yukon,68,13,4,0,New Brunswick
+Alberta,5785,1,5,0,Newfoundland and Labrador
+British Columbia,1630,2,5,0,Newfoundland and Labrador
+Manitoba,253,3,5,0,Newfoundland and Labrador
+New Brunswick,1566,4,5,0,Newfoundland and Labrador
+Newfoundland and Labrador,0,5,5,0,Newfoundland and Labrador
+Northwest Territories,183,6,5,0,Newfoundland and Labrador
+Nova Scotia,2691,7,5,0,Newfoundland and Labrador
+Nunavut,154,8,5,0,Newfoundland and Labrador
+Ontario,6515,9,5,0,Newfoundland and Labrador
+Prince Edward Island,417,10,5,0,Newfoundland and Labrador
+Quebec,762,11,5,0,Newfoundland and Labrador
+Saskatchewan,337,12,5,0,Newfoundland and Labrador
+Yukon,39,13,5,0,Newfoundland and Labrador
+Alberta,2754,1,6,0,Northwest Territories
+British Columbia,982,2,6,0,Northwest Territories
+Manitoba,176,3,6,0,Northwest Territories
+New Brunswick,206,4,6,0,Northwest Territories
+Newfoundland and Labrador,318,5,6,0,Northwest Territories
+Northwest Territories,0,6,6,0,Northwest Territories
+Nova Scotia,329,7,6,0,Northwest Territories
+Nunavut,188,8,6,0,Northwest Territories
+Ontario,1024,9,6,0,Northwest Territories
+Prince Edward Island,69,10,6,0,Northwest Territories
+Quebec,323,11,6,0,Northwest Territories
+Saskatchewan,251,12,6,0,Northwest Territories
+Yukon,348,13,6,0,Northwest Territories
+Alberta,8031,1,7,0,Nova Scotia
+British Columbia,4857,2,7,0,Nova Scotia
+Manitoba,670,3,7,0,Nova Scotia
+New Brunswick,6434,4,7,0,Nova Scotia
+Newfoundland and Labrador,2676,5,7,0,Nova Scotia
+Northwest Territories,372,6,7,0,Nova Scotia
+Nova Scotia,0,7,7,0,Nova Scotia
+Nunavut,304,8,7,0,Nova Scotia
+Ontario,16154,9,7,0,Nova Scotia
+Prince Edward Island,2009,10,7,0,Nova Scotia
+Quebec,2849,11,7,0,Nova Scotia
+Saskatchewan,541,12,7,0,Nova Scotia
+Yukon,123,13,7,0,Nova Scotia
+Alberta,428,1,8,0,Nunavut
+British Columbia,185,2,8,0,Nunavut
+Manitoba,285,3,8,0,Nunavut
+New Brunswick,140,4,8,0,Nunavut
+Newfoundland and Labrador,216,5,8,0,Nunavut
+Northwest Territories,268,6,8,0,Nunavut
+Nova Scotia,322,7,8,0,Nunavut
+Nunavut,0,8,8,0,Nunavut
+Ontario,1506,9,8,0,Nunavut
+Prince Edward Island,98,10,8,0,Nunavut
+Quebec,394,11,8,0,Nunavut
+Saskatchewan,133,12,8,0,Nunavut
+Yukon,100,13,8,0,Nunavut
+Alberta,84783,1,9,0,Ontario
+British Columbia,66657,2,9,0,Ontario
+Manitoba,19879,3,9,0,Ontario
+New Brunswick,27002,4,9,0,Ontario
+Newfoundland and Labrador,10505,5,9,0,Ontario
+Northwest Territories,1411,6,9,0,Ontario
+Nova Scotia,37521,7,9,0,Ontario
+Nunavut,1346,8,9,0,Ontario
+Ontario,0,9,9,0,Ontario
+Prince Edward Island,7938,10,9,0,Ontario
+Quebec,51099,11,9,0,Ontario
+Saskatchewan,11082,12,9,0,Ontario
+Yukon,1183,13,9,0,Ontario
+Alberta,1838,1,10,0,Prince Edward Island
+British Columbia,896,2,10,0,Prince Edward Island
+Manitoba,99,3,10,0,Prince Edward Island
+New Brunswick,1357,4,10,0,Prince Edward Island
+Newfoundland and Labrador,275,5,10,0,Prince Edward Island
+Northwest Territories,18,6,10,0,Prince Edward Island
+Nova Scotia,1647,7,10,0,Prince Edward Island
+Nunavut,33,8,10,0,Prince Edward Island
+Ontario,4637,9,10,0,Prince Edward Island
+Prince Edward Island,0,10,10,0,Prince Edward Island
+Quebec,408,11,10,0,Prince Edward Island
+Saskatchewan,113,12,10,0,Prince Edward Island
+Yukon,20,13,10,0,Prince Edward Island
+Alberta,11169,1,11,0,Quebec
+British Columbia,11546,2,11,0,Quebec
+Manitoba,2722,3,11,0,Quebec
+New Brunswick,6004,4,11,0,Quebec
+Newfoundland and Labrador,772,5,11,0,Quebec
+Northwest Territories,238,6,11,0,Quebec
+Nova Scotia,3859,7,11,0,Quebec
+Nunavut,340,8,11,0,Quebec
+Ontario,57655,9,11,0,Quebec
+Prince Edward Island,922,10,11,0,Quebec
+Quebec,0,11,11,0,Quebec
+Saskatchewan,1203,12,11,0,Quebec
+Yukon,339,13,11,0,Quebec
+Alberta,30969,1,12,0,Saskatchewan
+British Columbia,14588,2,12,0,Saskatchewan
+Manitoba,4199,3,12,0,Saskatchewan
+New Brunswick,640,4,12,0,Saskatchewan
+Newfoundland and Labrador,280,5,12,0,Saskatchewan
+Northwest Territories,160,6,12,0,Saskatchewan
+Nova Scotia,1091,7,12,0,Saskatchewan
+Nunavut,126,8,12,0,Saskatchewan
+Ontario,15075,9,12,0,Saskatchewan
+Prince Edward Island,203,10,12,0,Saskatchewan
+Quebec,1201,11,12,0,Saskatchewan
+Saskatchewan,0,12,12,0,Saskatchewan
+Yukon,229,13,12,0,Saskatchewan
+Alberta,1111,1,13,0,Yukon
+British Columbia,1711,2,13,0,Yukon
+Manitoba,80,3,13,0,Yukon
+New Brunswick,115,4,13,0,Yukon
+Newfoundland and Labrador,57,5,13,0,Yukon
+Northwest Territories,187,6,13,0,Yukon
+Nova Scotia,202,7,13,0,Yukon
+Nunavut,34,8,13,0,Yukon
+Ontario,731,9,13,0,Yukon
+Prince Edward Island,33,10,13,0,Yukon
+Quebec,233,11,13,0,Yukon
+Saskatchewan,210,12,13,0,Yukon
+Yukon,0,13,13,0,Yukon

@@ -1,0 +1,6002 @@
+[
+    {
+        "returns": 30.58895291501358,
+        "window": 345,
+        "position_size": 1,
+        "z_score": 2.46385217171879
+    },
+    {
+        "returns": 38.37793693111644,
+        "window": 480,
+        "position_size": 1,
+        "z_score": 2.9458703972369387
+    },
+    {
+        "returns": 2.3671892249944904,
+        "window": 539,
+        "position_size": 1,
+        "z_score": 3.791224774319791
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 557,
+        "position_size": 1,
+        "z_score": 3.221192652578999
+    },
+    {
+        "returns": 25.04966587606441,
+        "window": 598,
+        "position_size": 1,
+        "z_score": 2.988684202421328
+    },
+    {
+        "returns": -0.2883669858547364,
+        "window": 343,
+        "position_size": 1,
+        "z_score": 2.127636735804991
+    },
+    {
+        "returns": -50.023969555110625,
+        "window": 143,
+        "position_size": 1,
+        "z_score": 2.6433566790736123
+    },
+    {
+        "returns": 0.0,
+        "window": 549,
+        "position_size": 1,
+        "z_score": 3.8203082146884153
+    },
+    {
+        "returns": -45.629014609166006,
+        "window": 115,
+        "position_size": 1,
+        "z_score": 3.0347569755028223
+    },
+    {
+        "returns": 20.12987644250893,
+        "window": 304,
+        "position_size": 1,
+        "z_score": 2.4233420581977816
+    },
+    {
+        "returns": 0.0,
+        "window": 409,
+        "position_size": 1,
+        "z_score": 3.841769873949362
+    },
+    {
+        "returns": 5.242638049370953,
+        "window": 429,
+        "position_size": 1,
+        "z_score": 3.4643478892022745
+    },
+    {
+        "returns": 0.0,
+        "window": 543,
+        "position_size": 1,
+        "z_score": 3.9741005663069684
+    },
+    {
+        "returns": 27.68794433950643,
+        "window": 567,
+        "position_size": 1,
+        "z_score": 2.738220814239697
+    },
+    {
+        "returns": 19.778675917975306,
+        "window": 389,
+        "position_size": 1,
+        "z_score": 3.08203845642924
+    },
+    {
+        "returns": 36.05648470158303,
+        "window": 465,
+        "position_size": 1,
+        "z_score": 2.951828230241
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 526,
+        "position_size": 1,
+        "z_score": 3.429574987873176
+    },
+    {
+        "returns": 34.407598594652654,
+        "window": 565,
+        "position_size": 1,
+        "z_score": 2.335694700900146
+    },
+    {
+        "returns": 35.81100856680291,
+        "window": 584,
+        "position_size": 1,
+        "z_score": 2.4044171867906114
+    },
+    {
+        "returns": 39.12748291305661,
+        "window": 479,
+        "position_size": 1,
+        "z_score": 2.8982640014689793
+    },
+    {
+        "returns": 13.02831464629162,
+        "window": 255,
+        "position_size": 1,
+        "z_score": 3.6982175503823376
+    },
+    {
+        "returns": -46.07652594188971,
+        "window": 125,
+        "position_size": 1,
+        "z_score": 2.9494377014103486
+    },
+    {
+        "returns": 13.405642423004338,
+        "window": 187,
+        "position_size": 1,
+        "z_score": 3.3952657866434857
+    },
+    {
+        "returns": -34.14206057851152,
+        "window": 108,
+        "position_size": 1,
+        "z_score": 3.2369824691760405
+    },
+    {
+        "returns": 0.0,
+        "window": 409,
+        "position_size": 1,
+        "z_score": 3.8457578033343243
+    },
+    {
+        "returns": -60.66208968318233,
+        "window": 114,
+        "position_size": 1,
+        "z_score": 2.634210650928029
+    },
+    {
+        "returns": 10.56082803479535,
+        "window": 172,
+        "position_size": 1,
+        "z_score": 3.934886594725613
+    },
+    {
+        "returns": 3.8366016307331847,
+        "window": 558,
+        "position_size": 1,
+        "z_score": 3.668567600084579
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 464,
+        "position_size": 1,
+        "z_score": 3.210913134583862
+    },
+    {
+        "returns": 31.376919975889678,
+        "window": 503,
+        "position_size": 1,
+        "z_score": 2.5933505064043616
+    },
+    {
+        "returns": 37.386133390416944,
+        "window": 523,
+        "position_size": 1,
+        "z_score": 2.3181013318821204
+    },
+    {
+        "returns": 19.20825004541507,
+        "window": 515,
+        "position_size": 1,
+        "z_score": 3.022018421098095
+    },
+    {
+        "returns": 20.132193166522484,
+        "window": 221,
+        "position_size": 1,
+        "z_score": 3.7765108099646243
+    },
+    {
+        "returns": 11.224022841767919,
+        "window": 272,
+        "position_size": 1,
+        "z_score": 3.246798852661751
+    },
+    {
+        "returns": 8.581552601880503,
+        "window": 291,
+        "position_size": 1,
+        "z_score": 3.527718017381087
+    },
+    {
+        "returns": -0.6880806893541376,
+        "window": 352,
+        "position_size": 1,
+        "z_score": 3.8498328566415774
+    },
+    {
+        "returns": 37.627915542694154,
+        "window": 372,
+        "position_size": 1,
+        "z_score": 2.441640291268099
+    },
+    {
+        "returns": 13.809898076473246,
+        "window": 314,
+        "position_size": 1,
+        "z_score": 3.254659920606623
+    },
+    {
+        "returns": 27.424483787627423,
+        "window": 309,
+        "position_size": 1,
+        "z_score": 3.0458083570176884
+    },
+    {
+        "returns": 43.84654865962398,
+        "window": 457,
+        "position_size": 1,
+        "z_score": 2.276192115848989
+    },
+    {
+        "returns": 6.909588768067124,
+        "window": 332,
+        "position_size": 1,
+        "z_score": 3.388028228393395
+    },
+    {
+        "returns": -35.054028444668575,
+        "window": 252,
+        "position_size": 1,
+        "z_score": 2.018028296940585
+    },
+    {
+        "returns": 19.77086166802019,
+        "window": 383,
+        "position_size": 1,
+        "z_score": 2.1132500251521926
+    },
+    {
+        "returns": 33.102682516326695,
+        "window": 514,
+        "position_size": 1,
+        "z_score": 2.6180035067077334
+    },
+    {
+        "returns": 1.0930468820708938,
+        "window": 388,
+        "position_size": 1,
+        "z_score": 3.4731239389280426
+    },
+    {
+        "returns": 6.578900141078748,
+        "window": 368,
+        "position_size": 1,
+        "z_score": 2.0313965322684453
+    },
+    {
+        "returns": 18.840394398190256,
+        "window": 369,
+        "position_size": 1,
+        "z_score": 3.2965852327404694
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 499,
+        "position_size": 1,
+        "z_score": 3.378934457401069
+    },
+    {
+        "returns": -0.28157458184819006,
+        "window": 396,
+        "position_size": 1,
+        "z_score": 3.534278184752576
+    },
+    {
+        "returns": 35.023100161325374,
+        "window": 534,
+        "position_size": 1,
+        "z_score": 2.295535129079906
+    },
+    {
+        "returns": 30.516185849487556,
+        "window": 496,
+        "position_size": 1,
+        "z_score": 2.5969274127084616
+    },
+    {
+        "returns": 17.5154824438207,
+        "window": 393,
+        "position_size": 1,
+        "z_score": 2.9717860879439644
+    },
+    {
+        "returns": -24.328259214830496,
+        "window": 264,
+        "position_size": 1,
+        "z_score": 2.0743190135162184
+    },
+    {
+        "returns": 2.2479022470790824,
+        "window": 315,
+        "position_size": 1,
+        "z_score": 2.1582266999982256
+    },
+    {
+        "returns": 23.95436995746809,
+        "window": 373,
+        "position_size": 1,
+        "z_score": 2.6440457291111805
+    },
+    {
+        "returns": 29.519789457963498,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 3.5902577070237998
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 273,
+        "position_size": 1,
+        "z_score": 3.7864440508590764
+    },
+    {
+        "returns": -44.70630558329276,
+        "window": 122,
+        "position_size": 1,
+        "z_score": 2.9899261575633287
+    },
+    {
+        "returns": 21.428050172295343,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 3.383608072690312
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 319,
+        "position_size": 1,
+        "z_score": 3.983718705858223
+    },
+    {
+        "returns": 0.0,
+        "window": 397,
+        "position_size": 1,
+        "z_score": 3.9771947166785564
+    },
+    {
+        "returns": 37.775373133306175,
+        "window": 458,
+        "position_size": 1,
+        "z_score": 2.7750643180735732
+    },
+    {
+        "returns": 19.18814682073662,
+        "window": 204,
+        "position_size": 1,
+        "z_score": 3.566852176798556
+    },
+    {
+        "returns": 49.23448457080258,
+        "window": 514,
+        "position_size": 1,
+        "z_score": 2.1469959429625685
+    },
+    {
+        "returns": 36.05648470158303,
+        "window": 465,
+        "position_size": 1,
+        "z_score": 2.9370811172415694
+    },
+    {
+        "returns": 20.949710154915238,
+        "window": 231,
+        "position_size": 1,
+        "z_score": 2.8463618399620145
+    },
+    {
+        "returns": 4.8797586604812295,
+        "window": 252,
+        "position_size": 1,
+        "z_score": 3.732140139301862
+    },
+    {
+        "returns": 31.622664721301135,
+        "window": 487,
+        "position_size": 1,
+        "z_score": 2.65751207942493
+    },
+    {
+        "returns": 19.96360192937368,
+        "window": 421,
+        "position_size": 1,
+        "z_score": 2.0663932025916307
+    },
+    {
+        "returns": 24.12037041006579,
+        "window": 172,
+        "position_size": 1,
+        "z_score": 3.5763037659772134
+    },
+    {
+        "returns": 21.327889557386925,
+        "window": 403,
+        "position_size": 1,
+        "z_score": 2.1852095930986906
+    },
+    {
+        "returns": 6.153471355584543,
+        "window": 443,
+        "position_size": 1,
+        "z_score": 3.297456213278947
+    },
+    {
+        "returns": -111.24462184533695,
+        "window": 118,
+        "position_size": 1,
+        "z_score": 2.1985912119686124
+    },
+    {
+        "returns": -0.9164223713542015,
+        "window": 358,
+        "position_size": 1,
+        "z_score": 3.6158817408970125
+    },
+    {
+        "returns": 25.230773265181142,
+        "window": 589,
+        "position_size": 1,
+        "z_score": 2.965507449159018
+    },
+    {
+        "returns": 13.366962872665908,
+        "window": 147,
+        "position_size": 1,
+        "z_score": 3.317051000162097
+    },
+    {
+        "returns": 0.0,
+        "window": 472,
+        "position_size": 1,
+        "z_score": 3.8722338212947927
+    },
+    {
+        "returns": 39.12748291305661,
+        "window": 482,
+        "position_size": 1,
+        "z_score": 2.87661085303583
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 491,
+        "position_size": 1,
+        "z_score": 3.6092207267175347
+    },
+    {
+        "returns": 8.502799706305495,
+        "window": 230,
+        "position_size": 1,
+        "z_score": 3.1894463512864712
+    },
+    {
+        "returns": 35.73185721776167,
+        "window": 423,
+        "position_size": 1,
+        "z_score": 2.729890411097279
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 487,
+        "position_size": 1,
+        "z_score": 3.4638638631537044
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 511,
+        "position_size": 1,
+        "z_score": 3.203751419899292
+    },
+    {
+        "returns": 31.286157008881446,
+        "window": 322,
+        "position_size": 1,
+        "z_score": 3.235650992860305
+    },
+    {
+        "returns": -44.40580508139237,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 2.479162930517489
+    },
+    {
+        "returns": 18.689708141035226,
+        "window": 336,
+        "position_size": 1,
+        "z_score": 2.406379227328866
+    },
+    {
+        "returns": 7.737763557585595,
+        "window": 292,
+        "position_size": 1,
+        "z_score": 2.1814747683131275
+    },
+    {
+        "returns": 10.211049621196025,
+        "window": 235,
+        "position_size": 1,
+        "z_score": 3.4633114363239255
+    },
+    {
+        "returns": -10.526332153543308,
+        "window": 174,
+        "position_size": 1,
+        "z_score": 2.8375924856065398
+    },
+    {
+        "returns": 10.126152513094212,
+        "window": 136,
+        "position_size": 1,
+        "z_score": 3.277161072172405
+    },
+    {
+        "returns": 39.282494486912356,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 2.832010181031036
+    },
+    {
+        "returns": 26.224326576969588,
+        "window": 591,
+        "position_size": 1,
+        "z_score": 2.6606996592026233
+    },
+    {
+        "returns": 4.928374423549485,
+        "window": 474,
+        "position_size": 1,
+        "z_score": 3.5468498259487653
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 474,
+        "position_size": 1,
+        "z_score": 3.5246021312445386
+    },
+    {
+        "returns": 6.9757644065193745,
+        "window": 318,
+        "position_size": 1,
+        "z_score": 3.56761123761906
+    },
+    {
+        "returns": 19.389104216294072,
+        "window": 546,
+        "position_size": 1,
+        "z_score": 3.0692877123020827
+    },
+    {
+        "returns": 43.535365581432416,
+        "window": 463,
+        "position_size": 1,
+        "z_score": 2.4898446610935983
+    },
+    {
+        "returns": 14.549437996153983,
+        "window": 582,
+        "position_size": 1,
+        "z_score": 3.1430787169011474
+    },
+    {
+        "returns": 12.899040119443725,
+        "window": 246,
+        "position_size": 1,
+        "z_score": 3.235626206653577
+    },
+    {
+        "returns": 21.85193804524374,
+        "window": 155,
+        "position_size": 1,
+        "z_score": 3.7874933015606294
+    },
+    {
+        "returns": 22.972023087985235,
+        "window": 206,
+        "position_size": 1,
+        "z_score": 3.8127732195001593
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 580,
+        "position_size": 1,
+        "z_score": 3.3002524579381456
+    },
+    {
+        "returns": 8.365492732632902,
+        "window": 259,
+        "position_size": 1,
+        "z_score": 2.3648133394274113
+    },
+    {
+        "returns": 27.924519396077358,
+        "window": 571,
+        "position_size": 1,
+        "z_score": 2.738060732573776
+    },
+    {
+        "returns": 13.877686259131679,
+        "window": 282,
+        "position_size": 1,
+        "z_score": 2.3582465010074207
+    },
+    {
+        "returns": 0.0,
+        "window": 445,
+        "position_size": 1,
+        "z_score": 3.742387288813772
+    },
+    {
+        "returns": 1.0521417592010494,
+        "window": 180,
+        "position_size": 1,
+        "z_score": 3.025536968886142
+    },
+    {
+        "returns": 33.41885359102412,
+        "window": 377,
+        "position_size": 1,
+        "z_score": 2.6345615768300883
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 281,
+        "position_size": 1,
+        "z_score": 3.8786365734009407
+    },
+    {
+        "returns": -0.709905620551126,
+        "window": 354,
+        "position_size": 1,
+        "z_score": 3.761662420805087
+    },
+    {
+        "returns": 1.8925338969279437,
+        "window": 502,
+        "position_size": 1,
+        "z_score": 3.526670920341852
+    },
+    {
+        "returns": 30.03779272529073,
+        "window": 307,
+        "position_size": 1,
+        "z_score": 2.9947090112279375
+    },
+    {
+        "returns": 19.202792231784997,
+        "window": 569,
+        "position_size": 1,
+        "z_score": 3.0224555962245763
+    },
+    {
+        "returns": 11.374763780920148,
+        "window": 271,
+        "position_size": 1,
+        "z_score": 3.4108969584306683
+    },
+    {
+        "returns": 7.119584631979478,
+        "window": 323,
+        "position_size": 1,
+        "z_score": 3.461742664909221
+    },
+    {
+        "returns": -25.771566691945964,
+        "window": 234,
+        "position_size": 1,
+        "z_score": 2.1499252865036445
+    },
+    {
+        "returns": 19.983445901845016,
+        "window": 148,
+        "position_size": 1,
+        "z_score": 3.814620064692746
+    },
+    {
+        "returns": -46.95309022966785,
+        "window": 183,
+        "position_size": 1,
+        "z_score": 2.1329620888199408
+    },
+    {
+        "returns": 17.06814395755714,
+        "window": 231,
+        "position_size": 1,
+        "z_score": 3.8413530476808795
+    },
+    {
+        "returns": 28.659318414950576,
+        "window": 520,
+        "position_size": 1,
+        "z_score": 2.5274016735636335
+    },
+    {
+        "returns": 26.272608462320704,
+        "window": 325,
+        "position_size": 1,
+        "z_score": 2.9980409994305015
+    },
+    {
+        "returns": -28.01307086206657,
+        "window": 115,
+        "position_size": 1,
+        "z_score": 3.1804081277672114
+    },
+    {
+        "returns": 8.581552601880503,
+        "window": 294,
+        "position_size": 1,
+        "z_score": 3.5040397596026196
+    },
+    {
+        "returns": 0.0,
+        "window": 424,
+        "position_size": 1,
+        "z_score": 3.7970821161312998
+    },
+    {
+        "returns": 10.016835124067029,
+        "window": 255,
+        "position_size": 1,
+        "z_score": 2.4488802304926094
+    },
+    {
+        "returns": 7.659869660044251,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 2.19457735938273
+    },
+    {
+        "returns": 13.322367630588815,
+        "window": 282,
+        "position_size": 1,
+        "z_score": 3.444147736111316
+    },
+    {
+        "returns": 39.11436156843115,
+        "window": 596,
+        "position_size": 1,
+        "z_score": 2.0229239618161383
+    },
+    {
+        "returns": 45.732605332937055,
+        "window": 534,
+        "position_size": 1,
+        "z_score": 2.232594869865805
+    },
+    {
+        "returns": -64.2689549608458,
+        "window": 127,
+        "position_size": 1,
+        "z_score": 2.870374186155806
+    },
+    {
+        "returns": 27.050194567431618,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 2.9460610729751635
+    },
+    {
+        "returns": -43.79876720098082,
+        "window": 131,
+        "position_size": 1,
+        "z_score": 2.9264160285378393
+    },
+    {
+        "returns": 22.385020287044426,
+        "window": 428,
+        "position_size": 1,
+        "z_score": 2.0035315190723892
+    },
+    {
+        "returns": 36.05907760080186,
+        "window": 590,
+        "position_size": 1,
+        "z_score": 2.206197755814463
+    },
+    {
+        "returns": 48.44605426769135,
+        "window": 427,
+        "position_size": 1,
+        "z_score": 2.681726944968454
+    },
+    {
+        "returns": -15.299735845168698,
+        "window": 203,
+        "position_size": 1,
+        "z_score": 2.4523413983453124
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 584,
+        "position_size": 1,
+        "z_score": 3.271085694274844
+    },
+    {
+        "returns": 0.0,
+        "window": 471,
+        "position_size": 1,
+        "z_score": 3.959896999258935
+    },
+    {
+        "returns": 49.95536366338729,
+        "window": 435,
+        "position_size": 1,
+        "z_score": 2.6546330869618293
+    },
+    {
+        "returns": -89.67918295934282,
+        "window": 101,
+        "position_size": 1,
+        "z_score": 2.7324170448465663
+    },
+    {
+        "returns": 44.76943456498725,
+        "window": 406,
+        "position_size": 1,
+        "z_score": 2.567019819949206
+    },
+    {
+        "returns": 10.887701406174529,
+        "window": 270,
+        "position_size": 1,
+        "z_score": 3.2083237649616985
+    },
+    {
+        "returns": 0.0,
+        "window": 558,
+        "position_size": 1,
+        "z_score": 3.8459976387387105
+    },
+    {
+        "returns": 44.4167885624679,
+        "window": 429,
+        "position_size": 1,
+        "z_score": 2.4455549031843775
+    },
+    {
+        "returns": 0.0,
+        "window": 411,
+        "position_size": 1,
+        "z_score": 3.9639757713688297
+    },
+    {
+        "returns": 8.95365575484584,
+        "window": 286,
+        "position_size": 1,
+        "z_score": 2.190707806666306
+    },
+    {
+        "returns": -66.38506528781545,
+        "window": 148,
+        "position_size": 1,
+        "z_score": 2.383151566748613
+    },
+    {
+        "returns": 10.453384700257175,
+        "window": 252,
+        "position_size": 1,
+        "z_score": 3.3391021256164493
+    },
+    {
+        "returns": 30.974625822348344,
+        "window": 567,
+        "position_size": 1,
+        "z_score": 2.503946567227862
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 465,
+        "position_size": 1,
+        "z_score": 3.3640903934628157
+    },
+    {
+        "returns": 13.745953207059529,
+        "window": 270,
+        "position_size": 1,
+        "z_score": 2.986807098475932
+    },
+    {
+        "returns": 0.0,
+        "window": 481,
+        "position_size": 1,
+        "z_score": 3.7036417804344977
+    },
+    {
+        "returns": 6.80272824280496,
+        "window": 258,
+        "position_size": 1,
+        "z_score": 3.0888542261556333
+    },
+    {
+        "returns": 17.10792299682771,
+        "window": 324,
+        "position_size": 1,
+        "z_score": 3.671267755501506
+    },
+    {
+        "returns": 27.715715950919957,
+        "window": 563,
+        "position_size": 1,
+        "z_score": 2.8491306601537474
+    },
+    {
+        "returns": 0.0,
+        "window": 434,
+        "position_size": 1,
+        "z_score": 3.9751371317591673
+    },
+    {
+        "returns": -80.58215137883963,
+        "window": 106,
+        "position_size": 1,
+        "z_score": 2.72533957094553
+    },
+    {
+        "returns": 20.05884516027163,
+        "window": 406,
+        "position_size": 1,
+        "z_score": 2.9751792135117885
+    },
+    {
+        "returns": 23.145113871907824,
+        "window": 331,
+        "position_size": 1,
+        "z_score": 3.0030759563951746
+    },
+    {
+        "returns": 12.861931258694312,
+        "window": 285,
+        "position_size": 1,
+        "z_score": 3.221994615661495
+    },
+    {
+        "returns": 38.9042789215855,
+        "window": 414,
+        "position_size": 1,
+        "z_score": 2.366554939796489
+    },
+    {
+        "returns": 0.0,
+        "window": 454,
+        "position_size": 1,
+        "z_score": 3.9533010754970315
+    },
+    {
+        "returns": 18.495510230709442,
+        "window": 324,
+        "position_size": 1,
+        "z_score": 2.7119341893605924
+    },
+    {
+        "returns": 26.8348312275416,
+        "window": 335,
+        "position_size": 1,
+        "z_score": 2.513007318404566
+    },
+    {
+        "returns": 14.86147892717986,
+        "window": 560,
+        "position_size": 1,
+        "z_score": 3.165805713379589
+    },
+    {
+        "returns": 34.66288275224974,
+        "window": 522,
+        "position_size": 1,
+        "z_score": 2.686106166687699
+    },
+    {
+        "returns": 18.083889778359435,
+        "window": 379,
+        "position_size": 1,
+        "z_score": 3.0610707915906885
+    },
+    {
+        "returns": -87.38687568783803,
+        "window": 132,
+        "position_size": 1,
+        "z_score": 2.1626130638633114
+    },
+    {
+        "returns": 24.663192093965108,
+        "window": 165,
+        "position_size": 1,
+        "z_score": 3.382624315847555
+    },
+    {
+        "returns": -76.93997497877763,
+        "window": 129,
+        "position_size": 1,
+        "z_score": 2.473772294140047
+    },
+    {
+        "returns": 16.285147036974422,
+        "window": 392,
+        "position_size": 1,
+        "z_score": 2.023255136081974
+    },
+    {
+        "returns": 15.988388231814952,
+        "window": 574,
+        "position_size": 1,
+        "z_score": 3.072351969859814
+    },
+    {
+        "returns": 1.7485674196461787,
+        "window": 360,
+        "position_size": 1,
+        "z_score": 3.522005363025161
+    },
+    {
+        "returns": -1.170820413269439,
+        "window": 403,
+        "position_size": 1,
+        "z_score": 3.537961679850417
+    },
+    {
+        "returns": -11.189800696200109,
+        "window": 175,
+        "position_size": 1,
+        "z_score": 2.655219634360823
+    },
+    {
+        "returns": -48.92173467210546,
+        "window": 103,
+        "position_size": 1,
+        "z_score": 3.3344806539195533
+    },
+    {
+        "returns": 20.815605831458925,
+        "window": 351,
+        "position_size": 1,
+        "z_score": 3.098716092822251
+    },
+    {
+        "returns": 24.794025321148865,
+        "window": 425,
+        "position_size": 1,
+        "z_score": 3.065280054765312
+    },
+    {
+        "returns": 26.119385342119813,
+        "window": 593,
+        "position_size": 1,
+        "z_score": 2.887420715001514
+    },
+    {
+        "returns": 14.785940533683743,
+        "window": 320,
+        "position_size": 1,
+        "z_score": 3.445419088440703
+    },
+    {
+        "returns": -0.28157458184819006,
+        "window": 377,
+        "position_size": 1,
+        "z_score": 3.5786209597011447
+    },
+    {
+        "returns": 21.545887458865764,
+        "window": 337,
+        "position_size": 1,
+        "z_score": 3.313594032156453
+    },
+    {
+        "returns": 6.158473146560709,
+        "window": 224,
+        "position_size": 1,
+        "z_score": 3.170284234545335
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 557,
+        "position_size": 1,
+        "z_score": 3.391295253849779
+    },
+    {
+        "returns": 27.715715950919957,
+        "window": 543,
+        "position_size": 1,
+        "z_score": 2.841448971645523
+    },
+    {
+        "returns": 5.952828894370214,
+        "window": 444,
+        "position_size": 1,
+        "z_score": 3.275829680636443
+    },
+    {
+        "returns": 25.727952197340755,
+        "window": 395,
+        "position_size": 1,
+        "z_score": 2.694412503337097
+    },
+    {
+        "returns": 0.0,
+        "window": 436,
+        "position_size": 1,
+        "z_score": 3.7468763493890918
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 474,
+        "position_size": 1,
+        "z_score": 3.3363393393400216
+    },
+    {
+        "returns": 6.021421305620379,
+        "window": 404,
+        "position_size": 1,
+        "z_score": 3.333107582496372
+    },
+    {
+        "returns": -56.79076307660944,
+        "window": 135,
+        "position_size": 1,
+        "z_score": 2.6996210270461765
+    },
+    {
+        "returns": 4.020964966002339,
+        "window": 108,
+        "position_size": 1,
+        "z_score": 3.93821205756062
+    },
+    {
+        "returns": 24.880669881389622,
+        "window": 348,
+        "position_size": 1,
+        "z_score": 3.335885372134854
+    },
+    {
+        "returns": 16.43326969836039,
+        "window": 343,
+        "position_size": 1,
+        "z_score": 2.6671701142404447
+    },
+    {
+        "returns": -24.122212969672773,
+        "window": 109,
+        "position_size": 1,
+        "z_score": 3.5818120809826786
+    },
+    {
+        "returns": 27.42532894369174,
+        "window": 270,
+        "position_size": 1,
+        "z_score": 2.680253724559
+    },
+    {
+        "returns": 24.407056721417348,
+        "window": 432,
+        "position_size": 1,
+        "z_score": 2.0715619216116066
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 572,
+        "position_size": 1,
+        "z_score": 3.691223056609656
+    },
+    {
+        "returns": 23.054371568118995,
+        "window": 164,
+        "position_size": 1,
+        "z_score": 3.386054077388354
+    },
+    {
+        "returns": 19.57447824927658,
+        "window": 140,
+        "position_size": 1,
+        "z_score": 3.5895139339738416
+    },
+    {
+        "returns": 11.001431790292827,
+        "window": 260,
+        "position_size": 1,
+        "z_score": 3.3242235660805193
+    },
+    {
+        "returns": -2.2522585591441384,
+        "window": 365,
+        "position_size": 1,
+        "z_score": 2.020330244689447
+    },
+    {
+        "returns": 53.48261525237854,
+        "window": 498,
+        "position_size": 1,
+        "z_score": 2.252526681922064
+    },
+    {
+        "returns": 26.300648585491444,
+        "window": 501,
+        "position_size": 1,
+        "z_score": 2.9875861063981493
+    },
+    {
+        "returns": -0.28157458184819006,
+        "window": 369,
+        "position_size": 1,
+        "z_score": 3.7235367077289663
+    },
+    {
+        "returns": 19.890050458287533,
+        "window": 197,
+        "position_size": 1,
+        "z_score": 3.653657966968276
+    },
+    {
+        "returns": 42.36710438629825,
+        "window": 487,
+        "position_size": 1,
+        "z_score": 2.043094751963152
+    },
+    {
+        "returns": 1.2867433047442773,
+        "window": 161,
+        "position_size": 1,
+        "z_score": 3.182565141186782
+    },
+    {
+        "returns": 14.926221662373564,
+        "window": 190,
+        "position_size": 1,
+        "z_score": 3.4906365657161045
+    },
+    {
+        "returns": -28.309449796081708,
+        "window": 117,
+        "position_size": 1,
+        "z_score": 3.396576489274413
+    },
+    {
+        "returns": -37.99673115037831,
+        "window": 261,
+        "position_size": 1,
+        "z_score": 2.00406120109075
+    },
+    {
+        "returns": 21.545887458865764,
+        "window": 338,
+        "position_size": 1,
+        "z_score": 3.295261206352938
+    },
+    {
+        "returns": 0.0,
+        "window": 545,
+        "position_size": 1,
+        "z_score": 3.8443592551822956
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 569,
+        "position_size": 1,
+        "z_score": 3.2723024419455573
+    },
+    {
+        "returns": 26.900513490436197,
+        "window": 174,
+        "position_size": 1,
+        "z_score": 3.800206161583707
+    },
+    {
+        "returns": -5.766611227635394,
+        "window": 177,
+        "position_size": 1,
+        "z_score": 2.456609517638055
+    },
+    {
+        "returns": 8.502799706305495,
+        "window": 229,
+        "position_size": 1,
+        "z_score": 3.2122428240111334
+    },
+    {
+        "returns": 18.71491053443492,
+        "window": 369,
+        "position_size": 1,
+        "z_score": 2.749898133183966
+    },
+    {
+        "returns": 27.295303652106213,
+        "window": 326,
+        "position_size": 1,
+        "z_score": 3.0383550573551785
+    },
+    {
+        "returns": -45.98414550987195,
+        "window": 119,
+        "position_size": 1,
+        "z_score": 3.035831363335576
+    },
+    {
+        "returns": 0.46091479271831304,
+        "window": 345,
+        "position_size": 1,
+        "z_score": 3.93478562501942
+    },
+    {
+        "returns": 35.14250628820764,
+        "window": 404,
+        "position_size": 1,
+        "z_score": 2.3708845051589833
+    },
+    {
+        "returns": 10.56082803479535,
+        "window": 172,
+        "position_size": 1,
+        "z_score": 3.9280452317088503
+    },
+    {
+        "returns": -27.862446861452554,
+        "window": 211,
+        "position_size": 1,
+        "z_score": 2.218866229071269
+    },
+    {
+        "returns": 24.227687106537815,
+        "window": 213,
+        "position_size": 1,
+        "z_score": 3.830722245613935
+    },
+    {
+        "returns": -0.15374973019083882,
+        "window": 336,
+        "position_size": 1,
+        "z_score": 2.1831360528221513
+    },
+    {
+        "returns": -127.76297872068517,
+        "window": 112,
+        "position_size": 1,
+        "z_score": 2.28893979753234
+    },
+    {
+        "returns": 11.001431790292827,
+        "window": 267,
+        "position_size": 1,
+        "z_score": 3.317460174135889
+    },
+    {
+        "returns": -36.318599336698526,
+        "window": 244,
+        "position_size": 1,
+        "z_score": 2.039102913087104
+    },
+    {
+        "returns": 23.416248424281775,
+        "window": 407,
+        "position_size": 1,
+        "z_score": 2.2490909375108212
+    },
+    {
+        "returns": -19.935289135226185,
+        "window": 159,
+        "position_size": 1,
+        "z_score": 2.8034329383110457
+    },
+    {
+        "returns": 17.911765706383676,
+        "window": 312,
+        "position_size": 1,
+        "z_score": 3.6874502137134004
+    },
+    {
+        "returns": 29.55853149444397,
+        "window": 271,
+        "position_size": 1,
+        "z_score": 2.7800188990936077
+    },
+    {
+        "returns": -27.799932365868926,
+        "window": 164,
+        "position_size": 1,
+        "z_score": 2.416072229572027
+    },
+    {
+        "returns": 22.43303605526239,
+        "window": 134,
+        "position_size": 1,
+        "z_score": 3.7611124146222665
+    },
+    {
+        "returns": -5.348549026723731,
+        "window": 182,
+        "position_size": 1,
+        "z_score": 2.910142719104753
+    },
+    {
+        "returns": -15.898425756359302,
+        "window": 166,
+        "position_size": 1,
+        "z_score": 2.818293845007355
+    },
+    {
+        "returns": 23.77564203862312,
+        "window": 238,
+        "position_size": 1,
+        "z_score": 2.8641009191417046
+    },
+    {
+        "returns": 1.2834815802193589,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 3.1826576926872976
+    },
+    {
+        "returns": 42.2947180302117,
+        "window": 556,
+        "position_size": 1,
+        "z_score": 2.033948179199823
+    },
+    {
+        "returns": 5.583337684537582,
+        "window": 208,
+        "position_size": 1,
+        "z_score": 3.0101244578041353
+    },
+    {
+        "returns": 14.357279905786754,
+        "window": 574,
+        "position_size": 1,
+        "z_score": 3.095606541255566
+    },
+    {
+        "returns": 23.468950971355525,
+        "window": 323,
+        "position_size": 1,
+        "z_score": 2.8491032955057842
+    },
+    {
+        "returns": 0.0,
+        "window": 464,
+        "position_size": 1,
+        "z_score": 3.957155177797294
+    },
+    {
+        "returns": 2.7630538883627196,
+        "window": 133,
+        "position_size": 1,
+        "z_score": 3.4830066146490175
+    },
+    {
+        "returns": 6.591734512065159,
+        "window": 121,
+        "position_size": 1,
+        "z_score": 3.6975330197894922
+    },
+    {
+        "returns": -45.50330206029912,
+        "window": 213,
+        "position_size": 1,
+        "z_score": 2.079392933119286
+    },
+    {
+        "returns": 25.230773265181142,
+        "window": 587,
+        "position_size": 1,
+        "z_score": 2.945523793791361
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 458,
+        "position_size": 1,
+        "z_score": 3.3312155895042785
+    },
+    {
+        "returns": -0.2597496506512016,
+        "window": 362,
+        "position_size": 1,
+        "z_score": 3.8447461396205016
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 273,
+        "position_size": 1,
+        "z_score": 3.9541059153117626
+    },
+    {
+        "returns": -19.335471782894047,
+        "window": 143,
+        "position_size": 1,
+        "z_score": 2.961897744060268
+    },
+    {
+        "returns": -88.54586281235584,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 2.0707464158986513
+    },
+    {
+        "returns": -28.75710847462551,
+        "window": 157,
+        "position_size": 1,
+        "z_score": 2.722420686194357
+    },
+    {
+        "returns": 0.0,
+        "window": 390,
+        "position_size": 1,
+        "z_score": 3.9476799815584096
+    },
+    {
+        "returns": 49.20519597216867,
+        "window": 513,
+        "position_size": 1,
+        "z_score": 2.140163766205977
+    },
+    {
+        "returns": 20.831431412142138,
+        "window": 575,
+        "position_size": 1,
+        "z_score": 2.9792332487827164
+    },
+    {
+        "returns": 0.0,
+        "window": 441,
+        "position_size": 1,
+        "z_score": 3.999828204294574
+    },
+    {
+        "returns": 37.56328909435524,
+        "window": 594,
+        "position_size": 1,
+        "z_score": 2.3899266857190753
+    },
+    {
+        "returns": 16.810723434644615,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 3.365604971552402
+    },
+    {
+        "returns": 21.374758821767045,
+        "window": 381,
+        "position_size": 1,
+        "z_score": 3.3756772623456834
+    },
+    {
+        "returns": -19.129981456619134,
+        "window": 191,
+        "position_size": 1,
+        "z_score": 2.81596243427542
+    },
+    {
+        "returns": 21.85193804524374,
+        "window": 153,
+        "position_size": 1,
+        "z_score": 3.8663512079864772
+    },
+    {
+        "returns": 18.36922773649667,
+        "window": 332,
+        "position_size": 1,
+        "z_score": 2.588189228816346
+    },
+    {
+        "returns": 47.864519790427494,
+        "window": 428,
+        "position_size": 1,
+        "z_score": 2.710256268123005
+    },
+    {
+        "returns": -0.28157458184819006,
+        "window": 388,
+        "position_size": 1,
+        "z_score": 3.503546537374066
+    },
+    {
+        "returns": 9.064820823539094,
+        "window": 584,
+        "position_size": 1,
+        "z_score": 3.598769716201474
+    },
+    {
+        "returns": 12.717814308103698,
+        "window": 481,
+        "position_size": 1,
+        "z_score": 3.1301319923711635
+    },
+    {
+        "returns": 26.381139694814465,
+        "window": 542,
+        "position_size": 1,
+        "z_score": 2.727198287218625
+    },
+    {
+        "returns": 3.7448850011494415,
+        "window": 525,
+        "position_size": 1,
+        "z_score": 3.624673152624386
+    },
+    {
+        "returns": 20.815605831458925,
+        "window": 351,
+        "position_size": 1,
+        "z_score": 3.0969102652797207
+    },
+    {
+        "returns": 44.69106228662258,
+        "window": 439,
+        "position_size": 1,
+        "z_score": 2.500425141854474
+    },
+    {
+        "returns": 13.059028570402234,
+        "window": 593,
+        "position_size": 1,
+        "z_score": 3.430848727484154
+    },
+    {
+        "returns": 30.807984489147202,
+        "window": 155,
+        "position_size": 1,
+        "z_score": 3.6319028926626244
+    },
+    {
+        "returns": 2.3671892249944904,
+        "window": 530,
+        "position_size": 1,
+        "z_score": 3.8376180590996976
+    },
+    {
+        "returns": 10.47888089090793,
+        "window": 340,
+        "position_size": 1,
+        "z_score": 2.269859858254664
+    },
+    {
+        "returns": 19.038862313199843,
+        "window": 213,
+        "position_size": 1,
+        "z_score": 3.733046912101989
+    },
+    {
+        "returns": 57.70894044439524,
+        "window": 486,
+        "position_size": 1,
+        "z_score": 2.2630116823460806
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 497,
+        "position_size": 1,
+        "z_score": 3.4775141986858116
+    },
+    {
+        "returns": 18.217678412672285,
+        "window": 380,
+        "position_size": 1,
+        "z_score": 2.0918233371996617
+    },
+    {
+        "returns": 16.776760085488377,
+        "window": 235,
+        "position_size": 1,
+        "z_score": 3.558340368356916
+    },
+    {
+        "returns": -30.999995621719336,
+        "window": 155,
+        "position_size": 1,
+        "z_score": 2.7619962736074757
+    },
+    {
+        "returns": -0.709905620551126,
+        "window": 357,
+        "position_size": 1,
+        "z_score": 3.774591701086867
+    },
+    {
+        "returns": 1.8925338969279437,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 3.458151058077872
+    },
+    {
+        "returns": 36.01368640168516,
+        "window": 507,
+        "position_size": 1,
+        "z_score": 2.706001818275305
+    },
+    {
+        "returns": 14.659506688959254,
+        "window": 308,
+        "position_size": 1,
+        "z_score": 3.688241761265231
+    },
+    {
+        "returns": 14.605751254678125,
+        "window": 249,
+        "position_size": 1,
+        "z_score": 2.7083160179531154
+    },
+    {
+        "returns": 16.707560618617208,
+        "window": 147,
+        "position_size": 1,
+        "z_score": 3.912931729537605
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 553,
+        "position_size": 1,
+        "z_score": 3.268797351441693
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 595,
+        "position_size": 1,
+        "z_score": 3.728763726429005
+    },
+    {
+        "returns": 21.734233878035866,
+        "window": 234,
+        "position_size": 1,
+        "z_score": 2.906560270839827
+    },
+    {
+        "returns": -0.004417696395421444,
+        "window": 436,
+        "position_size": 1,
+        "z_score": 3.633753978998211
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 566,
+        "position_size": 1,
+        "z_score": 3.424453525881875
+    },
+    {
+        "returns": 17.6413590150421,
+        "window": 296,
+        "position_size": 1,
+        "z_score": 2.6936195254708224
+    },
+    {
+        "returns": 0.0,
+        "window": 413,
+        "position_size": 1,
+        "z_score": 3.8200489387743195
+    },
+    {
+        "returns": -40.33087815157842,
+        "window": 186,
+        "position_size": 1,
+        "z_score": 2.173906429088005
+    },
+    {
+        "returns": 46.37978088029081,
+        "window": 475,
+        "position_size": 1,
+        "z_score": 2.383361473290428
+    },
+    {
+        "returns": 40.134658835107984,
+        "window": 458,
+        "position_size": 1,
+        "z_score": 2.4100031796085677
+    },
+    {
+        "returns": 41.934651678592445,
+        "window": 594,
+        "position_size": 1,
+        "z_score": 2.0804993543241994
+    },
+    {
+        "returns": 13.605666828208314,
+        "window": 573,
+        "position_size": 1,
+        "z_score": 3.3645113445256145
+    },
+    {
+        "returns": 0.0,
+        "window": 399,
+        "position_size": 1,
+        "z_score": 3.9628365449949903
+    },
+    {
+        "returns": 32.949115152933246,
+        "window": 426,
+        "position_size": 1,
+        "z_score": 2.2474374049251713
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 590,
+        "position_size": 1,
+        "z_score": 3.3084627182839155
+    },
+    {
+        "returns": -24.37631661976593,
+        "window": 247,
+        "position_size": 1,
+        "z_score": 2.1149113372888184
+    },
+    {
+        "returns": -51.548247211968146,
+        "window": 184,
+        "position_size": 1,
+        "z_score": 2.0999286575058957
+    },
+    {
+        "returns": -7.69345818678471,
+        "window": 186,
+        "position_size": 1,
+        "z_score": 2.5533440862541834
+    },
+    {
+        "returns": -88.41124122917472,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 2.0576789787219614
+    },
+    {
+        "returns": 54.55179838684353,
+        "window": 479,
+        "position_size": 1,
+        "z_score": 2.2095699047797845
+    },
+    {
+        "returns": 17.10792299682771,
+        "window": 338,
+        "position_size": 1,
+        "z_score": 3.6381129526251548
+    },
+    {
+        "returns": -13.07702677149905,
+        "window": 174,
+        "position_size": 1,
+        "z_score": 2.6366350683165214
+    },
+    {
+        "returns": 21.09305434464045,
+        "window": 358,
+        "position_size": 1,
+        "z_score": 2.283669904106074
+    },
+    {
+        "returns": -41.557338109534385,
+        "window": 142,
+        "position_size": 1,
+        "z_score": 2.733377300709006
+    },
+    {
+        "returns": 36.039209509505326,
+        "window": 575,
+        "position_size": 1,
+        "z_score": 2.036582465827725
+    },
+    {
+        "returns": 8.637654501588713,
+        "window": 373,
+        "position_size": 1,
+        "z_score": 2.0311126397846158
+    },
+    {
+        "returns": 15.029755249217033,
+        "window": 326,
+        "position_size": 1,
+        "z_score": 3.4050103778613856
+    },
+    {
+        "returns": 1.0930468820708938,
+        "window": 399,
+        "position_size": 1,
+        "z_score": 3.406916214108472
+    },
+    {
+        "returns": 18.104722106199915,
+        "window": 277,
+        "position_size": 1,
+        "z_score": 2.51339232161406
+    },
+    {
+        "returns": -88.7398727019322,
+        "window": 122,
+        "position_size": 1,
+        "z_score": 2.36895860773317
+    },
+    {
+        "returns": -43.362304530649226,
+        "window": 207,
+        "position_size": 1,
+        "z_score": 2.1574181851028262
+    },
+    {
+        "returns": 20.180224749181434,
+        "window": 405,
+        "position_size": 1,
+        "z_score": 3.0733568637158126
+    },
+    {
+        "returns": 0.0,
+        "window": 433,
+        "position_size": 1,
+        "z_score": 3.784080811853694
+    },
+    {
+        "returns": 14.549437996153983,
+        "window": 574,
+        "position_size": 1,
+        "z_score": 3.207061526530747
+    },
+    {
+        "returns": 12.02888066348396,
+        "window": 242,
+        "position_size": 1,
+        "z_score": 2.987904798036339
+    },
+    {
+        "returns": 11.138666654744156,
+        "window": 241,
+        "position_size": 1,
+        "z_score": 3.512915314751116
+    },
+    {
+        "returns": 0.0,
+        "window": 417,
+        "position_size": 1,
+        "z_score": 3.995848489491143
+    },
+    {
+        "returns": 5.27630589781802,
+        "window": 282,
+        "position_size": 1,
+        "z_score": 2.180177662393785
+    },
+    {
+        "returns": 17.91703127502683,
+        "window": 401,
+        "position_size": 1,
+        "z_score": 2.9439867896660523
+    },
+    {
+        "returns": 18.620638012848076,
+        "window": 141,
+        "position_size": 1,
+        "z_score": 3.744128772036814
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 254,
+        "position_size": 1,
+        "z_score": 3.9504852078653876
+    },
+    {
+        "returns": 19.522556834512898,
+        "window": 374,
+        "position_size": 1,
+        "z_score": 3.0965473788539133
+    },
+    {
+        "returns": 40.75463112062175,
+        "window": 552,
+        "position_size": 1,
+        "z_score": 2.3303838812913042
+    },
+    {
+        "returns": 22.222759656544667,
+        "window": 121,
+        "position_size": 1,
+        "z_score": 3.9052800924317035
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 383,
+        "position_size": 1,
+        "z_score": 3.77452248424764
+    },
+    {
+        "returns": 36.97033147954403,
+        "window": 456,
+        "position_size": 1,
+        "z_score": 2.8747431840709554
+    },
+    {
+        "returns": 50.94380433665333,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 2.049457175008893
+    },
+    {
+        "returns": 43.554997965786015,
+        "window": 553,
+        "position_size": 1,
+        "z_score": 2.059368823320982
+    },
+    {
+        "returns": 26.353288025037045,
+        "window": 428,
+        "position_size": 1,
+        "z_score": 2.9962567317504236
+    },
+    {
+        "returns": -7.121540260905476,
+        "window": 243,
+        "position_size": 1,
+        "z_score": 2.214427128756785
+    },
+    {
+        "returns": 50.90965629226457,
+        "window": 496,
+        "position_size": 1,
+        "z_score": 2.114679393149923
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 483,
+        "position_size": 1,
+        "z_score": 3.328989320034406
+    },
+    {
+        "returns": 0.10558407686266946,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 3.0845199726528545
+    },
+    {
+        "returns": 11.752248721656315,
+        "window": 442,
+        "position_size": 1,
+        "z_score": 3.1414159203091385
+    },
+    {
+        "returns": 27.424483787627423,
+        "window": 307,
+        "position_size": 1,
+        "z_score": 3.0397739856473347
+    },
+    {
+        "returns": 0.0,
+        "window": 440,
+        "position_size": 1,
+        "z_score": 3.9635208491782086
+    },
+    {
+        "returns": 19.2260770435812,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 3.3575868472218144
+    },
+    {
+        "returns": 39.924449079198894,
+        "window": 495,
+        "position_size": 1,
+        "z_score": 2.9373301893644834
+    },
+    {
+        "returns": 19.537350873901232,
+        "window": 411,
+        "position_size": 1,
+        "z_score": 2.0926695003925904
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 472,
+        "position_size": 1,
+        "z_score": 3.4756335066219037
+    },
+    {
+        "returns": 52.67249400156834,
+        "window": 499,
+        "position_size": 1,
+        "z_score": 2.166139744575677
+    },
+    {
+        "returns": 13.651057047510903,
+        "window": 129,
+        "position_size": 1,
+        "z_score": 3.6503587429711013
+    },
+    {
+        "returns": -9.228252152646519,
+        "window": 120,
+        "position_size": 1,
+        "z_score": 3.5267009183472746
+    },
+    {
+        "returns": 0.0,
+        "window": 404,
+        "position_size": 1,
+        "z_score": 3.891912314587781
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 284,
+        "position_size": 1,
+        "z_score": 3.7906966782741818
+    },
+    {
+        "returns": 16.461156579133558,
+        "window": 250,
+        "position_size": 1,
+        "z_score": 3.6911500094759964
+    },
+    {
+        "returns": 24.64734016768375,
+        "window": 264,
+        "position_size": 1,
+        "z_score": 2.8849429405120848
+    },
+    {
+        "returns": 8.531170059137821,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 3.568033698801737
+    },
+    {
+        "returns": 31.513295662972496,
+        "window": 362,
+        "position_size": 1,
+        "z_score": 2.3569158322103414
+    },
+    {
+        "returns": 1.8925338969279437,
+        "window": 492,
+        "position_size": 1,
+        "z_score": 3.5508093508364036
+    },
+    {
+        "returns": 11.138666654744156,
+        "window": 236,
+        "position_size": 1,
+        "z_score": 3.5289533359014933
+    },
+    {
+        "returns": 46.67475873065359,
+        "window": 476,
+        "position_size": 1,
+        "z_score": 2.699922873966223
+    },
+    {
+        "returns": 7.165759104674407,
+        "window": 427,
+        "position_size": 1,
+        "z_score": 3.1573997296345837
+    },
+    {
+        "returns": -62.54802555919423,
+        "window": 167,
+        "position_size": 1,
+        "z_score": 2.160224695678396
+    },
+    {
+        "returns": -30.25201373568666,
+        "window": 115,
+        "position_size": 1,
+        "z_score": 2.9206800379424194
+    },
+    {
+        "returns": -75.80824350007356,
+        "window": 128,
+        "position_size": 1,
+        "z_score": 2.6634365955225014
+    },
+    {
+        "returns": 4.928374423549485,
+        "window": 452,
+        "position_size": 1,
+        "z_score": 3.4953634419118575
+    },
+    {
+        "returns": 13.059028570402234,
+        "window": 596,
+        "position_size": 1,
+        "z_score": 3.399032925822375
+    },
+    {
+        "returns": -17.79557071621184,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 2.5274135916556153
+    },
+    {
+        "returns": -74.27311132250338,
+        "window": 111,
+        "position_size": 1,
+        "z_score": 2.6264467121091206
+    },
+    {
+        "returns": 23.735987232657862,
+        "window": 298,
+        "position_size": 1,
+        "z_score": 2.481488515067107
+    },
+    {
+        "returns": 38.904557955890596,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 2.76372961835844
+    },
+    {
+        "returns": 20.547828904200287,
+        "window": 313,
+        "position_size": 1,
+        "z_score": 2.426556497570526
+    },
+    {
+        "returns": 24.592365064304204,
+        "window": 596,
+        "position_size": 1,
+        "z_score": 2.610386275996781
+    },
+    {
+        "returns": 38.904557955890596,
+        "window": 506,
+        "position_size": 1,
+        "z_score": 2.7782066528073037
+    },
+    {
+        "returns": 8.682558882022477,
+        "window": 286,
+        "position_size": 1,
+        "z_score": 2.250076249058912
+    },
+    {
+        "returns": 17.685275779498397,
+        "window": 267,
+        "position_size": 1,
+        "z_score": 2.596762866013206
+    },
+    {
+        "returns": 0.0,
+        "window": 450,
+        "position_size": 1,
+        "z_score": 3.6280222615793822
+    },
+    {
+        "returns": 18.930760686105486,
+        "window": 481,
+        "position_size": 1,
+        "z_score": 3.026525145419177
+    },
+    {
+        "returns": 9.268659875302546,
+        "window": 138,
+        "position_size": 1,
+        "z_score": 3.3680250088656067
+    },
+    {
+        "returns": 0.3727345043321293,
+        "window": 438,
+        "position_size": 1,
+        "z_score": 3.635183208411185
+    },
+    {
+        "returns": 11.001431790292827,
+        "window": 261,
+        "position_size": 1,
+        "z_score": 3.328065751792942
+    },
+    {
+        "returns": -38.22794439383938,
+        "window": 149,
+        "position_size": 1,
+        "z_score": 2.587120598992567
+    },
+    {
+        "returns": -59.44683146140551,
+        "window": 149,
+        "position_size": 1,
+        "z_score": 2.2800099513868504
+    },
+    {
+        "returns": 11.252398130728807,
+        "window": 246,
+        "position_size": 1,
+        "z_score": 2.59667389912149
+    },
+    {
+        "returns": 24.510430372064093,
+        "window": 176,
+        "position_size": 1,
+        "z_score": 3.6593269601954432
+    },
+    {
+        "returns": 23.731097597047437,
+        "window": 135,
+        "position_size": 1,
+        "z_score": 3.97429420608945
+    },
+    {
+        "returns": 0.0,
+        "window": 536,
+        "position_size": 1,
+        "z_score": 3.95491820520441
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 511,
+        "position_size": 1,
+        "z_score": 3.2526717072073743
+    },
+    {
+        "returns": 38.69200330987837,
+        "window": 401,
+        "position_size": 1,
+        "z_score": 2.6618264419745294
+    },
+    {
+        "returns": 28.902638421337542,
+        "window": 426,
+        "position_size": 1,
+        "z_score": 2.1694223246652333
+    },
+    {
+        "returns": 19.912693387400168,
+        "window": 192,
+        "position_size": 1,
+        "z_score": 3.697654600330801
+    },
+    {
+        "returns": 24.918038995881943,
+        "window": 599,
+        "position_size": 1,
+        "z_score": 2.917958464048753
+    },
+    {
+        "returns": 10.882543153004917,
+        "window": 123,
+        "position_size": 1,
+        "z_score": 3.7426843913621073
+    },
+    {
+        "returns": 6.720952072082355,
+        "window": 596,
+        "position_size": 1,
+        "z_score": 3.559843491921499
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 487,
+        "position_size": 1,
+        "z_score": 3.591471098023334
+    },
+    {
+        "returns": 22.43303605526239,
+        "window": 137,
+        "position_size": 1,
+        "z_score": 3.784624389125079
+    },
+    {
+        "returns": -51.38626082638234,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 2.254272306150641
+    },
+    {
+        "returns": 3.140129683405803,
+        "window": 154,
+        "position_size": 1,
+        "z_score": 3.054182620485867
+    },
+    {
+        "returns": 50.321464090291784,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 2.250880110185017
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 597,
+        "position_size": 1,
+        "z_score": 3.718035335899307
+    },
+    {
+        "returns": -5.875495237544101,
+        "window": 231,
+        "position_size": 1,
+        "z_score": 2.2968262172315486
+    },
+    {
+        "returns": 22.873907936623482,
+        "window": 338,
+        "position_size": 1,
+        "z_score": 2.8050477869749066
+    },
+    {
+        "returns": 11.602199492896261,
+        "window": 240,
+        "position_size": 1,
+        "z_score": 3.1045016664711773
+    },
+    {
+        "returns": 11.833071282882429,
+        "window": 349,
+        "position_size": 1,
+        "z_score": 2.262673824357157
+    },
+    {
+        "returns": -0.2597496506512016,
+        "window": 375,
+        "position_size": 1,
+        "z_score": 3.7696623734419314
+    },
+    {
+        "returns": 28.099675275288746,
+        "window": 564,
+        "position_size": 1,
+        "z_score": 2.8048185782413086
+    },
+    {
+        "returns": 9.425524196250763,
+        "window": 134,
+        "position_size": 1,
+        "z_score": 3.4003582134096355
+    },
+    {
+        "returns": 26.47268227062068,
+        "window": 541,
+        "position_size": 1,
+        "z_score": 2.8000580844574
+    },
+    {
+        "returns": -66.71835966814979,
+        "window": 144,
+        "position_size": 1,
+        "z_score": 2.34849527152903
+    },
+    {
+        "returns": -0.20198755750766395,
+        "window": 355,
+        "position_size": 1,
+        "z_score": 2.168797284448023
+    },
+    {
+        "returns": 3.069772925145344,
+        "window": 148,
+        "position_size": 1,
+        "z_score": 3.110660687415707
+    },
+    {
+        "returns": 23.145113871907824,
+        "window": 328,
+        "position_size": 1,
+        "z_score": 3.026435566474041
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 302,
+        "position_size": 1,
+        "z_score": 3.9135033918416475
+    },
+    {
+        "returns": 36.44886986660504,
+        "window": 396,
+        "position_size": 1,
+        "z_score": 2.430315365437864
+    },
+    {
+        "returns": -0.6880806893541376,
+        "window": 348,
+        "position_size": 1,
+        "z_score": 3.873042057346367
+    },
+    {
+        "returns": 1.0930468820708938,
+        "window": 403,
+        "position_size": 1,
+        "z_score": 3.4041541831072584
+    },
+    {
+        "returns": 35.136911079328456,
+        "window": 523,
+        "position_size": 1,
+        "z_score": 2.717034593749392
+    },
+    {
+        "returns": 38.56342857488312,
+        "window": 536,
+        "position_size": 1,
+        "z_score": 2.2467614426769105
+    },
+    {
+        "returns": -108.98092341481834,
+        "window": 108,
+        "position_size": 1,
+        "z_score": 2.4664862105077745
+    },
+    {
+        "returns": 34.44750995040681,
+        "window": 461,
+        "position_size": 1,
+        "z_score": 2.0232184062545726
+    },
+    {
+        "returns": 47.44413945620818,
+        "window": 466,
+        "position_size": 1,
+        "z_score": 2.339701742467552
+    },
+    {
+        "returns": 28.171488536018842,
+        "window": 433,
+        "position_size": 1,
+        "z_score": 2.943167428946165
+    },
+    {
+        "returns": 47.1509641094633,
+        "window": 468,
+        "position_size": 1,
+        "z_score": 2.2782600937288935
+    },
+    {
+        "returns": 19.522909037342515,
+        "window": 341,
+        "position_size": 1,
+        "z_score": 3.0662049873129646
+    },
+    {
+        "returns": 29.65351797134508,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 3.614527084976287
+    },
+    {
+        "returns": 41.585591535216054,
+        "window": 545,
+        "position_size": 1,
+        "z_score": 2.4052689956010056
+    },
+    {
+        "returns": 23.160903427504536,
+        "window": 293,
+        "position_size": 1,
+        "z_score": 2.9462526662339323
+    },
+    {
+        "returns": 20.952482963382863,
+        "window": 181,
+        "position_size": 1,
+        "z_score": 3.665652455979198
+    },
+    {
+        "returns": -0.39786468952524956,
+        "window": 369,
+        "position_size": 1,
+        "z_score": 3.490765245280529
+    },
+    {
+        "returns": 17.41344473589311,
+        "window": 418,
+        "position_size": 1,
+        "z_score": 3.1389290793484337
+    },
+    {
+        "returns": 9.500252824338077,
+        "window": 257,
+        "position_size": 1,
+        "z_score": 3.514665866100417
+    },
+    {
+        "returns": 15.246562658111088,
+        "window": 370,
+        "position_size": 1,
+        "z_score": 2.8180544811970236
+    },
+    {
+        "returns": 34.21568717039872,
+        "window": 453,
+        "position_size": 1,
+        "z_score": 2.1059031534213206
+    },
+    {
+        "returns": 13.059028570402234,
+        "window": 593,
+        "position_size": 1,
+        "z_score": 3.390009038265104
+    },
+    {
+        "returns": 19.747585461831022,
+        "window": 390,
+        "position_size": 1,
+        "z_score": 2.1269249957945933
+    },
+    {
+        "returns": 11.034864235035457,
+        "window": 249,
+        "position_size": 1,
+        "z_score": 3.4999546677368434
+    },
+    {
+        "returns": 24.880669881389622,
+        "window": 354,
+        "position_size": 1,
+        "z_score": 3.2496414287023194
+    },
+    {
+        "returns": -42.31991515371351,
+        "window": 106,
+        "position_size": 1,
+        "z_score": 3.272456580840853
+    },
+    {
+        "returns": 21.933983781895677,
+        "window": 197,
+        "position_size": 1,
+        "z_score": 3.7308159126854683
+    },
+    {
+        "returns": -0.021824931196988473,
+        "window": 416,
+        "position_size": 1,
+        "z_score": 3.690705217621182
+    },
+    {
+        "returns": -0.28157458184819006,
+        "window": 379,
+        "position_size": 1,
+        "z_score": 3.695995130608179
+    },
+    {
+        "returns": 0.0,
+        "window": 572,
+        "position_size": 1,
+        "z_score": 3.928692019864096
+    },
+    {
+        "returns": 15.558816846409172,
+        "window": 327,
+        "position_size": 1,
+        "z_score": 3.843453659663939
+    },
+    {
+        "returns": 0.0,
+        "window": 572,
+        "position_size": 1,
+        "z_score": 3.902274299895347
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 268,
+        "position_size": 1,
+        "z_score": 3.8178251988218976
+    },
+    {
+        "returns": 48.205131107603165,
+        "window": 506,
+        "position_size": 1,
+        "z_score": 2.1410671135543438
+    },
+    {
+        "returns": 20.46731911853817,
+        "window": 495,
+        "position_size": 1,
+        "z_score": 3.0649203674533774
+    },
+    {
+        "returns": 34.30310044908924,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 2.4764918352790417
+    },
+    {
+        "returns": 23.08872962835062,
+        "window": 347,
+        "position_size": 1,
+        "z_score": 3.2734712953687666
+    },
+    {
+        "returns": 19.562656063570103,
+        "window": 347,
+        "position_size": 1,
+        "z_score": 2.83188186268376
+    },
+    {
+        "returns": 41.90242801609725,
+        "window": 590,
+        "position_size": 1,
+        "z_score": 2.07802943622722
+    },
+    {
+        "returns": 26.015807205195188,
+        "window": 304,
+        "position_size": 1,
+        "z_score": 2.5022913951918726
+    },
+    {
+        "returns": 11.034864235035457,
+        "window": 251,
+        "position_size": 1,
+        "z_score": 3.490577119066656
+    },
+    {
+        "returns": 13.405024366993985,
+        "window": 596,
+        "position_size": 1,
+        "z_score": 3.269886791470605
+    },
+    {
+        "returns": 27.21962942937239,
+        "window": 555,
+        "position_size": 1,
+        "z_score": 2.7354351994473607
+    },
+    {
+        "returns": 11.569693557822575,
+        "window": 468,
+        "position_size": 1,
+        "z_score": 3.070332092333876
+    },
+    {
+        "returns": 3.7448850011494415,
+        "window": 542,
+        "position_size": 1,
+        "z_score": 3.658603678619442
+    },
+    {
+        "returns": 18.070450242030347,
+        "window": 409,
+        "position_size": 1,
+        "z_score": 2.8887998199170015
+    },
+    {
+        "returns": 3.9845436177699867,
+        "window": 174,
+        "position_size": 1,
+        "z_score": 3.266998111764703
+    },
+    {
+        "returns": 22.409027052383408,
+        "window": 382,
+        "position_size": 1,
+        "z_score": 2.161346347655554
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 3.4438852748646505
+    },
+    {
+        "returns": 53.29149021303897,
+        "window": 505,
+        "position_size": 1,
+        "z_score": 2.3211332306928143
+    },
+    {
+        "returns": -42.47006084083364,
+        "window": 116,
+        "position_size": 1,
+        "z_score": 2.982035114032098
+    },
+    {
+        "returns": 17.805850859093198,
+        "window": 390,
+        "position_size": 1,
+        "z_score": 3.1485913781507975
+    },
+    {
+        "returns": 26.501775117325906,
+        "window": 521,
+        "position_size": 1,
+        "z_score": 2.926558853240859
+    },
+    {
+        "returns": 22.840610045587937,
+        "window": 597,
+        "position_size": 1,
+        "z_score": 2.5892357680042717
+    },
+    {
+        "returns": 30.397997383460506,
+        "window": 431,
+        "position_size": 1,
+        "z_score": 2.1751546691578145
+    },
+    {
+        "returns": 30.7102663629812,
+        "window": 366,
+        "position_size": 1,
+        "z_score": 2.303361499598992
+    },
+    {
+        "returns": 46.870932272858454,
+        "window": 446,
+        "position_size": 1,
+        "z_score": 2.517001045847049
+    },
+    {
+        "returns": 1.3136067372608977,
+        "window": 280,
+        "position_size": 1,
+        "z_score": 2.127069157350025
+    },
+    {
+        "returns": -0.021824931196988473,
+        "window": 426,
+        "position_size": 1,
+        "z_score": 3.558798710843412
+    },
+    {
+        "returns": 11.55350057388614,
+        "window": 305,
+        "position_size": 1,
+        "z_score": 3.312685057730109
+    },
+    {
+        "returns": 19.150272880044668,
+        "window": 309,
+        "position_size": 1,
+        "z_score": 2.73612039368789
+    },
+    {
+        "returns": 6.9757644065193745,
+        "window": 316,
+        "position_size": 1,
+        "z_score": 3.4867173688783555
+    },
+    {
+        "returns": 0.0,
+        "window": 408,
+        "position_size": 1,
+        "z_score": 3.9682022243336075
+    },
+    {
+        "returns": 37.83970840483107,
+        "window": 550,
+        "position_size": 1,
+        "z_score": 2.6789529435029977
+    },
+    {
+        "returns": 20.349039668427395,
+        "window": 395,
+        "position_size": 1,
+        "z_score": 3.316053785381827
+    },
+    {
+        "returns": 17.706257434474537,
+        "window": 483,
+        "position_size": 1,
+        "z_score": 3.049073436604486
+    },
+    {
+        "returns": 17.854534331011564,
+        "window": 220,
+        "position_size": 1,
+        "z_score": 2.698839942776255
+    },
+    {
+        "returns": 30.6660678489784,
+        "window": 292,
+        "position_size": 1,
+        "z_score": 3.045667996513763
+    },
+    {
+        "returns": 4.8797586604812295,
+        "window": 258,
+        "position_size": 1,
+        "z_score": 3.7127485535080043
+    },
+    {
+        "returns": 3.6865877734903734,
+        "window": 349,
+        "position_size": 1,
+        "z_score": 2.1236052231559857
+    },
+    {
+        "returns": 11.86349092787168,
+        "window": 306,
+        "position_size": 1,
+        "z_score": 3.480818554217909
+    },
+    {
+        "returns": 41.44056030200136,
+        "window": 430,
+        "position_size": 1,
+        "z_score": 2.3810676742534334
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 568,
+        "position_size": 1,
+        "z_score": 3.3882162865044227
+    },
+    {
+        "returns": 20.803303915675087,
+        "window": 351,
+        "position_size": 1,
+        "z_score": 2.854185480816678
+    },
+    {
+        "returns": 0.0,
+        "window": 406,
+        "position_size": 1,
+        "z_score": 3.7196797428445922
+    },
+    {
+        "returns": 0.8674209002242605,
+        "window": 389,
+        "position_size": 1,
+        "z_score": 3.607931004838227
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 536,
+        "position_size": 1,
+        "z_score": 3.3626370659236953
+    },
+    {
+        "returns": -51.9387642216268,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 2.273976995633328
+    },
+    {
+        "returns": 0.0,
+        "window": 438,
+        "position_size": 1,
+        "z_score": 3.847730183652624
+    },
+    {
+        "returns": 17.32187854306062,
+        "window": 381,
+        "position_size": 1,
+        "z_score": 2.9849348389404735
+    },
+    {
+        "returns": 1.4479197809414472,
+        "window": 315,
+        "position_size": 1,
+        "z_score": 2.1524585352379875
+    },
+    {
+        "returns": 32.598994506341796,
+        "window": 342,
+        "position_size": 1,
+        "z_score": 2.574517676227822
+    },
+    {
+        "returns": 45.12484450323518,
+        "window": 417,
+        "position_size": 1,
+        "z_score": 2.550131010595988
+    },
+    {
+        "returns": 15.689790395577347,
+        "window": 209,
+        "position_size": 1,
+        "z_score": 3.569764069117161
+    },
+    {
+        "returns": -68.19039073960266,
+        "window": 187,
+        "position_size": 1,
+        "z_score": 2.0234448932576923
+    },
+    {
+        "returns": 21.374758821767045,
+        "window": 386,
+        "position_size": 1,
+        "z_score": 3.3284186717755953
+    },
+    {
+        "returns": 15.940142622120447,
+        "window": 325,
+        "position_size": 1,
+        "z_score": 2.414640118011432
+    },
+    {
+        "returns": 19.514033037415857,
+        "window": 297,
+        "position_size": 1,
+        "z_score": 2.3275990859078646
+    },
+    {
+        "returns": -4.173297583066187,
+        "window": 167,
+        "position_size": 1,
+        "z_score": 2.8779371192460106
+    },
+    {
+        "returns": -20.791661709368782,
+        "window": 121,
+        "position_size": 1,
+        "z_score": 3.5100083866783063
+    },
+    {
+        "returns": 49.034988705127034,
+        "window": 489,
+        "position_size": 1,
+        "z_score": 2.404107133975657
+    },
+    {
+        "returns": 18.78264957683473,
+        "window": 339,
+        "position_size": 1,
+        "z_score": 2.640902292572303
+    },
+    {
+        "returns": 45.40293474208306,
+        "window": 532,
+        "position_size": 1,
+        "z_score": 2.2196164451683558
+    },
+    {
+        "returns": 50.6854399686988,
+        "window": 432,
+        "position_size": 1,
+        "z_score": 2.55085866865078
+    },
+    {
+        "returns": -34.278421784064676,
+        "window": 253,
+        "position_size": 1,
+        "z_score": 2.048296314808809
+    },
+    {
+        "returns": 44.16241744873696,
+        "window": 361,
+        "position_size": 1,
+        "z_score": 2.5939992118484043
+    },
+    {
+        "returns": 38.904557955890596,
+        "window": 500,
+        "position_size": 1,
+        "z_score": 2.7530226781561513
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 552,
+        "position_size": 1,
+        "z_score": 3.515059551565175
+    },
+    {
+        "returns": 12.30655782898475,
+        "window": 308,
+        "position_size": 1,
+        "z_score": 3.704558274353127
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 263,
+        "position_size": 1,
+        "z_score": 3.8103360197331515
+    },
+    {
+        "returns": 21.80526131240822,
+        "window": 347,
+        "position_size": 1,
+        "z_score": 2.682259721704362
+    },
+    {
+        "returns": 37.974961207958586,
+        "window": 460,
+        "position_size": 1,
+        "z_score": 2.7856378901943915
+    },
+    {
+        "returns": 11.241459642860264,
+        "window": 303,
+        "position_size": 1,
+        "z_score": 3.4019210744831665
+    },
+    {
+        "returns": -4.4489214630420975,
+        "window": 241,
+        "position_size": 1,
+        "z_score": 2.2639726950642336
+    },
+    {
+        "returns": 5.42509967664796,
+        "window": 352,
+        "position_size": 1,
+        "z_score": 3.592304431028504
+    },
+    {
+        "returns": 18.12320773406782,
+        "window": 402,
+        "position_size": 1,
+        "z_score": 2.8912843294227026
+    },
+    {
+        "returns": 30.37331001518055,
+        "window": 383,
+        "position_size": 1,
+        "z_score": 2.6736667350491476
+    },
+    {
+        "returns": 13.639029963224857,
+        "window": 352,
+        "position_size": 1,
+        "z_score": 2.9859818149597808
+    },
+    {
+        "returns": 33.01065890413747,
+        "window": 587,
+        "position_size": 1,
+        "z_score": 2.5046950996400463
+    },
+    {
+        "returns": 27.621489606482555,
+        "window": 582,
+        "position_size": 1,
+        "z_score": 2.7777236039105517
+    },
+    {
+        "returns": 20.212110726268065,
+        "window": 393,
+        "position_size": 1,
+        "z_score": 2.787023839179972
+    },
+    {
+        "returns": 12.45542108377822,
+        "window": 308,
+        "position_size": 1,
+        "z_score": 3.2832952551541883
+    },
+    {
+        "returns": 11.446768286699808,
+        "window": 202,
+        "position_size": 1,
+        "z_score": 3.312220862534878
+    },
+    {
+        "returns": 35.24301680405665,
+        "window": 575,
+        "position_size": 1,
+        "z_score": 2.574220724467218
+    },
+    {
+        "returns": 6.965600292852741,
+        "window": 370,
+        "position_size": 1,
+        "z_score": 2.0181720676219026
+    },
+    {
+        "returns": 0.0,
+        "window": 421,
+        "position_size": 1,
+        "z_score": 3.7670600938287158
+    },
+    {
+        "returns": 35.68380871465797,
+        "window": 557,
+        "position_size": 1,
+        "z_score": 2.459160833682084
+    },
+    {
+        "returns": 18.475220472432284,
+        "window": 196,
+        "position_size": 1,
+        "z_score": 3.481583565563435
+    },
+    {
+        "returns": 21.143472343168014,
+        "window": 560,
+        "position_size": 1,
+        "z_score": 2.952932413723021
+    },
+    {
+        "returns": 38.637775634000946,
+        "window": 162,
+        "position_size": 1,
+        "z_score": 3.6750171920125685
+    },
+    {
+        "returns": 29.45977705244718,
+        "window": 389,
+        "position_size": 1,
+        "z_score": 2.393188470202679
+    },
+    {
+        "returns": 8.85941087027777,
+        "window": 269,
+        "position_size": 1,
+        "z_score": 2.3652124763433378
+    },
+    {
+        "returns": 4.113820893477168,
+        "window": 159,
+        "position_size": 1,
+        "z_score": 3.062422040570093
+    },
+    {
+        "returns": 16.297704051582514,
+        "window": 302,
+        "position_size": 1,
+        "z_score": 2.6341058388329346
+    },
+    {
+        "returns": 17.65145342779647,
+        "window": 219,
+        "position_size": 1,
+        "z_score": 3.677565014225612
+    },
+    {
+        "returns": 23.145113871907824,
+        "window": 329,
+        "position_size": 1,
+        "z_score": 3.012959143717943
+    },
+    {
+        "returns": 16.913689098302257,
+        "window": 289,
+        "position_size": 1,
+        "z_score": 2.816698965508193
+    },
+    {
+        "returns": 15.558816846409172,
+        "window": 312,
+        "position_size": 1,
+        "z_score": 3.7355995322930475
+    },
+    {
+        "returns": 1.5865868157279692,
+        "window": 182,
+        "position_size": 1,
+        "z_score": 3.1104276421179886
+    },
+    {
+        "returns": 3.409386690675092,
+        "window": 216,
+        "position_size": 1,
+        "z_score": 3.093166608903252
+    },
+    {
+        "returns": 0.0,
+        "window": 398,
+        "position_size": 1,
+        "z_score": 3.9080251421571264
+    },
+    {
+        "returns": 23.538022587704063,
+        "window": 337,
+        "position_size": 1,
+        "z_score": 2.853366692876439
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 373,
+        "position_size": 1,
+        "z_score": 3.9289793524266923
+    },
+    {
+        "returns": 0.7548522605595736,
+        "window": 262,
+        "position_size": 1,
+        "z_score": 2.189085275248626
+    },
+    {
+        "returns": 8.127742022434859,
+        "window": 295,
+        "position_size": 1,
+        "z_score": 3.4763118237519124
+    },
+    {
+        "returns": 35.688937801102156,
+        "window": 537,
+        "position_size": 1,
+        "z_score": 2.700385140919166
+    },
+    {
+        "returns": 28.658934566005428,
+        "window": 557,
+        "position_size": 1,
+        "z_score": 2.481297658646714
+    },
+    {
+        "returns": -4.136533722715285,
+        "window": 333,
+        "position_size": 1,
+        "z_score": 2.0019023110285135
+    },
+    {
+        "returns": 36.050543227193884,
+        "window": 583,
+        "position_size": 1,
+        "z_score": 2.3177594891331257
+    },
+    {
+        "returns": 19.038862313199843,
+        "window": 213,
+        "position_size": 1,
+        "z_score": 3.7737443389148853
+    },
+    {
+        "returns": 0.0,
+        "window": 427,
+        "position_size": 1,
+        "z_score": 3.956332696267141
+    },
+    {
+        "returns": 17.828755053476698,
+        "window": 320,
+        "position_size": 1,
+        "z_score": 2.361671244540448
+    },
+    {
+        "returns": -67.54848887122012,
+        "window": 185,
+        "position_size": 1,
+        "z_score": 2.0338973190322926
+    },
+    {
+        "returns": 28.47499252122816,
+        "window": 356,
+        "position_size": 1,
+        "z_score": 2.3903484038581055
+    },
+    {
+        "returns": 11.001431790292827,
+        "window": 260,
+        "position_size": 1,
+        "z_score": 3.340043651962829
+    },
+    {
+        "returns": 10.646849876525494,
+        "window": 260,
+        "position_size": 1,
+        "z_score": 3.4523881796182243
+    },
+    {
+        "returns": 39.124518927704,
+        "window": 480,
+        "position_size": 1,
+        "z_score": 2.8157551579887707
+    },
+    {
+        "returns": 12.4076060369066,
+        "window": 142,
+        "position_size": 1,
+        "z_score": 3.294986026197325
+    },
+    {
+        "returns": 21.41927603395311,
+        "window": 134,
+        "position_size": 1,
+        "z_score": 3.6788120252149143
+    },
+    {
+        "returns": 0.0,
+        "window": 552,
+        "position_size": 1,
+        "z_score": 3.9978827337968106
+    },
+    {
+        "returns": 6.834033284035968,
+        "window": 224,
+        "position_size": 1,
+        "z_score": 3.092395776208306
+    },
+    {
+        "returns": 44.15142499336457,
+        "window": 466,
+        "position_size": 1,
+        "z_score": 2.401625470801493
+    },
+    {
+        "returns": 21.048171476128346,
+        "window": 320,
+        "position_size": 1,
+        "z_score": 2.425938567159723
+    },
+    {
+        "returns": -12.158929238338487,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 2.8105864552238913
+    },
+    {
+        "returns": 4.5244934292395556,
+        "window": 416,
+        "position_size": 1,
+        "z_score": 3.170050641497703
+    },
+    {
+        "returns": 8.215177144775907,
+        "window": 211,
+        "position_size": 1,
+        "z_score": 3.2541925698698924
+    },
+    {
+        "returns": 15.558816846409172,
+        "window": 321,
+        "position_size": 1,
+        "z_score": 3.779220661551789
+    },
+    {
+        "returns": 16.236116884212606,
+        "window": 598,
+        "position_size": 1,
+        "z_score": 3.1039740905201065
+    },
+    {
+        "returns": 0.9733028563850894,
+        "window": 336,
+        "position_size": 1,
+        "z_score": 2.147723945336608
+    },
+    {
+        "returns": 0.0,
+        "window": 456,
+        "position_size": 1,
+        "z_score": 3.913812880156465
+    },
+    {
+        "returns": 13.02831464629162,
+        "window": 238,
+        "position_size": 1,
+        "z_score": 3.8434837669300324
+    },
+    {
+        "returns": 22.66829503947224,
+        "window": 346,
+        "position_size": 1,
+        "z_score": 3.1209043013874243
+    },
+    {
+        "returns": 44.10923588695573,
+        "window": 461,
+        "position_size": 1,
+        "z_score": 2.7139509679878873
+    },
+    {
+        "returns": -0.7299452656025096,
+        "window": 267,
+        "position_size": 1,
+        "z_score": 3.6571566025651547
+    },
+    {
+        "returns": 4.2679886358394015,
+        "window": 454,
+        "position_size": 1,
+        "z_score": 3.184941136226274
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 518,
+        "position_size": 1,
+        "z_score": 3.2131972152100277
+    },
+    {
+        "returns": 19.20825004541507,
+        "window": 521,
+        "position_size": 1,
+        "z_score": 3.0280054090414126
+    },
+    {
+        "returns": 27.715715950919957,
+        "window": 575,
+        "position_size": 1,
+        "z_score": 2.870134742769633
+    },
+    {
+        "returns": 42.34481334927614,
+        "window": 501,
+        "position_size": 1,
+        "z_score": 2.3796973922834797
+    },
+    {
+        "returns": 42.773413755953925,
+        "window": 437,
+        "position_size": 1,
+        "z_score": 2.2561905213380995
+    },
+    {
+        "returns": 10.646849876525494,
+        "window": 264,
+        "position_size": 1,
+        "z_score": 3.4353091245294234
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 284,
+        "position_size": 1,
+        "z_score": 3.9499834228732715
+    },
+    {
+        "returns": 30.499938892765158,
+        "window": 324,
+        "position_size": 1,
+        "z_score": 3.105540094229422
+    },
+    {
+        "returns": 36.16196815893045,
+        "window": 474,
+        "position_size": 1,
+        "z_score": 2.957484591629066
+    },
+    {
+        "returns": 21.211281685172253,
+        "window": 335,
+        "position_size": 1,
+        "z_score": 3.2732300189805192
+    },
+    {
+        "returns": 22.074022918734727,
+        "window": 285,
+        "position_size": 1,
+        "z_score": 2.5176755022793085
+    },
+    {
+        "returns": 15.76352101856287,
+        "window": 183,
+        "position_size": 1,
+        "z_score": 3.4751287921819958
+    },
+    {
+        "returns": 42.97991934765628,
+        "window": 394,
+        "position_size": 1,
+        "z_score": 2.536785203381272
+    },
+    {
+        "returns": 14.421925722593869,
+        "window": 343,
+        "position_size": 1,
+        "z_score": 2.356167603990526
+    },
+    {
+        "returns": 41.43163047633834,
+        "window": 400,
+        "position_size": 1,
+        "z_score": 2.5339047189312804
+    },
+    {
+        "returns": -41.423335555882886,
+        "window": 163,
+        "position_size": 1,
+        "z_score": 2.3017106823607385
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 304,
+        "position_size": 1,
+        "z_score": 3.9718137443923576
+    },
+    {
+        "returns": -0.7299452656025096,
+        "window": 275,
+        "position_size": 1,
+        "z_score": 3.7048654616882577
+    },
+    {
+        "returns": 8.090079202130028,
+        "window": 251,
+        "position_size": 1,
+        "z_score": 2.5520941909351755
+    },
+    {
+        "returns": 0.9108924958381976,
+        "window": 152,
+        "position_size": 1,
+        "z_score": 3.2042331156644366
+    },
+    {
+        "returns": 14.401290882311969,
+        "window": 566,
+        "position_size": 1,
+        "z_score": 3.106923611543915
+    },
+    {
+        "returns": 16.367183802939735,
+        "window": 403,
+        "position_size": 1,
+        "z_score": 3.133899818399968
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 464,
+        "position_size": 1,
+        "z_score": 3.658026710904422
+    },
+    {
+        "returns": 22.950052877858752,
+        "window": 183,
+        "position_size": 1,
+        "z_score": 3.973860722853056
+    },
+    {
+        "returns": -90.61580742975434,
+        "window": 132,
+        "position_size": 1,
+        "z_score": 2.1149065028486573
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 460,
+        "position_size": 1,
+        "z_score": 3.5862483433223353
+    },
+    {
+        "returns": 13.184196312388622,
+        "window": 199,
+        "position_size": 1,
+        "z_score": 3.172505703361285
+    },
+    {
+        "returns": -45.0538331694363,
+        "window": 197,
+        "position_size": 1,
+        "z_score": 2.1114962325386366
+    },
+    {
+        "returns": 34.91800068815405,
+        "window": 587,
+        "position_size": 1,
+        "z_score": 2.5572399677539153
+    },
+    {
+        "returns": -70.16572359491693,
+        "window": 157,
+        "position_size": 1,
+        "z_score": 2.1507481278850342
+    },
+    {
+        "returns": -0.6880806893541376,
+        "window": 356,
+        "position_size": 1,
+        "z_score": 3.917990753342007
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 536,
+        "position_size": 1,
+        "z_score": 3.4686366656994787
+    },
+    {
+        "returns": 37.36406019206993,
+        "window": 384,
+        "position_size": 1,
+        "z_score": 2.364643179420135
+    },
+    {
+        "returns": 0.0,
+        "window": 595,
+        "position_size": 1,
+        "z_score": 3.952145594977531
+    },
+    {
+        "returns": -14.244985695328069,
+        "window": 211,
+        "position_size": 1,
+        "z_score": 2.4302437449963916
+    },
+    {
+        "returns": 35.54696398006945,
+        "window": 431,
+        "position_size": 1,
+        "z_score": 2.2310663964061144
+    },
+    {
+        "returns": 32.145804159013096,
+        "window": 525,
+        "position_size": 1,
+        "z_score": 2.5922318147023296
+    },
+    {
+        "returns": -29.02521320182541,
+        "window": 239,
+        "position_size": 1,
+        "z_score": 2.0905371880443955
+    },
+    {
+        "returns": -61.85258445406339,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 2.2524427057307026
+    },
+    {
+        "returns": 29.42607003825242,
+        "window": 532,
+        "position_size": 1,
+        "z_score": 2.8896682433505996
+    },
+    {
+        "returns": 42.82655428439375,
+        "window": 567,
+        "position_size": 1,
+        "z_score": 2.026841627338592
+    },
+    {
+        "returns": 4.7781326756601175,
+        "window": 230,
+        "position_size": 1,
+        "z_score": 2.9995178777517566
+    },
+    {
+        "returns": 48.45043568321216,
+        "window": 491,
+        "position_size": 1,
+        "z_score": 2.366003945652631
+    },
+    {
+        "returns": 0.31426362582146794,
+        "window": 429,
+        "position_size": 1,
+        "z_score": 3.6612167997062977
+    },
+    {
+        "returns": 11.828574360365792,
+        "window": 274,
+        "position_size": 1,
+        "z_score": 3.43958192376125
+    },
+    {
+        "returns": 11.569693557822575,
+        "window": 452,
+        "position_size": 1,
+        "z_score": 3.1237012029894275
+    },
+    {
+        "returns": 11.780580827432459,
+        "window": 448,
+        "position_size": 1,
+        "z_score": 3.149408761999452
+    },
+    {
+        "returns": 9.070152710286266,
+        "window": 236,
+        "position_size": 1,
+        "z_score": 3.1649309094966247
+    },
+    {
+        "returns": 3.7448850011494415,
+        "window": 522,
+        "position_size": 1,
+        "z_score": 3.521083563811275
+    },
+    {
+        "returns": -23.857854937952197,
+        "window": 113,
+        "position_size": 1,
+        "z_score": 3.576461423472837
+    },
+    {
+        "returns": -23.127901581169226,
+        "window": 218,
+        "position_size": 1,
+        "z_score": 2.2307174424008163
+    },
+    {
+        "returns": 0.0,
+        "window": 482,
+        "position_size": 1,
+        "z_score": 3.979280507203774
+    },
+    {
+        "returns": 40.533338282349405,
+        "window": 396,
+        "position_size": 1,
+        "z_score": 2.5547686897547237
+    },
+    {
+        "returns": 36.09431770840138,
+        "window": 362,
+        "position_size": 1,
+        "z_score": 2.4310093559749375
+    },
+    {
+        "returns": 39.329997468790225,
+        "window": 485,
+        "position_size": 1,
+        "z_score": 2.8715311376448387
+    },
+    {
+        "returns": 5.952828894370214,
+        "window": 441,
+        "position_size": 1,
+        "z_score": 3.281386400290306
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 261,
+        "position_size": 1,
+        "z_score": 3.837027961165326
+    },
+    {
+        "returns": 27.424483787627423,
+        "window": 314,
+        "position_size": 1,
+        "z_score": 3.012776052883312
+    },
+    {
+        "returns": -161.02725367717812,
+        "window": 101,
+        "position_size": 1,
+        "z_score": 2.111201768542287
+    },
+    {
+        "returns": -42.303600966445174,
+        "window": 108,
+        "position_size": 1,
+        "z_score": 2.942216032027613
+    },
+    {
+        "returns": -32.577339077739,
+        "window": 217,
+        "position_size": 1,
+        "z_score": 2.1386189857341398
+    },
+    {
+        "returns": -1.366847794370642,
+        "window": 165,
+        "position_size": 1,
+        "z_score": 3.1184018829808426
+    },
+    {
+        "returns": 12.49437676547359,
+        "window": 282,
+        "position_size": 1,
+        "z_score": 2.3084400860832197
+    },
+    {
+        "returns": -81.00173313423261,
+        "window": 117,
+        "position_size": 1,
+        "z_score": 2.5282212953518863
+    },
+    {
+        "returns": 11.176337974616445,
+        "window": 278,
+        "position_size": 1,
+        "z_score": 3.197962399271126
+    },
+    {
+        "returns": -30.32538554609073,
+        "window": 126,
+        "position_size": 1,
+        "z_score": 3.1241595016231134
+    },
+    {
+        "returns": -8.564894485666628,
+        "window": 254,
+        "position_size": 1,
+        "z_score": 2.1361689967820325
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 577,
+        "position_size": 1,
+        "z_score": 3.6635484561764153
+    },
+    {
+        "returns": 0.0,
+        "window": 410,
+        "position_size": 1,
+        "z_score": 3.9886278239724846
+    },
+    {
+        "returns": 15.731851283340575,
+        "window": 198,
+        "position_size": 1,
+        "z_score": 3.404219375417144
+    },
+    {
+        "returns": 7.472026700295373,
+        "window": 216,
+        "position_size": 1,
+        "z_score": 3.3375488061176846
+    },
+    {
+        "returns": 11.120088562695173,
+        "window": 354,
+        "position_size": 1,
+        "z_score": 2.8783386163272366
+    },
+    {
+        "returns": 46.78387963827481,
+        "window": 558,
+        "position_size": 1,
+        "z_score": 2.111908903903539
+    },
+    {
+        "returns": -70.16256223643427,
+        "window": 123,
+        "position_size": 1,
+        "z_score": 2.595223848076791
+    },
+    {
+        "returns": 21.545887458865764,
+        "window": 339,
+        "position_size": 1,
+        "z_score": 3.2980000614382
+    },
+    {
+        "returns": 5.989629233403548,
+        "window": 404,
+        "position_size": 1,
+        "z_score": 3.281309240489681
+    },
+    {
+        "returns": 17.234335903430292,
+        "window": 385,
+        "position_size": 1,
+        "z_score": 2.799257115214237
+    },
+    {
+        "returns": 6.2811709562715805,
+        "window": 425,
+        "position_size": 1,
+        "z_score": 3.4274801288087215
+    },
+    {
+        "returns": 23.830245185077274,
+        "window": 402,
+        "position_size": 1,
+        "z_score": 2.7443819715656135
+    },
+    {
+        "returns": -12.992411570449804,
+        "window": 174,
+        "position_size": 1,
+        "z_score": 2.5558852380399806
+    },
+    {
+        "returns": 4.514098367490988,
+        "window": 167,
+        "position_size": 1,
+        "z_score": 3.2954173976459815
+    },
+    {
+        "returns": -0.021824931196988473,
+        "window": 404,
+        "position_size": 1,
+        "z_score": 3.6268933480508765
+    },
+    {
+        "returns": 0.0,
+        "window": 515,
+        "position_size": 1,
+        "z_score": 3.8549155844861502
+    },
+    {
+        "returns": -23.74792344450293,
+        "window": 161,
+        "position_size": 1,
+        "z_score": 2.6395546767774154
+    },
+    {
+        "returns": 24.738775390890623,
+        "window": 326,
+        "position_size": 1,
+        "z_score": 2.874291709147453
+    },
+    {
+        "returns": 51.168384138909914,
+        "window": 448,
+        "position_size": 1,
+        "z_score": 2.363847157067755
+    },
+    {
+        "returns": 0.0,
+        "window": 541,
+        "position_size": 1,
+        "z_score": 3.9368111247226762
+    },
+    {
+        "returns": 11.98755672800462,
+        "window": 278,
+        "position_size": 1,
+        "z_score": 2.2597047529280196
+    },
+    {
+        "returns": 38.68184592847956,
+        "window": 485,
+        "position_size": 1,
+        "z_score": 2.7612384023808136
+    },
+    {
+        "returns": 21.44513994924273,
+        "window": 329,
+        "position_size": 1,
+        "z_score": 2.497660050560911
+    },
+    {
+        "returns": 21.101644201573208,
+        "window": 353,
+        "position_size": 1,
+        "z_score": 3.1160998810932643
+    },
+    {
+        "returns": 2.3671892249944904,
+        "window": 528,
+        "position_size": 1,
+        "z_score": 3.744919733644597
+    },
+    {
+        "returns": -40.90210587295019,
+        "window": 148,
+        "position_size": 1,
+        "z_score": 2.640393602880433
+    },
+    {
+        "returns": -50.598346664292194,
+        "window": 138,
+        "position_size": 1,
+        "z_score": 2.718066298348944
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 483,
+        "position_size": 1,
+        "z_score": 3.3090414238341634
+    },
+    {
+        "returns": 45.35374749387256,
+        "window": 450,
+        "position_size": 1,
+        "z_score": 2.3412485776462812
+    },
+    {
+        "returns": 18.12320773406782,
+        "window": 398,
+        "position_size": 1,
+        "z_score": 2.8496338901857965
+    },
+    {
+        "returns": 0.0,
+        "window": 485,
+        "position_size": 1,
+        "z_score": 3.928212609356047
+    },
+    {
+        "returns": 26.565637372805668,
+        "window": 580,
+        "position_size": 1,
+        "z_score": 2.634513952363272
+    },
+    {
+        "returns": -6.881930790567139,
+        "window": 229,
+        "position_size": 1,
+        "z_score": 2.3122502174094173
+    },
+    {
+        "returns": 34.02903667556893,
+        "window": 437,
+        "position_size": 1,
+        "z_score": 2.1462341147692046
+    },
+    {
+        "returns": 46.078928054517746,
+        "window": 434,
+        "position_size": 1,
+        "z_score": 2.424204309917952
+    },
+    {
+        "returns": 0.0,
+        "window": 520,
+        "position_size": 1,
+        "z_score": 3.9868979354589715
+    },
+    {
+        "returns": 26.214641498976107,
+        "window": 331,
+        "position_size": 1,
+        "z_score": 2.563953642260329
+    },
+    {
+        "returns": 33.23043269375739,
+        "window": 507,
+        "position_size": 1,
+        "z_score": 2.650855731044471
+    },
+    {
+        "returns": -11.252325276886722,
+        "window": 242,
+        "position_size": 1,
+        "z_score": 2.401985607042403
+    },
+    {
+        "returns": 28.445177265151187,
+        "window": 561,
+        "position_size": 1,
+        "z_score": 2.935326715526935
+    },
+    {
+        "returns": 16.572675257818673,
+        "window": 170,
+        "position_size": 1,
+        "z_score": 3.3555741789251914
+    },
+    {
+        "returns": 10.56082803479535,
+        "window": 166,
+        "position_size": 1,
+        "z_score": 3.9416687564134083
+    },
+    {
+        "returns": 17.385133990875147,
+        "window": 248,
+        "position_size": 1,
+        "z_score": 2.7400658904895074
+    },
+    {
+        "returns": 30.40755785121746,
+        "window": 489,
+        "position_size": 1,
+        "z_score": 2.603488892540989
+    },
+    {
+        "returns": 42.93204285116667,
+        "window": 543,
+        "position_size": 1,
+        "z_score": 2.0759050514494457
+    },
+    {
+        "returns": 24.174665415215486,
+        "window": 273,
+        "position_size": 1,
+        "z_score": 2.8562652657752556
+    },
+    {
+        "returns": 0.0,
+        "window": 517,
+        "position_size": 1,
+        "z_score": 3.838891022167746
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 552,
+        "position_size": 1,
+        "z_score": 3.4416149689927353
+    },
+    {
+        "returns": 17.70311630997412,
+        "window": 408,
+        "position_size": 1,
+        "z_score": 3.2027266853296696
+    },
+    {
+        "returns": 22.247694143903573,
+        "window": 280,
+        "position_size": 1,
+        "z_score": 2.90020970167334
+    },
+    {
+        "returns": 14.685359292750945,
+        "window": 520,
+        "position_size": 1,
+        "z_score": 3.093888945267145
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 562,
+        "position_size": 1,
+        "z_score": 3.4076242394718306
+    },
+    {
+        "returns": 42.141011425798524,
+        "window": 446,
+        "position_size": 1,
+        "z_score": 2.2355911895317693
+    },
+    {
+        "returns": 17.944454161578278,
+        "window": 296,
+        "position_size": 1,
+        "z_score": 2.831248522040555
+    },
+    {
+        "returns": 27.924519396077358,
+        "window": 573,
+        "position_size": 1,
+        "z_score": 2.7682664648511617
+    },
+    {
+        "returns": 42.95705338853986,
+        "window": 464,
+        "position_size": 1,
+        "z_score": 2.3804989633399645
+    },
+    {
+        "returns": 15.3051084238366,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 3.3482466031700726
+    },
+    {
+        "returns": 15.555300537125731,
+        "window": 317,
+        "position_size": 1,
+        "z_score": 3.2226337186890857
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 317,
+        "position_size": 1,
+        "z_score": 3.9652590866908293
+    },
+    {
+        "returns": 19.333376973407667,
+        "window": 414,
+        "position_size": 1,
+        "z_score": 2.9406825345815735
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 581,
+        "position_size": 1,
+        "z_score": 3.681850797226631
+    },
+    {
+        "returns": 27.621489606482555,
+        "window": 581,
+        "position_size": 1,
+        "z_score": 2.7695794847008446
+    },
+    {
+        "returns": 32.66077847280053,
+        "window": 328,
+        "position_size": 1,
+        "z_score": 3.1936637131935326
+    },
+    {
+        "returns": -124.20221062437713,
+        "window": 126,
+        "position_size": 1,
+        "z_score": 2.015826575987003
+    },
+    {
+        "returns": 34.4937787690244,
+        "window": 454,
+        "position_size": 1,
+        "z_score": 2.1048074121241953
+    },
+    {
+        "returns": 23.743982308175646,
+        "window": 214,
+        "position_size": 1,
+        "z_score": 2.7462493498356606
+    },
+    {
+        "returns": 19.928862325613636,
+        "window": 349,
+        "position_size": 1,
+        "z_score": 2.8089475116238143
+    },
+    {
+        "returns": 0.9717359799128644,
+        "window": 434,
+        "position_size": 1,
+        "z_score": 3.513502439200206
+    },
+    {
+        "returns": 15.3051084238366,
+        "window": 142,
+        "position_size": 1,
+        "z_score": 3.3763896227888655
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 567,
+        "position_size": 1,
+        "z_score": 3.509456796922567
+    },
+    {
+        "returns": -18.649291360845382,
+        "window": 273,
+        "position_size": 1,
+        "z_score": 2.0735413282374062
+    },
+    {
+        "returns": 21.43624997526672,
+        "window": 354,
+        "position_size": 1,
+        "z_score": 3.1384376566062198
+    },
+    {
+        "returns": 39.2031651540608,
+        "window": 525,
+        "position_size": 1,
+        "z_score": 2.3677805264608827
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 564,
+        "position_size": 1,
+        "z_score": 3.372075581651555
+    },
+    {
+        "returns": 21.13134343861543,
+        "window": 155,
+        "position_size": 1,
+        "z_score": 3.412984260852027
+    },
+    {
+        "returns": -0.021824931196988473,
+        "window": 414,
+        "position_size": 1,
+        "z_score": 3.4553170814815193
+    },
+    {
+        "returns": 2.3671892249944904,
+        "window": 540,
+        "position_size": 1,
+        "z_score": 3.7476060972737475
+    },
+    {
+        "returns": 52.49073905687305,
+        "window": 456,
+        "position_size": 1,
+        "z_score": 2.708247014945683
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 268,
+        "position_size": 1,
+        "z_score": 3.7776653157556637
+    },
+    {
+        "returns": 42.34481334927614,
+        "window": 503,
+        "position_size": 1,
+        "z_score": 2.3664001927706524
+    },
+    {
+        "returns": 16.07646402073874,
+        "window": 582,
+        "position_size": 1,
+        "z_score": 3.0585175829337716
+    },
+    {
+        "returns": 40.44294667661552,
+        "window": 573,
+        "position_size": 1,
+        "z_score": 2.2435033739747596
+    },
+    {
+        "returns": 19.517210945016814,
+        "window": 194,
+        "position_size": 1,
+        "z_score": 3.9134727876435127
+    },
+    {
+        "returns": 4.622815546544871,
+        "window": 346,
+        "position_size": 1,
+        "z_score": 3.600082723675615
+    },
+    {
+        "returns": 11.34270410675208,
+        "window": 450,
+        "position_size": 1,
+        "z_score": 3.0816097236565256
+    },
+    {
+        "returns": 41.555246470836664,
+        "window": 418,
+        "position_size": 1,
+        "z_score": 2.530709844565093
+    },
+    {
+        "returns": -2.7273675881463078,
+        "window": 166,
+        "position_size": 1,
+        "z_score": 2.9216915486795236
+    },
+    {
+        "returns": 25.014284997614823,
+        "window": 181,
+        "position_size": 1,
+        "z_score": 3.7075425252794902
+    },
+    {
+        "returns": 26.272608462320704,
+        "window": 324,
+        "position_size": 1,
+        "z_score": 3.003010477299278
+    },
+    {
+        "returns": 37.17371155521482,
+        "window": 595,
+        "position_size": 1,
+        "z_score": 2.3282708336900937
+    },
+    {
+        "returns": 49.72380807937657,
+        "window": 434,
+        "position_size": 1,
+        "z_score": 2.6498255181612755
+    },
+    {
+        "returns": 3.7448850011494415,
+        "window": 560,
+        "position_size": 1,
+        "z_score": 3.5983690381162976
+    },
+    {
+        "returns": -66.46219684275411,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 2.413773633786487
+    },
+    {
+        "returns": 20.21751164610714,
+        "window": 156,
+        "position_size": 1,
+        "z_score": 3.9883712565917797
+    },
+    {
+        "returns": 15.407558015824634,
+        "window": 178,
+        "position_size": 1,
+        "z_score": 3.3317984410338317
+    },
+    {
+        "returns": -64.99445892575613,
+        "window": 142,
+        "position_size": 1,
+        "z_score": 2.268380468644676
+    },
+    {
+        "returns": 12.712679668121154,
+        "window": 237,
+        "position_size": 1,
+        "z_score": 3.068285808119954
+    },
+    {
+        "returns": 21.933983781895677,
+        "window": 195,
+        "position_size": 1,
+        "z_score": 3.718802703114412
+    },
+    {
+        "returns": 37.67592170432499,
+        "window": 408,
+        "position_size": 1,
+        "z_score": 2.361402954488108
+    },
+    {
+        "returns": 11.55350057388614,
+        "window": 314,
+        "position_size": 1,
+        "z_score": 3.37510299853001
+    },
+    {
+        "returns": 17.974133288603525,
+        "window": 206,
+        "position_size": 1,
+        "z_score": 3.976229102453049
+    },
+    {
+        "returns": 11.623539340212346,
+        "window": 295,
+        "position_size": 1,
+        "z_score": 3.22074775638328
+    },
+    {
+        "returns": 0.0,
+        "window": 482,
+        "position_size": 1,
+        "z_score": 3.9311535558866897
+    },
+    {
+        "returns": 8.502799706305495,
+        "window": 231,
+        "position_size": 1,
+        "z_score": 3.1865301630707057
+    },
+    {
+        "returns": 6.720952072082355,
+        "window": 597,
+        "position_size": 1,
+        "z_score": 3.5207848858109845
+    },
+    {
+        "returns": -21.877841913132215,
+        "window": 112,
+        "position_size": 1,
+        "z_score": 3.317553522363833
+    },
+    {
+        "returns": -3.494412106002983,
+        "window": 151,
+        "position_size": 1,
+        "z_score": 2.9905645512546206
+    },
+    {
+        "returns": -9.167243451087415,
+        "window": 287,
+        "position_size": 1,
+        "z_score": 2.0856026317408487
+    },
+    {
+        "returns": -35.93686443765296,
+        "window": 187,
+        "position_size": 1,
+        "z_score": 2.2494945692835078
+    },
+    {
+        "returns": -31.768435878198034,
+        "window": 223,
+        "position_size": 1,
+        "z_score": 2.111535535814502
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 476,
+        "position_size": 1,
+        "z_score": 3.3105427631867164
+    },
+    {
+        "returns": 41.22878401811249,
+        "window": 521,
+        "position_size": 1,
+        "z_score": 2.3924955378104924
+    },
+    {
+        "returns": 1.6082738159122982,
+        "window": 324,
+        "position_size": 1,
+        "z_score": 2.1318162365811806
+    },
+    {
+        "returns": 20.41998214532964,
+        "window": 397,
+        "position_size": 1,
+        "z_score": 3.2536452507648876
+    },
+    {
+        "returns": -2.686589080831709,
+        "window": 366,
+        "position_size": 1,
+        "z_score": 2.000562559977927
+    },
+    {
+        "returns": 19.475620541238186,
+        "window": 385,
+        "position_size": 1,
+        "z_score": 3.4034100347852343
+    },
+    {
+        "returns": -70.58639231848656,
+        "window": 128,
+        "position_size": 1,
+        "z_score": 2.765745606999279
+    },
+    {
+        "returns": 48.19948878828427,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 2.362940958302461
+    },
+    {
+        "returns": -69.73643687415347,
+        "window": 120,
+        "position_size": 1,
+        "z_score": 2.6229752737225875
+    },
+    {
+        "returns": 26.61354010029777,
+        "window": 222,
+        "position_size": 1,
+        "z_score": 2.773149746655231
+    },
+    {
+        "returns": 9.345528351672328,
+        "window": 356,
+        "position_size": 1,
+        "z_score": 3.4343311181287923
+    },
+    {
+        "returns": 7.269841778853333,
+        "window": 238,
+        "position_size": 1,
+        "z_score": 3.904022499813088
+    },
+    {
+        "returns": -87.9151910261437,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 2.0096607157716644
+    },
+    {
+        "returns": 45.80757150975046,
+        "window": 426,
+        "position_size": 1,
+        "z_score": 2.5267489549324758
+    },
+    {
+        "returns": 42.9166114392342,
+        "window": 576,
+        "position_size": 1,
+        "z_score": 2.006765094822529
+    },
+    {
+        "returns": -11.1215061898788,
+        "window": 178,
+        "position_size": 1,
+        "z_score": 2.7065541948598977
+    },
+    {
+        "returns": 19.044650955558154,
+        "window": 302,
+        "position_size": 1,
+        "z_score": 2.828683444341104
+    },
+    {
+        "returns": 37.386133390416944,
+        "window": 521,
+        "position_size": 1,
+        "z_score": 2.334107463354581
+    },
+    {
+        "returns": 30.17626065584068,
+        "window": 392,
+        "position_size": 1,
+        "z_score": 2.6535590896085752
+    },
+    {
+        "returns": -26.454633239226723,
+        "window": 206,
+        "position_size": 1,
+        "z_score": 2.2286045102167833
+    },
+    {
+        "returns": 29.577605406730527,
+        "window": 373,
+        "position_size": 1,
+        "z_score": 2.269822797468169
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 284,
+        "position_size": 1,
+        "z_score": 3.793561261232611
+    },
+    {
+        "returns": 15.418397764663723,
+        "window": 226,
+        "position_size": 1,
+        "z_score": 3.943789775758567
+    },
+    {
+        "returns": -3.240407820668679,
+        "window": 257,
+        "position_size": 1,
+        "z_score": 3.870164138351901
+    },
+    {
+        "returns": 18.217981680130833,
+        "window": 154,
+        "position_size": 1,
+        "z_score": 3.953679164258298
+    },
+    {
+        "returns": 5.844754644169143,
+        "window": 463,
+        "position_size": 1,
+        "z_score": 3.4818440240394883
+    },
+    {
+        "returns": 23.257096675802586,
+        "window": 501,
+        "position_size": 1,
+        "z_score": 3.0434667959099784
+    },
+    {
+        "returns": -0.6880806893541376,
+        "window": 346,
+        "position_size": 1,
+        "z_score": 3.8684554876077835
+    },
+    {
+        "returns": 19.58385752797949,
+        "window": 362,
+        "position_size": 1,
+        "z_score": 2.7206721687288686
+    },
+    {
+        "returns": 15.24521733593042,
+        "window": 342,
+        "position_size": 1,
+        "z_score": 3.7066710995028176
+    },
+    {
+        "returns": 5.02565574847722,
+        "window": 111,
+        "position_size": 1,
+        "z_score": 3.9028813991505036
+    },
+    {
+        "returns": 11.552673262772487,
+        "window": 497,
+        "position_size": 1,
+        "z_score": 3.1283024562639934
+    },
+    {
+        "returns": -7.905699506485007,
+        "window": 108,
+        "position_size": 1,
+        "z_score": 3.812178002362141
+    },
+    {
+        "returns": 17.57727545605735,
+        "window": 287,
+        "position_size": 1,
+        "z_score": 3.064210825570747
+    },
+    {
+        "returns": 5.602709381164004,
+        "window": 429,
+        "position_size": 1,
+        "z_score": 3.1811608435089465
+    },
+    {
+        "returns": 16.82972162184774,
+        "window": 178,
+        "position_size": 1,
+        "z_score": 3.415341344603579
+    },
+    {
+        "returns": -34.03907016614289,
+        "window": 129,
+        "position_size": 1,
+        "z_score": 2.9875127097376755
+    },
+    {
+        "returns": -13.31885962687852,
+        "window": 201,
+        "position_size": 1,
+        "z_score": 2.438146248785616
+    },
+    {
+        "returns": 35.778560282604076,
+        "window": 467,
+        "position_size": 1,
+        "z_score": 2.933183076058814
+    },
+    {
+        "returns": 0.0,
+        "window": 445,
+        "position_size": 1,
+        "z_score": 3.6575579565283665
+    },
+    {
+        "returns": 42.79044831212195,
+        "window": 524,
+        "position_size": 1,
+        "z_score": 2.188070217836004
+    },
+    {
+        "returns": 3.8366016307331847,
+        "window": 528,
+        "position_size": 1,
+        "z_score": 3.651857987176803
+    },
+    {
+        "returns": 39.335758129165015,
+        "window": 378,
+        "position_size": 1,
+        "z_score": 2.4682676217074104
+    },
+    {
+        "returns": 34.21193278399551,
+        "window": 593,
+        "position_size": 1,
+        "z_score": 2.5441593613218147
+    },
+    {
+        "returns": 34.65739095123513,
+        "window": 585,
+        "position_size": 1,
+        "z_score": 2.557151434787674
+    },
+    {
+        "returns": 11.86349092787168,
+        "window": 300,
+        "position_size": 1,
+        "z_score": 3.523568337564717
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 484,
+        "position_size": 1,
+        "z_score": 3.6184160381073003
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 3.8450695892254405
+    },
+    {
+        "returns": 27.21962942937239,
+        "window": 563,
+        "position_size": 1,
+        "z_score": 2.719125297102734
+    },
+    {
+        "returns": -10.83367319962349,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 2.0583426861052336
+    },
+    {
+        "returns": 13.797578805535977,
+        "window": 217,
+        "position_size": 1,
+        "z_score": 3.501612918669154
+    },
+    {
+        "returns": 9.500252824338077,
+        "window": 258,
+        "position_size": 1,
+        "z_score": 3.492662200232788
+    },
+    {
+        "returns": 6.9757644065193745,
+        "window": 325,
+        "position_size": 1,
+        "z_score": 3.509229444906547
+    },
+    {
+        "returns": 5.612334150939432,
+        "window": 435,
+        "position_size": 1,
+        "z_score": 3.397807951106474
+    },
+    {
+        "returns": 24.7401065349261,
+        "window": 318,
+        "position_size": 1,
+        "z_score": 2.5545477193103032
+    },
+    {
+        "returns": 8.978278135691653,
+        "window": 229,
+        "position_size": 1,
+        "z_score": 3.1605162013080794
+    },
+    {
+        "returns": 18.538006646004987,
+        "window": 212,
+        "position_size": 1,
+        "z_score": 3.6004628058299346
+    },
+    {
+        "returns": 7.490057440096052,
+        "window": 276,
+        "position_size": 1,
+        "z_score": 2.3440868282540293
+    },
+    {
+        "returns": 10.56082803479535,
+        "window": 167,
+        "position_size": 1,
+        "z_score": 3.858593491145858
+    },
+    {
+        "returns": -83.99342862188087,
+        "window": 179,
+        "position_size": 1,
+        "z_score": 2.0270713963290685
+    },
+    {
+        "returns": 21.8010573957863,
+        "window": 197,
+        "position_size": 1,
+        "z_score": 3.829929299477074
+    },
+    {
+        "returns": 36.661776825382276,
+        "window": 582,
+        "position_size": 1,
+        "z_score": 2.2888796855178657
+    },
+    {
+        "returns": 16.458758149248524,
+        "window": 241,
+        "position_size": 1,
+        "z_score": 3.586547023636251
+    },
+    {
+        "returns": -4.134857817362672,
+        "window": 243,
+        "position_size": 1,
+        "z_score": 2.398224189882992
+    },
+    {
+        "returns": 16.929502676505308,
+        "window": 291,
+        "position_size": 1,
+        "z_score": 3.0820057944362356
+    },
+    {
+        "returns": 21.942402071998913,
+        "window": 367,
+        "position_size": 1,
+        "z_score": 3.0675449085057087
+    },
+    {
+        "returns": -24.41646865521534,
+        "window": 191,
+        "position_size": 1,
+        "z_score": 2.753609564828318
+    },
+    {
+        "returns": 4.923956727154064,
+        "window": 434,
+        "position_size": 1,
+        "z_score": 3.435889265890269
+    },
+    {
+        "returns": -89.39280013194298,
+        "window": 106,
+        "position_size": 1,
+        "z_score": 2.6350354825814684
+    },
+    {
+        "returns": -49.581165424230676,
+        "window": 118,
+        "position_size": 1,
+        "z_score": 3.0457085730605855
+    },
+    {
+        "returns": 1.8925338969279437,
+        "window": 498,
+        "position_size": 1,
+        "z_score": 3.5992074249128354
+    },
+    {
+        "returns": 41.174804342274456,
+        "window": 548,
+        "position_size": 1,
+        "z_score": 2.3568987919186792
+    },
+    {
+        "returns": -19.441793029830023,
+        "window": 178,
+        "position_size": 1,
+        "z_score": 2.4085402786675463
+    },
+    {
+        "returns": -0.2597496506512016,
+        "window": 366,
+        "position_size": 1,
+        "z_score": 3.9488299092097003
+    },
+    {
+        "returns": 3.096941838069597,
+        "window": 185,
+        "position_size": 1,
+        "z_score": 3.061357412735689
+    },
+    {
+        "returns": 26.910888907585104,
+        "window": 529,
+        "position_size": 1,
+        "z_score": 2.7630556404120545
+    },
+    {
+        "returns": 27.404368115986927,
+        "window": 177,
+        "position_size": 1,
+        "z_score": 3.815683410224665
+    },
+    {
+        "returns": 19.462178158543793,
+        "window": 295,
+        "position_size": 1,
+        "z_score": 2.7406181449025615
+    },
+    {
+        "returns": 25.911850716121535,
+        "window": 435,
+        "position_size": 1,
+        "z_score": 2.0577241775989545
+    },
+    {
+        "returns": 27.84681754745702,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 2.630796000645862
+    },
+    {
+        "returns": 34.66288275224974,
+        "window": 520,
+        "position_size": 1,
+        "z_score": 2.697939713793752
+    },
+    {
+        "returns": 6.638114801345182,
+        "window": 199,
+        "position_size": 1,
+        "z_score": 2.979082820865023
+    },
+    {
+        "returns": 0.0,
+        "window": 494,
+        "position_size": 1,
+        "z_score": 3.981652289249599
+    },
+    {
+        "returns": 6.2811709562715805,
+        "window": 422,
+        "position_size": 1,
+        "z_score": 3.3743878240381724
+    },
+    {
+        "returns": -4.2454307167952265,
+        "window": 154,
+        "position_size": 1,
+        "z_score": 2.9752984407208394
+    },
+    {
+        "returns": 11.049839364515947,
+        "window": 210,
+        "position_size": 1,
+        "z_score": 3.447087605117678
+    },
+    {
+        "returns": 26.68193928104529,
+        "window": 427,
+        "position_size": 1,
+        "z_score": 3.02087532004673
+    },
+    {
+        "returns": -27.80282981713276,
+        "window": 207,
+        "position_size": 1,
+        "z_score": 2.2150240247899333
+    },
+    {
+        "returns": 28.859005029342143,
+        "window": 421,
+        "position_size": 1,
+        "z_score": 2.227989332922174
+    },
+    {
+        "returns": 19.50414749282072,
+        "window": 292,
+        "position_size": 1,
+        "z_score": 2.8875215744537663
+    },
+    {
+        "returns": 0.5367195082496892,
+        "window": 443,
+        "position_size": 1,
+        "z_score": 3.6590706858133433
+    },
+    {
+        "returns": 27.050194567431618,
+        "window": 515,
+        "position_size": 1,
+        "z_score": 2.9975815880362346
+    },
+    {
+        "returns": 2.088646569592356,
+        "window": 221,
+        "position_size": 1,
+        "z_score": 2.5730031696053492
+    },
+    {
+        "returns": 45.26371114805511,
+        "window": 489,
+        "position_size": 1,
+        "z_score": 2.041088426151237
+    },
+    {
+        "returns": 12.959650243324631,
+        "window": 328,
+        "position_size": 1,
+        "z_score": 2.378418236843167
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 537,
+        "position_size": 1,
+        "z_score": 3.2795196925251684
+    },
+    {
+        "returns": 5.465093931799174,
+        "window": 442,
+        "position_size": 1,
+        "z_score": 3.475854156719003
+    },
+    {
+        "returns": -146.3247838649511,
+        "window": 105,
+        "position_size": 1,
+        "z_score": 2.304938046386262
+    },
+    {
+        "returns": 18.429110576554194,
+        "window": 294,
+        "position_size": 1,
+        "z_score": 2.4008632448306155
+    },
+    {
+        "returns": 38.71418147747704,
+        "window": 473,
+        "position_size": 1,
+        "z_score": 2.8859007898143063
+    },
+    {
+        "returns": 27.715715950919957,
+        "window": 543,
+        "position_size": 1,
+        "z_score": 2.839366849112536
+    },
+    {
+        "returns": 48.94454709279876,
+        "window": 486,
+        "position_size": 1,
+        "z_score": 2.1481929427871425
+    },
+    {
+        "returns": 6.9757644065193745,
+        "window": 322,
+        "position_size": 1,
+        "z_score": 3.481648664436517
+    },
+    {
+        "returns": 4.478875905449286,
+        "window": 447,
+        "position_size": 1,
+        "z_score": 3.180104379214127
+    },
+    {
+        "returns": 48.20213892154811,
+        "window": 421,
+        "position_size": 1,
+        "z_score": 2.557877106559498
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 561,
+        "position_size": 1,
+        "z_score": 3.401184154102139
+    },
+    {
+        "returns": 7.287805337545251,
+        "window": 340,
+        "position_size": 1,
+        "z_score": 3.469823262678249
+    },
+    {
+        "returns": 14.64774349511299,
+        "window": 247,
+        "position_size": 1,
+        "z_score": 2.6878432400899417
+    },
+    {
+        "returns": -13.056195188512447,
+        "window": 171,
+        "position_size": 1,
+        "z_score": 2.8448024052165315
+    },
+    {
+        "returns": 3.7448850011494415,
+        "window": 544,
+        "position_size": 1,
+        "z_score": 3.6203263821548792
+    },
+    {
+        "returns": -87.14080574314335,
+        "window": 129,
+        "position_size": 1,
+        "z_score": 2.1416721118065007
+    },
+    {
+        "returns": -28.449163672919212,
+        "window": 161,
+        "position_size": 1,
+        "z_score": 2.5126317676476955
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 317,
+        "position_size": 1,
+        "z_score": 3.958150458905991
+    },
+    {
+        "returns": 0.0,
+        "window": 542,
+        "position_size": 1,
+        "z_score": 3.996187882291757
+    },
+    {
+        "returns": -40.95053142240795,
+        "window": 153,
+        "position_size": 1,
+        "z_score": 2.7213789800593933
+    },
+    {
+        "returns": 21.183083567521408,
+        "window": 283,
+        "position_size": 1,
+        "z_score": 2.949676783835713
+    },
+    {
+        "returns": 1.50127359100361,
+        "window": 364,
+        "position_size": 1,
+        "z_score": 3.475075415245965
+    },
+    {
+        "returns": -2.390083118372104,
+        "window": 290,
+        "position_size": 1,
+        "z_score": 3.915876375423089
+    },
+    {
+        "returns": -40.7965746288769,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 2.584323006257594
+    },
+    {
+        "returns": 5.834382587602704,
+        "window": 218,
+        "position_size": 1,
+        "z_score": 2.9389839252358216
+    },
+    {
+        "returns": 3.8366016307331847,
+        "window": 532,
+        "position_size": 1,
+        "z_score": 3.685610896883511
+    },
+    {
+        "returns": 41.34088502444274,
+        "window": 456,
+        "position_size": 1,
+        "z_score": 2.1906745826973077
+    },
+    {
+        "returns": 17.70188004180136,
+        "window": 117,
+        "position_size": 1,
+        "z_score": 3.986072844265448
+    },
+    {
+        "returns": -97.50020966630268,
+        "window": 115,
+        "position_size": 1,
+        "z_score": 2.494853698622339
+    },
+    {
+        "returns": -9.331016507410368,
+        "window": 118,
+        "position_size": 1,
+        "z_score": 3.5465962078418523
+    },
+    {
+        "returns": -7.843903345244598,
+        "window": 298,
+        "position_size": 1,
+        "z_score": 2.0562811621877755
+    },
+    {
+        "returns": -31.96609646250431,
+        "window": 250,
+        "position_size": 1,
+        "z_score": 2.078850349137513
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 547,
+        "position_size": 1,
+        "z_score": 3.4997866152201302
+    },
+    {
+        "returns": 9.445819547502879,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 3.219537283690908
+    },
+    {
+        "returns": -112.31735772065008,
+        "window": 116,
+        "position_size": 1,
+        "z_score": 2.3583580573723646
+    },
+    {
+        "returns": 33.11963824949794,
+        "window": 370,
+        "position_size": 1,
+        "z_score": 2.3186629460436308
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 493,
+        "position_size": 1,
+        "z_score": 3.190442086915855
+    },
+    {
+        "returns": 20.815605831458925,
+        "window": 356,
+        "position_size": 1,
+        "z_score": 3.07809690375308
+    },
+    {
+        "returns": 14.549437996153983,
+        "window": 590,
+        "position_size": 1,
+        "z_score": 3.160420195152788
+    },
+    {
+        "returns": 5.616751847334854,
+        "window": 512,
+        "position_size": 1,
+        "z_score": 3.34879434495188
+    },
+    {
+        "returns": -155.57900399277537,
+        "window": 102,
+        "position_size": 1,
+        "z_score": 2.1579803683791052
+    },
+    {
+        "returns": 1.0930468820708938,
+        "window": 399,
+        "position_size": 1,
+        "z_score": 3.4154920820107684
+    },
+    {
+        "returns": 13.620738587673259,
+        "window": 357,
+        "position_size": 1,
+        "z_score": 2.953598580575664
+    },
+    {
+        "returns": 23.141945964026263,
+        "window": 191,
+        "position_size": 1,
+        "z_score": 3.8203922431346546
+    },
+    {
+        "returns": 3.311718772439235,
+        "window": 168,
+        "position_size": 1,
+        "z_score": 3.2442670334936143
+    },
+    {
+        "returns": 26.44667925456406,
+        "window": 305,
+        "position_size": 1,
+        "z_score": 3.1424000834359305
+    },
+    {
+        "returns": 51.85536887029161,
+        "window": 484,
+        "position_size": 1,
+        "z_score": 2.2973126573366525
+    },
+    {
+        "returns": 7.268460490342022,
+        "window": 527,
+        "position_size": 1,
+        "z_score": 3.317182845208781
+    },
+    {
+        "returns": -40.53817198141587,
+        "window": 173,
+        "position_size": 1,
+        "z_score": 2.305141280786022
+    },
+    {
+        "returns": 1.0521417592010494,
+        "window": 178,
+        "position_size": 1,
+        "z_score": 3.0538368266386513
+    },
+    {
+        "returns": 36.30139453097013,
+        "window": 513,
+        "position_size": 1,
+        "z_score": 2.7196122018723754
+    },
+    {
+        "returns": 15.312161097061107,
+        "window": 230,
+        "position_size": 1,
+        "z_score": 3.6709300187393206
+    },
+    {
+        "returns": 18.85437818475566,
+        "window": 485,
+        "position_size": 1,
+        "z_score": 3.088279698946226
+    },
+    {
+        "returns": 7.269841778853333,
+        "window": 250,
+        "position_size": 1,
+        "z_score": 3.953967157971886
+    },
+    {
+        "returns": 18.625871482477805,
+        "window": 296,
+        "position_size": 1,
+        "z_score": 2.413603943784082
+    },
+    {
+        "returns": 34.66288275224974,
+        "window": 528,
+        "position_size": 1,
+        "z_score": 2.6772718705960354
+    },
+    {
+        "returns": 48.724246175873304,
+        "window": 443,
+        "position_size": 1,
+        "z_score": 2.344999771842068
+    },
+    {
+        "returns": 50.23206188405857,
+        "window": 442,
+        "position_size": 1,
+        "z_score": 2.6658716491493797
+    },
+    {
+        "returns": -104.43460563919211,
+        "window": 122,
+        "position_size": 1,
+        "z_score": 2.185326402717325
+    },
+    {
+        "returns": 9.345528351672328,
+        "window": 359,
+        "position_size": 1,
+        "z_score": 3.4439153906234745
+    },
+    {
+        "returns": 8.109778905982012,
+        "window": 278,
+        "position_size": 1,
+        "z_score": 3.1773249774763226
+    },
+    {
+        "returns": 13.81702116461247,
+        "window": 150,
+        "position_size": 1,
+        "z_score": 3.284910397022692
+    },
+    {
+        "returns": 1.0056353056672833,
+        "window": 213,
+        "position_size": 1,
+        "z_score": 3.0378179490695967
+    },
+    {
+        "returns": -58.781259011984275,
+        "window": 162,
+        "position_size": 1,
+        "z_score": 2.222065387699391
+    },
+    {
+        "returns": 20.855070231448508,
+        "window": 320,
+        "position_size": 1,
+        "z_score": 2.8798660937939036
+    },
+    {
+        "returns": 20.000437774624743,
+        "window": 311,
+        "position_size": 1,
+        "z_score": 2.3437485639918325
+    },
+    {
+        "returns": 36.56704877555171,
+        "window": 381,
+        "position_size": 1,
+        "z_score": 2.370290296280766
+    },
+    {
+        "returns": 15.312161097061107,
+        "window": 250,
+        "position_size": 1,
+        "z_score": 3.664730092151979
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 480,
+        "position_size": 1,
+        "z_score": 3.292429359336527
+    },
+    {
+        "returns": 22.850352868378422,
+        "window": 415,
+        "position_size": 1,
+        "z_score": 2.0025275477603497
+    },
+    {
+        "returns": 13.605718687267881,
+        "window": 246,
+        "position_size": 1,
+        "z_score": 3.089596937315798
+    },
+    {
+        "returns": 13.159957049239665,
+        "window": 232,
+        "position_size": 1,
+        "z_score": 3.534002269303234
+    },
+    {
+        "returns": 19.857352314794525,
+        "window": 349,
+        "position_size": 1,
+        "z_score": 2.842179387997473
+    },
+    {
+        "returns": 23.509514489930325,
+        "window": 157,
+        "position_size": 1,
+        "z_score": 3.3219838428156354
+    },
+    {
+        "returns": 47.19161806690113,
+        "window": 475,
+        "position_size": 1,
+        "z_score": 2.7476703269199207
+    },
+    {
+        "returns": -76.88406869265987,
+        "window": 132,
+        "position_size": 1,
+        "z_score": 2.621721821995039
+    },
+    {
+        "returns": -22.966003101472324,
+        "window": 271,
+        "position_size": 1,
+        "z_score": 2.068249385081096
+    },
+    {
+        "returns": 15.961817015477436,
+        "window": 299,
+        "position_size": 1,
+        "z_score": 3.174914663979693
+    },
+    {
+        "returns": -36.35089274899701,
+        "window": 188,
+        "position_size": 1,
+        "z_score": 2.255004915656229
+    },
+    {
+        "returns": 20.21751164610714,
+        "window": 157,
+        "position_size": 1,
+        "z_score": 3.9232739864494874
+    },
+    {
+        "returns": 26.224326576969588,
+        "window": 595,
+        "position_size": 1,
+        "z_score": 2.680795939407953
+    },
+    {
+        "returns": 24.767462037098085,
+        "window": 494,
+        "position_size": 1,
+        "z_score": 3.0357654024009424
+    },
+    {
+        "returns": 51.06718485664328,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 2.064028682966504
+    },
+    {
+        "returns": 19.957796027355243,
+        "window": 524,
+        "position_size": 1,
+        "z_score": 2.9929662821329988
+    },
+    {
+        "returns": 27.0368362958111,
+        "window": 593,
+        "position_size": 1,
+        "z_score": 2.7908870166660584
+    },
+    {
+        "returns": 0.0,
+        "window": 566,
+        "position_size": 1,
+        "z_score": 3.844567761223597
+    },
+    {
+        "returns": 26.636882741856653,
+        "window": 578,
+        "position_size": 1,
+        "z_score": 2.6724017076578086
+    },
+    {
+        "returns": -25.87633564469138,
+        "window": 204,
+        "position_size": 1,
+        "z_score": 2.297148221623398
+    },
+    {
+        "returns": 21.57413290865975,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 3.691934409672182
+    },
+    {
+        "returns": 6.241225733474948,
+        "window": 265,
+        "position_size": 1,
+        "z_score": 3.665994960204313
+    },
+    {
+        "returns": 19.121333343979813,
+        "window": 349,
+        "position_size": 1,
+        "z_score": 2.7603259120846584
+    },
+    {
+        "returns": 6.4987171201053116,
+        "window": 273,
+        "position_size": 1,
+        "z_score": 2.3378566145371487
+    },
+    {
+        "returns": 14.815997876268739,
+        "window": 384,
+        "position_size": 1,
+        "z_score": 2.044681206930054
+    },
+    {
+        "returns": 11.049839364515947,
+        "window": 208,
+        "position_size": 1,
+        "z_score": 3.4713704313019265
+    },
+    {
+        "returns": 36.280205589570414,
+        "window": 387,
+        "position_size": 1,
+        "z_score": 2.400780622280144
+    },
+    {
+        "returns": 20.54840305274115,
+        "window": 369,
+        "position_size": 1,
+        "z_score": 2.7395815649110578
+    },
+    {
+        "returns": 0.0,
+        "window": 468,
+        "position_size": 1,
+        "z_score": 3.896768284631568
+    },
+    {
+        "returns": -66.74954097380942,
+        "window": 146,
+        "position_size": 1,
+        "z_score": 2.2000788323980993
+    },
+    {
+        "returns": 23.522946418522906,
+        "window": 443,
+        "position_size": 1,
+        "z_score": 3.0029360546909585
+    },
+    {
+        "returns": 0.9761536763082859,
+        "window": 452,
+        "position_size": 1,
+        "z_score": 3.569597079706872
+    },
+    {
+        "returns": 17.706257434474537,
+        "window": 478,
+        "position_size": 1,
+        "z_score": 3.0758427332267164
+    },
+    {
+        "returns": 0.0,
+        "window": 382,
+        "position_size": 1,
+        "z_score": 3.997700025388216
+    },
+    {
+        "returns": 28.80946583195714,
+        "window": 452,
+        "position_size": 1,
+        "z_score": 2.9758019440328596
+    },
+    {
+        "returns": 20.31743340321941,
+        "window": 423,
+        "position_size": 1,
+        "z_score": 2.969135024225198
+    },
+    {
+        "returns": 0.46091479271831304,
+        "window": 341,
+        "position_size": 1,
+        "z_score": 3.9612769606105633
+    },
+    {
+        "returns": -0.3353346577650882,
+        "window": 334,
+        "position_size": 1,
+        "z_score": 2.0736902998840354
+    },
+    {
+        "returns": 19.800911691593456,
+        "window": 348,
+        "position_size": 1,
+        "z_score": 2.789417763516332
+    },
+    {
+        "returns": 7.469102951556351,
+        "window": 574,
+        "position_size": 1,
+        "z_score": 3.470271255128697
+    },
+    {
+        "returns": 15.860119615404528,
+        "window": 341,
+        "position_size": 1,
+        "z_score": 2.6659989911299724
+    },
+    {
+        "returns": 38.54950569391417,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 2.7978713830887267
+    },
+    {
+        "returns": 1.8925338969279437,
+        "window": 504,
+        "position_size": 1,
+        "z_score": 3.539216445174357
+    },
+    {
+        "returns": 19.912693387400168,
+        "window": 192,
+        "position_size": 1,
+        "z_score": 3.6987447639222317
+    },
+    {
+        "returns": 0.889245831421249,
+        "window": 375,
+        "position_size": 1,
+        "z_score": 3.9828642734615687
+    },
+    {
+        "returns": 47.15457466508724,
+        "window": 459,
+        "position_size": 1,
+        "z_score": 2.3314516487831227
+    },
+    {
+        "returns": -35.363017275848506,
+        "window": 118,
+        "position_size": 1,
+        "z_score": 3.1399875623747144
+    },
+    {
+        "returns": 13.390479343959214,
+        "window": 532,
+        "position_size": 1,
+        "z_score": 3.0975577238739027
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 471,
+        "position_size": 1,
+        "z_score": 3.2260681696355804
+    },
+    {
+        "returns": 18.217981680130833,
+        "window": 153,
+        "position_size": 1,
+        "z_score": 3.930444659327491
+    },
+    {
+        "returns": 24.322115850307227,
+        "window": 391,
+        "position_size": 1,
+        "z_score": 2.7167065293536714
+    },
+    {
+        "returns": -6.246477509416536,
+        "window": 272,
+        "position_size": 1,
+        "z_score": 2.1272494031836446
+    },
+    {
+        "returns": 26.991287244317164,
+        "window": 535,
+        "position_size": 1,
+        "z_score": 2.8132046403598014
+    },
+    {
+        "returns": -81.14036811041956,
+        "window": 121,
+        "position_size": 1,
+        "z_score": 2.4554498969864835
+    },
+    {
+        "returns": 3.6167270929402093,
+        "window": 228,
+        "position_size": 1,
+        "z_score": 3.023254184251111
+    },
+    {
+        "returns": 5.4161093861205245,
+        "window": 473,
+        "position_size": 1,
+        "z_score": 3.217407499409443
+    },
+    {
+        "returns": 16.2687224669603,
+        "window": 222,
+        "position_size": 1,
+        "z_score": 3.979571414444816
+    },
+    {
+        "returns": -83.134288655496,
+        "window": 115,
+        "position_size": 1,
+        "z_score": 2.5494923671497918
+    },
+    {
+        "returns": 42.46667226362251,
+        "window": 586,
+        "position_size": 1,
+        "z_score": 2.194930041924667
+    },
+    {
+        "returns": 51.813584877073026,
+        "window": 426,
+        "position_size": 1,
+        "z_score": 2.6185337494171037
+    },
+    {
+        "returns": 14.271939652791389,
+        "window": 309,
+        "position_size": 1,
+        "z_score": 2.2256655923074096
+    },
+    {
+        "returns": 36.13108454653798,
+        "window": 586,
+        "position_size": 1,
+        "z_score": 2.3172270447989183
+    },
+    {
+        "returns": -148.58873896023624,
+        "window": 104,
+        "position_size": 1,
+        "z_score": 2.1693518676207786
+    },
+    {
+        "returns": 38.1059696512184,
+        "window": 515,
+        "position_size": 1,
+        "z_score": 2.3343876934099193
+    },
+    {
+        "returns": 0.0,
+        "window": 461,
+        "position_size": 1,
+        "z_score": 3.9136169399464062
+    },
+    {
+        "returns": 20.908031327246363,
+        "window": 380,
+        "position_size": 1,
+        "z_score": 3.1597775417687455
+    },
+    {
+        "returns": 11.79731528941943,
+        "window": 315,
+        "position_size": 1,
+        "z_score": 3.326550200417266
+    },
+    {
+        "returns": 20.180224749181434,
+        "window": 400,
+        "position_size": 1,
+        "z_score": 3.123893489466162
+    },
+    {
+        "returns": 0.0,
+        "window": 411,
+        "position_size": 1,
+        "z_score": 3.8565448757416845
+    },
+    {
+        "returns": -72.72797047409517,
+        "window": 117,
+        "position_size": 1,
+        "z_score": 2.618475778526375
+    },
+    {
+        "returns": 24.932935125756558,
+        "window": 267,
+        "position_size": 1,
+        "z_score": 2.886527383478941
+    },
+    {
+        "returns": 0.0,
+        "window": 474,
+        "position_size": 1,
+        "z_score": 3.820114737835197
+    },
+    {
+        "returns": 48.67374522501109,
+        "window": 508,
+        "position_size": 1,
+        "z_score": 2.2067568722866446
+    },
+    {
+        "returns": 21.41927603395311,
+        "window": 144,
+        "position_size": 1,
+        "z_score": 3.653611084525698
+    },
+    {
+        "returns": 14.047464693750271,
+        "window": 599,
+        "position_size": 1,
+        "z_score": 3.4540552572282013
+    },
+    {
+        "returns": 2.7687313248411556,
+        "window": 588,
+        "position_size": 1,
+        "z_score": 3.658270514354596
+    },
+    {
+        "returns": -0.604381440328325,
+        "window": 359,
+        "position_size": 1,
+        "z_score": 3.580389667257947
+    },
+    {
+        "returns": -74.82704928261319,
+        "window": 136,
+        "position_size": 1,
+        "z_score": 2.5736001209104975
+    },
+    {
+        "returns": 31.98863160093765,
+        "window": 543,
+        "position_size": 1,
+        "z_score": 2.58759559404701
+    },
+    {
+        "returns": 11.049839364515947,
+        "window": 208,
+        "position_size": 1,
+        "z_score": 3.4505004239138932
+    },
+    {
+        "returns": 44.453211366081405,
+        "window": 513,
+        "position_size": 1,
+        "z_score": 2.250281139547566
+    },
+    {
+        "returns": 3.8366016307331847,
+        "window": 535,
+        "position_size": 1,
+        "z_score": 3.6715033959337573
+    },
+    {
+        "returns": 29.42607003825242,
+        "window": 529,
+        "position_size": 1,
+        "z_score": 2.9096867510585067
+    },
+    {
+        "returns": 44.086202129974936,
+        "window": 455,
+        "position_size": 1,
+        "z_score": 2.454960703296252
+    }
+]
