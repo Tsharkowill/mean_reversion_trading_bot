@@ -70,24 +70,24 @@ def fetch_and_compile_candle_data(times_dict, markets, granularity):
         df_market_prices = final_df[cols]
         
         # Export the compiled data to a CSV file
-        df_market_prices.to_csv(f"data_final_{granularity}.csv", index=False)
+        df_market_prices.to_csv(f"data_{granularity}.csv", index=False)
 
     except BitgetAPIException as e:
         print(f"error: {e.message}")
 
 
 
-times_dict_1H = get_unix_times(10)
+# times_dict_1H = get_unix_times(10)
 
-try:
-    fetch_and_compile_candle_data(times_dict_1H, TEST_MARKETS, '1H')
-except Exception as e:
-    print(f"Error fetching market data: {e}")
+# try:
+#     fetch_and_compile_candle_data(times_dict_1H, TEST_MARKETS, '1H')
+# except Exception as e:
+#     print(f"Error fetching market data: {e}")
 
 
-times_dict_15m = get_unix_times(10)
+# times_dict_15m = get_unix_times(10)
 
-try:
-    fetch_and_compile_candle_data(times_dict_15m, TEST_MARKETS, '15m')
-except Exception as e:
-    print(f"Error fetching market data: {e}")
+# try:
+#     fetch_and_compile_candle_data(times_dict_15m, TEST_MARKETS, '15m')
+# except Exception as e:
+#     print(f"Error fetching market data: {e}")
