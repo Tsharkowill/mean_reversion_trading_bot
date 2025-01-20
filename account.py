@@ -61,7 +61,7 @@ if not orders_df.empty:
 
     # Upload Parquet file to S3
     s3_client = boto3.client("s3")
-    bucket_name = "your-s3-bucket"
+    bucket_name = "bitgettrades"
     s3_key = f"trades/daily/trades_{datetime.now().strftime('%Y%m%d')}.parquet"
 
     try:
