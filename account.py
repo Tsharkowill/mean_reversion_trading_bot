@@ -6,98 +6,71 @@ from constants import SCALP_MARKETS
 
 import time
 import pandas as pd
-import cx_Oracle
-import os
+import boto3
+from datetime import datetime
 
 
 def get_unix_times():
-    # Get the current Unix time
-    current_unix_time = int(time.time())
-    
-    # Calculate the Unix time 7 days back (7 days * 24 hours * 60 minutes * 60 seconds)
-    unix_time_minus_7 = current_unix_time - (7 * 24 * 60 * 60)
-
-    # Multiply by 1000 to account for milliseconds
-    current_unix_time = current_unix_time * 1000
-    unix_time_minus_7 = unix_time_minus_7 * 1000
-
-    
-    return current_unix_time, unix_time_minus_7
-
-# Get the current and 7 days back Unix times
-current_unix_time, unix_time_minus_7 = get_unix_times()
+    """Get the Unix time for the last 24 hours."""
+    current_unix_time = int(time.time() * 1000)  # Current time in milliseconds
+    unix_time_minus_24h = current_unix_time - (24 * 60 * 60 * 1000)  # 24 hours back
+    return current_unix_time, unix_time_minus_24h
 
 
+# Get the current and 24 hours back Unix times
+current_unix_time, unix_time_minus_24h = get_unix_times()
 
+# API credentials
 apiKey = config('apiKey')
 secretKey = config('secretKey')
 passphrase = config('passphrase')
 
-# Create an instance of the BitgetApi class
-baseApi = BitgetApi(apiKey, secretKey, passphrase)
-
+# Initialize the API
 order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
 
 orders_df = pd.DataFrame()
 
+# Fetch orders for each market
 for market in SCALP_MARKETS:
     params = {
-    "symbol": f"{market}_UMCBL",
-    "productType": "USDT-FUTURES",
-    "startTime": unix_time_minus_7,
-    "endTime": current_unix_time,
-    "pageSize": 20
+        "symbol": f"{market}_UMCBL",
+        "productType": "USDT-FUTURES",
+        "startTime": unix_time_minus_24h,
+        "endTime": current_unix_time,
+        "pageSize": 20
     }
     try:
         response = order_api.ordersHistory(params)
 
-        # Extract the order list
-        orders = response['data']['orderList']
-
-        # Create a DataFrame
-        current_orders = pd.DataFrame(orders)
-
-        # Append current orders to orders_df
-        orders_df = pd.concat([orders_df, current_orders], ignore_index=True)
+        # Extract and append orders
+        if 'data' in response and 'orderList' in response['data']:
+            orders = response['data']['orderList']
+            current_orders = pd.DataFrame(orders)
+            orders_df = pd.concat([orders_df, current_orders], ignore_index=True)
+        else:
+            print(f"No data returned for market: {market}")
 
     except BitgetAPIException as e:
-            print("error:" + e.message)
+        print(f"Error fetching orders for market {market}: {e.message}")
 
+# Save to Parquet and upload to S3
+if not orders_df.empty:
+    # Save Parquet file locally
+    parquet_file = f"/tmp/trades_{datetime.now().strftime('%Y%m%d')}.parquet"
+    orders_df.to_parquet(parquet_file, index=False)
 
-orders_df.drop(orders_df.columns[18], axis=1, inplace=True)
+    # Upload Parquet file to S3
+    s3_client = boto3.client("s3")
+    bucket_name = "your-s3-bucket"
+    s3_key = f"trades/daily/trades_{datetime.now().strftime('%Y%m%d')}.parquet"
 
-# Set the location of the client credentials wallet
-os.environ["TNS_ADMIN"] = "/opt/oracle/wallet"
-
-# Create a connection to Oracle database using the TNS name from your tnsnames.ora
-# Replace 'dbname_high' with the actual TNS name from your tnsnames.ora
-connection = cx_Oracle.connect(
-    user=config('oracle_user_name'),
-    password=config('oracle_password'),
-    dsn="meanrevbot_high"  # This is the TNS name for your Oracle database connection
-)
-
-# Create a cursor object
-cursor = connection.cursor()
-
-# Convert Pandas DataFrame to Oracle-compatible format
-data_to_insert = orders_df.to_records(index=False).tolist()
-
-# Dynamically create placeholders based on the DataFrame's number of columns
-placeholders = ', '.join([f":{i+1}" for i in range(len(orders_df.columns))])
-
-# SQL Insert Statement
-sql_insert_query = f"INSERT INTO trades VALUES ({placeholders})"
-
-# Insert data into Oracle database
-cursor.executemany(sql_insert_query, data_to_insert)
-
-# Commit changes and close connection
-connection.commit()
-connection.close()
-
-'''Create heatmap maybe using Spearman rank correlation or Kendalls Tau instead of Pearson correlation
-coefficient as pearson assumes linearity and normal distribution (although maybe there is a normal distribution)'''
+    try:
+        s3_client.upload_file(parquet_file, bucket_name, s3_key)
+        print(f"File uploaded to s3://{bucket_name}/{s3_key}")
+    except Exception as e:
+        print(f"Error uploading to S3: {e}")
+else:
+    print("No data to upload.")
 
 
 
