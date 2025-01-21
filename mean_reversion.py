@@ -14,7 +14,26 @@ passphrase = config('passphrase')
 
 baseApi = BitgetApi(apiKey, secretKey, passphrase)
 
+# Function to log the order response
+def log_order_response(response, file_path):
 
+    try:
+        # Load existing data if the file exists
+        try:
+            with open(file_path, "r") as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            data = []
+
+        # Append the new response data
+        data.append(response)
+
+        # Write updated data back to the file
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=4)
+        print(f"Order logged successfully: {response['data']['orderId']}")
+    except Exception as e:
+        print(f"Failed to log order: {e}")
 
 def calculate_zscore(market, spreads_df, WINDOW):
     spread_series = spreads_df[market]
@@ -103,9 +122,17 @@ def enter_scalp_trade(market, position_type, price_data, open_scalps):
 
     # Execute the trades
     order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
+    # File to store order responses
+    ORDER_FILE = "order_responses.json"
     try:
         response_base = order_api.placeOrder(params)
         print(response_base)
+        # Check if the response is successful
+        if response_base['code'] == '00000':
+            log_order_response(response_base, ORDER_FILE)
+        else:
+            error_message = f"Order failed: {response_base['msg']}"
+            print(error_message)
     except BitgetAPIException as e:
         print("error:" + e.message)
 
@@ -145,8 +172,20 @@ def exit_scalp_trade(market, position_type, open_scalps):
 
     # Execute the trades
     order_api = maxOrderApi.OrderApi(apiKey, secretKey, passphrase)
+    # File to store order responses
+    ORDER_FILE = "order_responses.json"
     try:
         response_base = order_api.placeOrder(params)
         print(response_base)
+        # Check if the response is successful
+        if response_base['code'] == '00000':
+            log_order_response(response_base, ORDER_FILE)
+        else:
+            error_message = f"Order failed: {response_base['msg']}"
+            print(error_message)
     except BitgetAPIException as e:
         print("error:" + e.message)
+
+
+
+
