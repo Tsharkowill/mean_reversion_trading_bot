@@ -1,9 +1,7 @@
-import pandas as pd
-
 from get_time import get_unix_times
 from get_markets import fetch_and_compile_candle_data
-from mean_reversion import manage_scalp
-from constants import SCALP_MARKETS, Z_SCORE_LONG, Z_SCORE_SHORT, WINDOW
+from mean_reversion import manage_trade
+from constants import MARKETS, Z_SCORE_HIGH, Z_SCORE_MEDIUM, HIGH_WINDOW, MEDIUM_WINDOW
 
 
 from bitget.bitget_api import BitgetApi
@@ -23,16 +21,21 @@ baseApi = BitgetApi(apiKey, secretKey, passphrase)
 
 
 # Create dictionary for requesting market data
-times_dict = get_unix_times(2)
+times_dict = get_unix_times(3)
 
 # Get market prices and create a .csv for selected markets
 try:
-    fetch_and_compile_candle_data(times_dict, SCALP_MARKETS, '15m')
+    fetch_and_compile_candle_data(times_dict, MARKETS, '15m')
 except Exception as e:
     print(f"Error fetching market data: {e}")
 
 try:
-    manage_scalp('data_15m.csv', SCALP_MARKETS, '15m', Z_SCORE_LONG, Z_SCORE_SHORT, WINDOW)
+    manage_trade('data_15m.csv', MARKETS, 'high', Z_SCORE_HIGH, HIGH_WINDOW)
+except Exception as e:
+    print(f"Error managing scalps: {e}")
+
+try:
+    manage_trade('data_15m.csv', MARKETS, 'medium', Z_SCORE_MEDIUM, MEDIUM_WINDOW)
 except Exception as e:
     print(f"Error managing scalps: {e}")
 

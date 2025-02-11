@@ -1,7 +1,7 @@
 venv
 arb/
 .env
-.csv
+*.json
 *.ipynb_checkpoints/
 *.virtual_documents
 __pycache__/

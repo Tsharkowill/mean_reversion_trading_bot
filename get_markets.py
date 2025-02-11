@@ -9,7 +9,7 @@ from bitget.exceptions import BitgetAPIException
 
 from decouple import config
 from get_time import get_unix_times
-from constants import MARKETS, SCALP_MARKETS, TEST_MARKETS
+from constants import MARKETS
 
 
 
@@ -85,9 +85,9 @@ def fetch_and_compile_candle_data(times_dict, markets, granularity):
 #     print(f"Error fetching market data: {e}")
 
 
-# times_dict_15m = get_unix_times(10)
+times_dict_15m = get_unix_times(151)
 
-# try:
-#     fetch_and_compile_candle_data(times_dict_15m, TEST_MARKETS, '15m')
-# except Exception as e:
-#     print(f"Error fetching market data: {e}")
+try:
+    fetch_and_compile_candle_data(times_dict_15m, MARKETS, '15m')
+except Exception as e:
+    print(f"Error fetching market data: {e}")
