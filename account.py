@@ -2,7 +2,7 @@ import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
 from bitget.exceptions import BitgetAPIException
 from decouple import config
-from constants import SCALP_MARKETS
+from constants import MARKETS
 
 import time
 import pandas as pd
@@ -91,7 +91,7 @@ def main():
     order_api = maxOrderApi.OrderApi(api_key, secret_key, passphrase)
 
     # Fetch historical trades
-    orders_df = fetch_historical_trades(order_api, SCALP_MARKETS, unix_time_minus_24h, current_unix_time)
+    orders_df = fetch_historical_trades(order_api, MARKETS, unix_time_minus_24h, current_unix_time)
 
     if not orders_df.empty:
         # Save Parquet file locally
