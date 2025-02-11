@@ -42,14 +42,10 @@ def calculate_zscore(market, spreads_df, WINDOW):
     spreads_df[f'z_score_{market}'] = (spread_series - mean) / std
 
 def calculate_limit_percentage(cadence):
-    # Adjust this function to dynamically set the percentage based on cadence
-    # For example:
     if cadence == 'high':
-        return 0.05  # 5% for high cadence data
+        return 0.05  
     elif cadence == 'medium':
         return 0.1  # 10% for medium cadence data
-    else:
-        return 0.15  # 15% for low cadence data
 
 
 def manage_trade(price_data_file, MARKETS, cadence, Z_SCORE, WINDOW):
@@ -162,7 +158,7 @@ def enter_limit_trade(market, position_type, price_data, limit_percentage):
     asset_position_size = round(TRADE_SIZE / asset_latest_price, 2)
 
     if position_type == "long":
-        limit_price = asset_latest_price * (1 + limit_percentage)
+        limit_price = round(asset_latest_price * (1 + limit_percentage), 2)
         print(f"Opening long limit trade on: {market}")
         params = {
             "symbol": f"{market}_UMCBL",
@@ -175,7 +171,7 @@ def enter_limit_trade(market, position_type, price_data, limit_percentage):
         }
 
     elif position_type == "short":
-        limit_price = asset_latest_price * (1 - limit_percentage)
+        limit_price = round(asset_latest_price * (1 - limit_percentage), 2)
         print(f"Opening short trade on: {market}")
         params = {
             "symbol": f"{market}_UMCBL",
