@@ -85,7 +85,7 @@ def fetch_and_compile_candle_data(times_dict, markets, granularity):
 #     print(f"Error fetching market data: {e}")
 
 
-# times_dict_15m = get_unix_times(151)
+# times_dict_15m = get_unix_times(131)
 
 # try:
 #     fetch_and_compile_candle_data(times_dict_15m, MARKETS, '15m')
