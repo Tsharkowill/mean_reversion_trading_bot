@@ -72,6 +72,7 @@ def main():
 
     # Fetch historical trades
     fills_df = fetch_order_fills(order_api, MARKETS, unix_time_minus_24h, current_unix_time)
+    print(fills_df.dtypes)
 
     if not fills_df.empty:
         # Save Parquet file locally
