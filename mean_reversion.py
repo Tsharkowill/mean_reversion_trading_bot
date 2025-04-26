@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 
-from constants import TRADE_SIZE
+from constants import TRADE_SIZE, LONG_RATIO, SHORT_RATIO
 import bitget.v1.mix.order_api as maxOrderApi
 from bitget.bitget_api import BitgetApi
 from bitget.exceptions import BitgetAPIException
@@ -103,7 +103,8 @@ def enter_market_trade(market, position_type, price_data, open_trades):
 
     asset_latest_price = price_data[market].iloc[-1]
 
-    asset_position_size = round(TRADE_SIZE / asset_latest_price, 2)
+    long_position_size = round((TRADE_SIZE * LONG_RATIO) / asset_latest_price, 2)
+    short_position_size = round((TRADE_SIZE * SHORT_RATIO) / asset_latest_price, 2)
 
     if position_type == "long":
         print(f"Opening long trade on: {market}")
@@ -112,7 +113,7 @@ def enter_market_trade(market, position_type, price_data, open_trades):
             "marginCoin": "USDT",
             "side": "open_long",
             "orderType": "market",
-            "size": asset_position_size,
+            "size": long_position_size,
             "timeInForceValue": "normal"
         }
 
@@ -123,7 +124,7 @@ def enter_market_trade(market, position_type, price_data, open_trades):
             "marginCoin": "USDT",
             "side": "open_short",
             "orderType": "market",
-            "size": asset_position_size,
+            "size": short_position_size,
             "timeInForceValue": "normal"
         }
 
@@ -155,7 +156,8 @@ def enter_limit_trade(market, position_type, price_data, limit_percentage):
 
     asset_latest_price = price_data[market].iloc[-1]
 
-    asset_position_size = round(TRADE_SIZE / asset_latest_price, 2)
+    long_position_size = round((TRADE_SIZE * LONG_RATIO) / asset_latest_price, 2)
+    short_position_size = round((TRADE_SIZE * SHORT_RATIO) / asset_latest_price, 2)
 
     if position_type == "long":
         limit_price = round(asset_latest_price * (1 + limit_percentage), 2)
@@ -165,7 +167,7 @@ def enter_limit_trade(market, position_type, price_data, limit_percentage):
             "marginCoin": "USDT",
             "side": "close_long",
             "orderType": "limit",
-            "size": asset_position_size,
+            "size": long_position_size,
             "price": limit_price,
             "timeInForceValue": "normal"
         }
@@ -178,7 +180,7 @@ def enter_limit_trade(market, position_type, price_data, limit_percentage):
             "marginCoin": "USDT",
             "side": "close_short",
             "orderType": "limit",
-            "size": asset_position_size,
+            "size": short_position_size,
             "price": limit_price,
             "timeInForceValue": "normal"
         }
